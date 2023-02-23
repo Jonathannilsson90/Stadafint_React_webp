@@ -1,4 +1,4 @@
-class Customer
+class Cleaner
 {
 name: string;
 bookings: string[]
@@ -10,4 +10,4 @@ bookings: string[]
 
     }
 }
-export default Customer
+export default Cleaner
