@@ -1,9 +1,10 @@
 import './HomePage.css'
+import NavigationMenu from './NavigationMenu'
 
 const HomePage = () => {
     return (
         <div>
-            <p>This is home page</p>
+            <NavigationMenu></NavigationMenu>
         </div>
     )
 }
