@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+  
+/* header */
+.navigation {
+  background-color: rgb(155, 241, 25);;
+  text-align: center;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+  
+/* menu */
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+} 
+  
+/* menu Buttons */
+.menubtn {
+  background-color: rgb(155, 241, 25);
+  color: black;
+  /* padding: 16px; */
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 1s;
+  width: 160px;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginbtn {
+  background-color: rgb(155, 241, 25);
+  color: black;
+  padding: 16px; 
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 1s;
+  width: 160px;
+  transition: all 0.3s ease-in-out;
+}
+  
+/* Menu button hover  */
+.menubtn:hover{
+  background-color: rgb(119, 194, 8);
+  font-size: 18px;
+  color:black;
+} 
+
+/* Image logo*/
+.logo-img{
+  height: 50px;
+  width: auto;
+  padding-top: 5px;
+  
+}
+
+/* Menu logo   */
+.menu-logo{
+    font-family:fantasy;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}  
+
+.menu-logo:hover{
+  transform: scale(1.2);
+}
