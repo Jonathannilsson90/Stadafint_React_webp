@@ -1,0 +1,62 @@
+.footer-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+}
+
+ul li{
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+ul li.list:hover{
+    color: white;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+ul li{
+    font-size: Lora;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+ul li.list-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.about-footer{
+    padding-top: 10px;
+    width: 15%;
+    text-align: left;
+}
+
+.footer-logo{
+    font-family:fantasy;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-logo:hover{
+    transform: scale(1.2);
+}
+
+.footer-about-text{
+  line-height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-about-text:hover{
+    font-weight: bold;
+  }
+

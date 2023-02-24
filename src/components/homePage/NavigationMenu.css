@@ -4,7 +4,7 @@
   
 /* header */
 .navigation {
-  background-color: rgb(155, 241, 25);;
+  background-color: rgb(167, 165, 165);
   text-align: center;
   height: 50px;
   position: fixed;
@@ -23,7 +23,7 @@
   
 /* menu Buttons */
 .menubtn {
-  background-color: rgb(155, 241, 25);
+  background-color: rgb(167, 165, 165);
   color: black;
   /* padding: 16px; */
   height: 50px;
@@ -36,7 +36,8 @@
 }
 
 .loginbtn {
-  background-color: rgb(155, 241, 25);
+  background-color: rgb(167, 165, 165);
+  /* rgb(155, 241, 25) */
   color: black;
   padding: 16px; 
   font-size: 16px;
@@ -49,9 +50,10 @@
   
 /* Menu button hover  */
 .menubtn:hover{
-  background-color: rgb(119, 194, 8);
+  background-color: gray;
+  /* rgb(119, 194, 8); */
   font-size: 18px;
-  color:black;
+  color:white;
 } 
 
 /* Image logo*/
