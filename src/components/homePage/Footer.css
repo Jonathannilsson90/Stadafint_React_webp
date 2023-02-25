@@ -1,0 +1,78 @@
+.footer-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    height: 220px;
+}
+
+ul li{
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+ul li.list:hover{
+    color: white;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+ul li{
+    font-size: Lora;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+ul li.list-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.footer-about{
+    padding-top: 10px;
+    width: 15%;
+    text-align: center;
+    background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125));
+}
+.footer-about:hover{
+    padding-top: 10px;
+    width: 15%;
+    text-align: center;
+    background: radial-gradient(rgb(207, 204, 204), rgb(121, 120, 120));
+}
+
+.footer-logo{
+    font-family:fantasy;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-logo:hover{
+    transform: scale(1.1);
+}
+
+.footer-about-text{
+  line-height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* .footer-about-text:hover{
+    font-weight: bold;
+} */
+
+.vertical-line{
+    border-left: 2px solid rgb(108, 106, 106);
+    height: 220px;
+    position: absolute;
+    left: 20%;
+    margin-left: -4px;
+}
+
