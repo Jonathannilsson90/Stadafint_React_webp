@@ -1,8 +1,17 @@
-.main-section-wrapper{
+.header-section-wrapper{
     width: 90%;
     min-height: 500px;
+    display: flex; 
+    justify-content: left;
     margin: 50px auto 0px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/headerSectionBackground.png');
+    background-image: url('../images/header-section.jpeg');
+    
 }
+
+.header-section-content-wrapper{
+    height: 200px;
+    width: 30%;  
+}
+

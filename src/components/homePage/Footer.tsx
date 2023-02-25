@@ -14,9 +14,9 @@ const Footer = () => {
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>
                 </div>
-{/*                 <div 
+                <div 
                     className="vertical-line">
-                </div> */}
+                </div> 
                 <ul>
                     <li className="list-title">Main menu</li>
                     <li className="list">Home</li>
