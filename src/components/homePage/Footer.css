@@ -2,7 +2,7 @@
     margin-top: 100px;
     display: flex;
     justify-content: space-around;
-    background-color: gray;
+    background-color: rgb(169, 218, 96);
     height: 220px;
 }
 
@@ -38,14 +38,14 @@ ul li.list-title{
     padding-top: 10px;
     width: 15%;
     text-align: center;
-    background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125));
+    /* background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125)); */
 }
-.footer-about:hover{
+/* .footer-about:hover{
     padding-top: 10px;
     width: 15%;
     text-align: center;
     background: radial-gradient(rgb(207, 204, 204), rgb(121, 120, 120));
-}
+} */
 
 .footer-logo{
     font-family:fantasy;
@@ -61,18 +61,19 @@ ul li.list-title{
 
 .footer-about-text{
   line-height: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-/* .footer-about-text:hover{
-    font-weight: bold;
-} */
+ .footer-about-text:hover{
+    color:white;
+} 
 
 .vertical-line{
     border-left: 2px solid rgb(108, 106, 106);
-    height: 220px;
+    height: 120px;
     position: absolute;
-    left: 20%;
+    left: 25%;
     margin-left: -4px;
+    margin-top: 50px;
 }
 

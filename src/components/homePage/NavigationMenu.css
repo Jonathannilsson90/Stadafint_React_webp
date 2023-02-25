@@ -4,7 +4,7 @@
   
 /* header */
 .navigation {
-  background-color: rgb(155, 241, 25);
+  background-color: rgb(169, 218, 96);
   height: 50px;
   position: fixed;
   left: 0;
@@ -22,7 +22,7 @@
   
 /* menu Buttons */
 .menubtn {
-  background-color: rgb(155, 241, 25);
+  background-color: rgb(169, 218, 96);
   color: black;
   /* padding: 16px; */
   height: 50px;
@@ -35,7 +35,7 @@
 }
 
 .loginbtn {
-  background-color:rgb(155, 241, 25);
+  background-color:rgb(169, 218, 96);
   /* rgb(155, 241, 25) */
   color: black;
   padding: 16px; 
