@@ -7,13 +7,16 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className="footer-container">
-                <div className="about-footer">
+                <div className="footer-about">
                     <div className="footer-logo">
                         <img className='logo-img' src={Dimond}></img>
                         <span>Diamond Clean</span>
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>
                 </div>
+{/*                 <div 
+                    className="vertical-line">
+                </div> */}
                 <ul>
                     <li className="list-title">Main menu</li>
                     <li className="list">Home</li>

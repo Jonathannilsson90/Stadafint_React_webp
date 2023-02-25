@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     background-color: gray;
+    height: 220px;
 }
 
 ul li{
@@ -33,10 +34,17 @@ ul li.list-title{
     text-decoration: underline;
 }
 
-.about-footer{
+.footer-about{
     padding-top: 10px;
     width: 15%;
-    text-align: left;
+    text-align: center;
+    background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125));
+}
+.footer-about:hover{
+    padding-top: 10px;
+    width: 15%;
+    text-align: center;
+    background: radial-gradient(rgb(207, 204, 204), rgb(121, 120, 120));
 }
 
 .footer-logo{
@@ -48,7 +56,7 @@ ul li.list-title{
 }
 
 .footer-logo:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .footer-about-text{
@@ -56,7 +64,15 @@ ul li.list-title{
   transition: all 0.3s ease-in-out;
 }
 
-.footer-about-text:hover{
+/* .footer-about-text:hover{
     font-weight: bold;
-  }
+} */
+
+.vertical-line{
+    border-left: 2px solid rgb(108, 106, 106);
+    height: 220px;
+    position: absolute;
+    left: 20%;
+    margin-left: -4px;
+}
 

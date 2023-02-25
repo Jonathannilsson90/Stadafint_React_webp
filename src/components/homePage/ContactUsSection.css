@@ -1,0 +1,36 @@
+.contact-wrapper{
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgb(236, 237, 239);
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+.contact-title{
+    color: gray;
+    font-style: italic;
+}
+
+.contact-title:hover{
+    color: rgb(96, 94, 94);
+    font-style: italic;
+}
+
+.contact-card{
+    padding-top: 10px;
+    width: 34%;
+    text-align: center;
+    background: radial-gradient(rgb(242, 240, 240), rgb(167, 164, 164));
+}
+.contact-text{
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.contact-text:hover{
+    font-size: 21px;
+    text-decoration: underline;
+}
+
