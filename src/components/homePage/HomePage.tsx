@@ -1,8 +1,10 @@
+import './HomePage.css'
 import ContactUsSection from './ContactUsSection'
 import Footer from './Footer'
 import HeaderSection from './HeaderSection'
-import './HomePage.css'
 import NavigationMenu from './NavigationMenu'
+import ServiceSection from './ServiceSection'
+import ChooseUsSection from './WhyChooseUs'
 
 
 const HomePage = () => {
@@ -11,6 +13,8 @@ const HomePage = () => {
             <NavigationMenu></NavigationMenu>
             <HeaderSection></HeaderSection>
             <ContactUsSection></ContactUsSection>
+            <ServiceSection></ServiceSection>
+            <ChooseUsSection></ChooseUsSection>
             <Footer></Footer>
         </div>
     )

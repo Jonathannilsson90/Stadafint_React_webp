@@ -1,0 +1,85 @@
+.offered-services-section-wrapper{
+    width: 90%;
+    background-color: rgb(251, 249, 249);
+    margin: 0 auto;
+}
+
+.offered-services-section{
+   padding-top: 20px; 
+   padding-bottom: 30px;
+}
+
+.offered-services-section-title h2{
+   color: rgb(9, 54, 137)
+}
+
+.offered-services-section-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.servise-image{
+    margin-top: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.offered-services-card{
+    margin-top: 30px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 23%;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    background-color: white ;
+}
+
+.offered-services-card:hover{
+transform: scale(1.05);
+box-shadow: 0 0 5px gray
+}
+
+p{
+    padding: 10px;
+    line-height: 20px;
+}
+
+hr{
+    width: 40%;
+   border-top: 5px orange solid;
+    float: left;
+}
+
+h1{
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+
+.more-info {
+    background-color: rgb(245, 177, 51);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+    
+ 
+  .more-info:hover{
+    background-color: rgb(243, 125, 8);
+    text-decoration: underline;
+    color:black;
+  } 

@@ -6,15 +6,13 @@
     margin: 50px auto 0px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/header-section.jpeg');
-    
-    
+    background-image: url('../images/header-section.jpeg');   
 }
 
 .header-section-content-wrapper{
     height: 200px;
     width: 30%;
-    margin: 30px 0px 0px 100px;  
+    margin: 30px 20px 20px 100px;  
 }
 
 .header-section-title{
@@ -35,7 +33,6 @@
     margin-top: 20px;
 }
 
-/* menu Buttons */
 .header-section-button {
     background-color: rgb(245, 177, 51);
     color: black;
@@ -48,10 +45,9 @@
     border-radius: 10px;
 }
     
-  /* Menu button hover  */
-  .header-section-button:hover{
+.header-section-button:hover{
     background-color: rgb(243, 125, 8);
     text-decoration: underline;
     color:black;
-  } 
+} 
 
