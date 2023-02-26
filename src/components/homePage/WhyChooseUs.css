@@ -1,0 +1,13 @@
+.choose-us-wrapper{
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: rgb(236, 237, 239); */
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/choose-us-section.png');
+}
