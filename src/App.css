@@ -1,7 +1,10 @@
 html {
   scroll-padding-top: 50px;
 }
-.App {
-  text-align: center;
-}
+ .App {
+  /* text-align: center; */
+  font-family: "terfens", sans-serif; ;
+} 
+
+
 

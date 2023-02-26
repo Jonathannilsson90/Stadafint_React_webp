@@ -3,15 +3,19 @@
     height: 200px;
     display: flex;
     flex-wrap: nowrap;
-    background-color: rgb(236, 237, 239);
+    /* background-color: rgb(236, 237, 239); */
     margin: auto;
     display: flex;
     justify-content:space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/contact-us.png');
 }
 
 .contact-title{
-    color: gray;
+    color: rgb(78, 76, 76);
     font-style: italic;
+    font-weight: bold;
 }
 
 .contact-title:hover{
@@ -20,17 +24,38 @@
 }
 
 .contact-card{
-    padding-top: 10px;
+    padding-top: 40px;
     width: 34%;
     text-align: center;
-    background: radial-gradient(rgb(188, 232, 247), rgb(116, 200, 223));
+    /* background: radial-gradient(rgb(188, 232, 247), rgb(116, 200, 223)); */
 }
 .contact-text{
     font-size: 20px;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 .contact-text:hover{
-    font-size: 21px;
+    font-size: 22px;
     text-decoration: underline;
+}
+
+i{
+    height: 20px;
+}
+
+.vertical-line-1{
+    border-left: 2px solid rgb(26, 154, 189);
+    height: 100px;
+    position: absolute;
+    left: 33%;
+    margin-top: 25px;
+}
+
+.vertical-line-2{
+    border-left: 2px solid rgb(26, 154, 189);
+    height: 100px;
+    position: absolute;
+    left: 66%;
+    margin-top: 25px;
 }
 
