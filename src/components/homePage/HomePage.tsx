@@ -6,6 +6,7 @@ import NavigationMenu from './NavigationMenu'
 import ServiceSection from './ServiceSection'
 import ChooseUsSection from './WhyChooseUs'
 import HowItWorks from './HowItWorks'
+import NewsLetter from './NewsLetterSection'
 
 
 const HomePage = () => {
@@ -26,6 +27,7 @@ const HomePage = () => {
             <ServiceSection></ServiceSection>
             <ChooseUsSection></ChooseUsSection>
             <HowItWorks></HowItWorks>
+            <NewsLetter></NewsLetter>
             <Footer onScrollToElementClickHandler={onScrollToElementClickHandler}></Footer>
         </div>
     )
