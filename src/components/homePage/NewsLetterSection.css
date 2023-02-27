@@ -1,19 +1,22 @@
 .newsletter-section-wrapper{
-    background-color: var(--color-gray);
-    height: 150px;
-    width: 500px;
-    max-width: 500px;
+    height: 230px;
+    width: 60%;
+
     text-align: center;
     margin: 20px auto;
     font-family: "terfens", sans-serif; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/newsLetter.png');   
 }
 
 .newsletter-section-wrapper form{
+
     display: flex;
     justify-content: center;
 }
 
-.newsletter-section-wrapper h2{
+.newsletter-section-wrapper h1{
     padding-top: 20px;
 }
 
@@ -32,7 +35,6 @@
 
 .newsletter-section-wrapper button:hover{
     background-color: rgb(243, 125, 8);
-    text-decoration: underline;
     color:black;
 }
 
