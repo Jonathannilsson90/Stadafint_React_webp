@@ -73,8 +73,7 @@
 
 .circle:hover{
     transform: scale(1.1);
-    background-color: rgb(245, 177, 51);
-    transition: transform 0.3s ease-in-out;   
+    background-color: rgb(245, 177, 51);  
 }
 
 .how-card-arrow{

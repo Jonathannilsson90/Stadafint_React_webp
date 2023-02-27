@@ -2,16 +2,15 @@ import { Link } from 'react-router-dom';
 import './NavigationMenu.css'
 import Dimond from '../images/logo2.webp'
 
+interface INavigationMenu {
+    onScrollToElementClickHandler : (el : string) => void;
+}
 
-const NavigationMenu = () => {
+const NavigationMenu = (props : INavigationMenu) => {
 
-
-    function scrollToElementClickHandler(event : React.MouseEvent<HTMLElement>){
-        let dataElement = event.currentTarget.dataset.element;
-        let element = document.querySelector('.' + dataElement)
-        if (element) {
-            element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
-          }
+    const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
+        let el = event.currentTarget.dataset.element!;
+        props.onScrollToElementClickHandler(el)
     }
 
     
