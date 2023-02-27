@@ -1,0 +1,91 @@
+.how-section-wrapper{
+    width: 90%;
+    background-color: rgb(251, 249, 249);
+    margin: 0 auto;
+}
+
+.how-section{
+    padding-top: 20px; 
+    padding-bottom: 30px;
+}
+
+.how-section-title{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: flex-end;
+}
+
+.how-section-title h2{
+    color: rgb(9, 54, 137)
+
+}
+
+.offered-services-section-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.how-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+
+.how-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    
+}
+
+.how-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-card-content p{
+    padding: 10px;
+}
+
+.how-hr{
+    width: 40%;
+    border-top: 5px orange solid;
+    float: right;
+}
+
+.circle{
+
+        height: 120px;
+        width: 120px;
+        background-color: rgb(245, 202, 123);
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        justify-content: center;
+        
+  
+        transition: transform 0.3s ease-in-out;        
+}
+
+.circle:hover{
+    transform: scale(1.1);
+    background-color: rgb(245, 177, 51);
+
+}
+
+.how-card-arrow{
+    margin-top: 40px;
+}
+
+.circle-btn{
+    border: none;
+    background-color: rgb(251, 249, 249);
+    cursor: pointer;
+}

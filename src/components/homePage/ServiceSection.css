@@ -37,8 +37,8 @@
 }
 
 .offered-services-card:hover{
-transform: scale(1.05);
-box-shadow: 0 0 5px gray
+    transform: scale(1.05);
+    box-shadow: 0 0 5px gray
 }
 
 p{
@@ -46,9 +46,9 @@ p{
     line-height: 20px;
 }
 
-hr{
+.service-hr{
     width: 40%;
-   border-top: 5px orange solid;
+    border-top: 5px orange solid;
     float: left;
 }
 

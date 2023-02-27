@@ -7,33 +7,33 @@ import WindowCleaning from '../images/window-cleaning.png'
 const ServiceSection = () => {
     const props = [
         {
-            title: "What we do",
+            title: "Basic Cleaning",
             text: 'Basic Cleaning is professional service on a budget.'
-                + 'Like the name suggests, this service doesn’t include'
-                + 'everything, just the things that are essential to maintaining'
-                + 'a clean, comfortable home.',
+                + ' Like the name suggests, this service doesn’t include'
+                + ' everything, just the things that are essential to maintaining'
+                + ' a clean, comfortable home.',
             image: BasicCleaning
         },
         {
-            title: 'Top cleaning',
-            text: 'Basic Cleaning is professional service on a budget. Like the'
-                + 'name suggests, this service doesn’t include everything, just the'
-                + 'things that are essential to maintaining a clean, comfortable home.',
+            title: 'Top Cleaning',
+            text: 'Our company delivers a Top Cleaning service that covers '
+                + ' all the areas that are traditionally covered by Basic Cleaning'
+                + ' and some additional areas, inside and outside. ',
             image: TopCleaning
         },
         {
-            title: 'Dimond Cleaning',
+            title: 'Diamond Cleaning',
             text: 'Diamond Cleaning is a servise exclusively delivered by our company.'
                 + ' Our Dimond option includes not only all of Top Cleaning, but'
                 + ' also an expanded list of chores to be done every time.',
             image: DiamondCleaning
         },
         {
-            title: 'Window cleaning',
+            title: 'Window Cleaning',
             text: 'We deliver professional window cleaning at fixed prices and'
                 + 'with a quality guarantee, so'
-                + 'that you can spend your time and energy on things that are warmer'
-                + 'around your heart.',
+                + ' that you can spend your time and energy on things that are warmer'
+                + ' around your heart.',
             image: WindowCleaning
         }
     ]
@@ -45,7 +45,7 @@ const ServiceSection = () => {
                     <h2>What we do</h2>
                     <h1>Offering high quality cleaning services <br /><strong>at affordable prices</strong></h1>
                 </div>
-                <hr />
+                <hr className='service-hr'/>
 
                 <div className='offered-services-section-content'>
                     {props.map((card) =>

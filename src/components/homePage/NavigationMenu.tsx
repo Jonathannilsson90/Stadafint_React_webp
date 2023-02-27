@@ -24,11 +24,11 @@ const NavigationMenu = () => {
                             <span>Diamond Clean</span>
                         </div>
                         <div className="menu-center">
-                            <button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}><a>Home</a></button>
-                            <button className="menubtn" data-element='contact-wrapper' onClick={scrollToElementClickHandler}>Contact</button>
-                            <button className="menubtn" data-element='' onClick={scrollToElementClickHandler}>Services</button>
-                            <button className="menubtn" data-element='' onClick={scrollToElementClickHandler}>Why choose us</button>
-                            <button className="menubtn">About us</button>
+                        <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}><a>Home</a></button></Link>
+                            <button className="menubtn" data-element='contact-section-wrapper' onClick={scrollToElementClickHandler}>Contact</button>
+                            <button className="menubtn" data-element='offered-services-section-wrapper' onClick={scrollToElementClickHandler}>Services</button>
+                            <button className="menubtn" data-element='choose-us-section-wrapper' onClick={scrollToElementClickHandler}>Why choose us</button>
+                            <button className="menubtn">How it works</button>
                            
                         </div>
                         <div className="menu-right">
