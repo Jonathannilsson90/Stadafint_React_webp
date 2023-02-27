@@ -5,6 +5,7 @@ import DiamondCleaning from '../images/dimond-cleaning.png'
 import WindowCleaning from '../images/window-cleaning.png'
 
 const ServiceSection = () => {
+    
     const props = [
         {
             title: "Basic Cleaning",
