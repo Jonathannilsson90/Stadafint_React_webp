@@ -12,8 +12,7 @@ const NavigationMenu = (props : INavigationMenu) => {
         let el = event.currentTarget.dataset.element!;
         props.onScrollToElementClickHandler(el)
     }
-
-    
+  
         return (
             <div className='navigation-menu-wrapper'>
                 <header className="navigation">
@@ -23,7 +22,7 @@ const NavigationMenu = (props : INavigationMenu) => {
                             <span>Diamond Clean</span>
                         </div>
                         <div className="menu-center">
-                        <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}><a>Home</a></button></Link>
+                            <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}><a>Home</a></button></Link>
                             <button className="menubtn" data-element='contact-section-wrapper' onClick={scrollToElementClickHandler}>Contact</button>
                             <button className="menubtn" data-element='offered-services-section-wrapper' onClick={scrollToElementClickHandler}>Services</button>
                             <button className="menubtn" data-element='choose-us-section-wrapper' onClick={scrollToElementClickHandler}>Why choose us</button>
@@ -31,7 +30,7 @@ const NavigationMenu = (props : INavigationMenu) => {
                            
                         </div>
                         <div className="menu-right">
-                        <Link to= {"/login"}><button className="menubtn loginbtn">Sign up / Log in</button></Link>
+                            <Link to= {"/login"}><button className="menubtn loginbtn">Sign up / Log in</button></Link>
                         </div>
                     </div>
                 </header>

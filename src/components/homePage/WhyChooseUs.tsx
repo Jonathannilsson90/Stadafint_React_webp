@@ -6,10 +6,10 @@ import WhyChooseUsCard from './WhyChooseUsCard';
 const ChooseUsSection = () => {
     const [display, setDisplay] = useState(true);
 
-    const onDisplay = () => {
+/*     const onDisplay = () => {
         setDisplay(!display)
     }
-
+ */
     return (
         <div className='choose-us-section-wrapper'>
 

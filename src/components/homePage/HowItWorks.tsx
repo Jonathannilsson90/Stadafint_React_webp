@@ -5,8 +5,7 @@ import './HowItWorks.css'
 const HowItWorks = () => {
 
     const[info, setInfo]= useState(true);
-
-    
+ 
     return (
         <div className="how-section-wrapper">
             <div className="how-section">

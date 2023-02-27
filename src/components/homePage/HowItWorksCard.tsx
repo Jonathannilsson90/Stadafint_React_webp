@@ -9,6 +9,7 @@ interface IHowItWorksCard {
 }
 
 const HowItWorksCard = (props : IHowItWorksCard) => {
+    
     const[info, setInfo]= useState(true);
 
     let el = document.querySelector('.how-card');
