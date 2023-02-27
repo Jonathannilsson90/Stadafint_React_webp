@@ -9,6 +9,17 @@ import HowItWorks from './HowItWorks'
 
 
 const HomePage = () => {
+
+    const  onScrollToElementClickHandler =(el : string) =>{
+        console.log('Inside onScrollToElementClickHandler');
+        console.log(el);
+        let element = document.querySelector('.' + el);
+        console.log(element);
+        if (element) {
+            element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
+          }
+    }
+
     return (
         <div>
             <NavigationMenu></NavigationMenu>
@@ -17,7 +28,7 @@ const HomePage = () => {
             <ServiceSection></ServiceSection>
             <ChooseUsSection></ChooseUsSection>
             <HowItWorks></HowItWorks>
-            <Footer></Footer>
+            <Footer onScrollToElementClickHandler={onScrollToElementClickHandler}></Footer>
         </div>
     )
 }

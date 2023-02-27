@@ -7,7 +7,7 @@ const NavigationMenu = () => {
 
 
     function scrollToElementClickHandler(event : React.MouseEvent<HTMLElement>){
-        let dataElement = event.currentTarget.dataset.element
+        let dataElement = event.currentTarget.dataset.element;
         let element = document.querySelector('.' + dataElement)
         if (element) {
             element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
@@ -28,7 +28,7 @@ const NavigationMenu = () => {
                             <button className="menubtn" data-element='contact-section-wrapper' onClick={scrollToElementClickHandler}>Contact</button>
                             <button className="menubtn" data-element='offered-services-section-wrapper' onClick={scrollToElementClickHandler}>Services</button>
                             <button className="menubtn" data-element='choose-us-section-wrapper' onClick={scrollToElementClickHandler}>Why choose us</button>
-                            <button className="menubtn">How it works</button>
+                            <button className="menubtn" data-element='how-section-wrapper' onClick={scrollToElementClickHandler}>How it works</button>
                            
                         </div>
                         <div className="menu-right">

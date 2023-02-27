@@ -5,12 +5,6 @@ const HowItWorks = () => {
     const[info1, setInfo1]= useState(true);
     const[info2, setInfo2]= useState(true);
     const[info3, setInfo3]= useState(true);
-
-    let text1= info1 ? '1' : "More info";
-    let text2= info2 ? '2' : "More info";
-    let text3= info3 ? '3' : "More info";
-
-
     
     return (
         <div className="how-section-wrapper">
