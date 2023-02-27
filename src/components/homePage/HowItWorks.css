@@ -30,7 +30,6 @@
 
 .how-cards{
     display: flex;
-    justify-content: space-between;
     flex-wrap: nowrap;
     margin-top: 80px;
     justify-content: space-between;
@@ -69,15 +68,13 @@
         display: inline-block;
         text-align: center;
         justify-content: center;
-        
-  
         transition: transform 0.3s ease-in-out;        
 }
 
 .circle:hover{
     transform: scale(1.1);
     background-color: rgb(245, 177, 51);
-
+    transition: transform 0.3s ease-in-out;   
 }
 
 .how-card-arrow{
