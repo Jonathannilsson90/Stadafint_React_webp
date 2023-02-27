@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import HowItWorksCard from './HowItWorkaCard';
+import HowItWorksCard from './HowItWorksCard';
 import './HowItWorks.css'
 
 const HowItWorks = () => {
@@ -24,7 +24,7 @@ const HowItWorks = () => {
                             pText={"Become our customer and get a goog deal."} 
                     ></HowItWorksCard>
 
-                    <div className='how-card-arrow'><i className="fa-solid fa-chevron-right fa-2xl"></i></div>
+                    <div className='how-card-arrow'><i className="fa-solid fa-arrow-trend-up fa-2xl"></i></div>
 
                     <HowItWorksCard
                             info={info}
@@ -33,7 +33,7 @@ const HowItWorks = () => {
                             pText={"We're available every day of the week with cleans beginning as early as 8am."} 
                     ></HowItWorksCard>
 
-                    <div className='how-card-arrow'><i className="fa-solid fa-chevron-right fa-2xl"></i></div>
+                    <div className='how-card-arrow'><i className="fa-solid fa-arrow-trend-down fa-2xl"></i></div>
 
                     <HowItWorksCard
                             info={info}
