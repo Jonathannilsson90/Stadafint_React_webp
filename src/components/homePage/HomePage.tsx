@@ -11,8 +11,6 @@ import HowItWorks from './HowItWorks'
 const HomePage = () => {
 
     const  onScrollToElementClickHandler =(el : string) =>{
-        console.log('Inside onScrollToElementClickHandler');
-        console.log(el);
         let element = document.querySelector('.' + el);
         console.log(element);
         if (element) {
@@ -22,7 +20,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <NavigationMenu></NavigationMenu>
+            <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu>
             <HeaderSection></HeaderSection>
             <ContactUsSection></ContactUsSection>
             <ServiceSection></ServiceSection>
