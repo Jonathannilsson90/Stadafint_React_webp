@@ -5,6 +5,7 @@ import HeaderSection from './HeaderSection'
 import NavigationMenu from './NavigationMenu'
 import ServiceSection from './ServiceSection'
 import ChooseUsSection from './WhyChooseUs'
+import HowItWorks from './HowItWorks'
 
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
             <ContactUsSection></ContactUsSection>
             <ServiceSection></ServiceSection>
             <ChooseUsSection></ChooseUsSection>
+            <HowItWorks></HowItWorks>
             <Footer></Footer>
         </div>
     )

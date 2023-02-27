@@ -23,10 +23,11 @@ const Footer = () => {
                     <li className="list">Contact</li>
                     <li className="list">Services</li>
                     <li className="list">Why choose us</li>
+                    <li className="list">How it works</li>
 
                 </ul>
                 <ul>
-                    <li className="list-title">Addresses location </li>
+                    <li className="list-title">Address locations </li>
                     <li className="list">Skarpnäck</li>
                     <li className="list">Sätra</li>
                     <li className="list">Årsta</li>

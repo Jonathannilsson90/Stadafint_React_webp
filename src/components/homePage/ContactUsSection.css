@@ -1,4 +1,4 @@
-.contact-wrapper{
+.contact-section-wrapper{
     width: 90%;
     height: 200px;
     display: flex;
@@ -13,15 +13,12 @@
 }
 
 .contact-title{
-    color: rgb(9, 54, 137);
+    color: black;
     font-style: italic;
     font-weight: bold;
+    font-size: 20px;
 }
 
-.contact-title:hover{
-    color: rgb(96, 94, 94);
-    font-style: italic;
-}
 
 .contact-card{
     padding-top: 40px;
@@ -30,13 +27,13 @@
     /* background: radial-gradient(rgb(188, 232, 247), rgb(116, 200, 223)); */
 }
 .contact-text{
+    text-shadow: 2px 2px white;
     font-size: 20px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 .contact-text:hover{
     font-size: 22px;
-    text-decoration: underline;
 }
 
 i{
@@ -48,7 +45,7 @@ i{
     height: 100px;
     position: absolute;
     left: 33%;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .vertical-line-2{
@@ -56,6 +53,7 @@ i{
     height: 100px;
     position: absolute;
     left: 66%;
-    margin-top: 25px;
+    margin-top: 50px;
 }
+
 

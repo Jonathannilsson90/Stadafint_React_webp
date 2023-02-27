@@ -1,9 +1,9 @@
 .footer-container{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
     background-color: rgb(169, 218, 96);
-    height: 220px;
+    height: 230px;
 }
 
 ul li{
@@ -22,9 +22,8 @@ ul{
 
 
 ul li{
-    font-size: Lora;
     font-size: 17px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 ul li.list-title{
