@@ -19,6 +19,7 @@ const HowItWorks = () => {
                     <HowItWorksCard
                             info={info}
                             num={1}
+                            circleText={'Log in now!'}
                             hText={'Log in or Sign up'}
                             pText={"Become our customer and get a goog deal."} 
                     ></HowItWorksCard>
@@ -28,7 +29,8 @@ const HowItWorks = () => {
                     <HowItWorksCard
                             info={info}
                             num={2}
-                            hText={'Bok cleaning'}
+                            circleText={'Book now!'}
+                            hText={'Book cleaning'}
                             pText={"We're available every day of the week with cleans beginning as early as 8am."} 
                     ></HowItWorksCard>
 
@@ -37,6 +39,7 @@ const HowItWorks = () => {
                     <HowItWorksCard
                             info={info}
                             num={3}
+                            circleText={'Get a deal!'}
                             hText={'Enjoy Cleaniness'}
                             pText={"Keep your place always healthy, clean, and fresh."} 
                     ></HowItWorksCard>

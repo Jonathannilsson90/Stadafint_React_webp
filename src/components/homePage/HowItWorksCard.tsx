@@ -2,10 +2,11 @@ import { useState } from 'react';
 import './HowItWorks.css'
 
 interface IHowItWorksCard {
-    info  : boolean
-    hText : string
-    pText : string
-    num   : number
+    info       : boolean
+    circleText : string
+    hText      : string
+    pText      : string
+    num        : number
 }
 
 const HowItWorksCard = (props : IHowItWorksCard) => {
@@ -22,7 +23,7 @@ const HowItWorksCard = (props : IHowItWorksCard) => {
                     style={{fontSize : info ? 32 : 20 }}
                     onMouseOver={() => setInfo(false)} 
                     onMouseLeave={() => setInfo(true)}>
-                        <span className='circle' style={{paddingTop : info ? 40 : 50}}>{info ? props.num : "More info"}</span>
+                        <span className='circle' style={{paddingTop : info ? 40 : 50}}>{info ? props.num : props.circleText}</span>
                 </button>
             </div>
 
