@@ -21,7 +21,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu>
+            {/* <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu> */}
             <HeaderSection></HeaderSection>
             <ContactUsSection></ContactUsSection>
             <ServiceSection></ServiceSection>

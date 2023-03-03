@@ -41,7 +41,7 @@
     box-shadow: 0 0 5px gray
 }
 
-p{
+.offered-services-section-title p{
     padding: 10px;
     line-height: 20px;
 }
@@ -52,12 +52,12 @@ p{
     float: left;
 }
 
-h1{
+.offered-services-section-title h1{
     font-size: 30px;
     margin: 20px 0;
 }
 
-h2{
+.offered-services-section-title h2{
     margin-top: 0;
     margin-bottom: 10px;
     color: gray;

@@ -7,26 +7,31 @@ enum Level{
 
 class Booking
 {
-    date: Date;
-    time: string;
-    customer: string;
+    _id: string;
+    customerName: string;
+    cleanerName: string;
     level: Level;
-    cleaner: string;
-    status: boolean;
+    time: string;
+    date: Date;
+    status: boolean
 
-    constructor(date : Date, 
+
+    constructor(
+                _id: string,
+                date : Date, 
                 time: string, 
-                customer: string, 
+                customerName: string, 
                 level: Level, 
-                cleaner: string, 
+                cleanerName: string, 
                 status: boolean)
     {
+        this._id = _id;
         this.date = date;
         this.time = time;
-        this.customer = customer;
+        this.customerName = customerName;
         this.level = level;
-        this.cleaner = cleaner;
-        this.status = status;
+        this.cleanerName = cleanerName;
+        this.status = status
     }
 }
 export default Booking
