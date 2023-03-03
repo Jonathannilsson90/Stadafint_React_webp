@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import Booking from '../../models/Booking';
 import Member from '../../models/Member';
+import LogInFooter from './LogInFooter';
+
 import LogInForm from './LogInForm'
-// import LogInMenu from './LogInMenu'
+import LogInMenu from './LogInMenu';
 
 import './LogInPage.css'
 
@@ -94,11 +96,12 @@ const LogInPage = () => {
     
     return (
         <>
+            <LogInMenu></LogInMenu>
             <LogInForm  onSubmitHandler={onSubmitHandler}
                         text={text}
                         display={display}
                         isCustomer={isCustomer} ></LogInForm>
-                           
+            <LogInFooter></LogInFooter>             
         </>
      
     )

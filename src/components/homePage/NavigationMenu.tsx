@@ -31,7 +31,7 @@ const NavigationMenu = (props : INavigationMenu) => {
                         </div>
                         
                         <div className="menu-right">
-                            <Link to= {"/login"}><button className="menubtn loginbtn">Sign up / Log in</button></Link>
+                            <Link to= {"/login"}><button className="menubtn loginbtn">Log in</button></Link>
                         </div>
                     </div>
                 </header>

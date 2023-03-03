@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       
       <Router>
-      <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu>
+      {/* <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu> */}
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/login' element={<LoginPage/>} />
