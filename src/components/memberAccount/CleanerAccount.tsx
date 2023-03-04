@@ -77,7 +77,7 @@ const CLeanerAccount = () => {
         <div className="cleaner-background-image"></div>
          <div className='cleaner-account-title'>
                 <h1>Hello, {data}!!!</h1>
-                <h2>Your bookings:</h2>
+                <h2>Your cleanings:</h2>
          </div>   
          <div className='cleaner-list-of-bookings'>   
                 <table className='cleaner-table'>

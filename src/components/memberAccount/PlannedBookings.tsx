@@ -1,8 +1,8 @@
 import Booking from "../../models/Booking"
 import Level from "../../models/Booking"
-import './OneBooking.css'
+import './PlannedBookings.css'
 
-interface IOneBooking {
+interface IPlannedBookings {
     customerName: string
     cleanerName: string
     level: string
@@ -11,7 +11,7 @@ interface IOneBooking {
 }
 
 
-const OneBooking = (props: IOneBooking) => {
+const PlannedBookings = (props: IPlannedBookings) => {
 
     return(
         <>
@@ -29,4 +29,4 @@ const OneBooking = (props: IOneBooking) => {
     )
 }
 
-export default OneBooking
+export default PlannedBookings

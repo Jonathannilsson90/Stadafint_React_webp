@@ -1,0 +1,22 @@
+li{
+    text-decoration: none;
+    }
+    
+    button {
+        background-color: rgb(245, 177, 51);
+        color: black;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 1s;
+        width: 100px;
+        height: 30px;
+        border-radius: 10px;
+      }
+        
+     
+    button:hover{
+        background-color: rgb(243, 125, 8);
+        text-decoration: underline;
+        color:black;
+    }
