@@ -75,11 +75,11 @@
     height: 50px;
     border-radius: 10px;
     margin-bottom: 20px;
-  }
+}
     
  
-  .more-info:hover{
+.more-info:hover{
     background-color: rgb(243, 125, 8);
     text-decoration: underline;
     color:black;
-  } 
+} 

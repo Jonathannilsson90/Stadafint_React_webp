@@ -1,0 +1,7 @@
+.login-footer-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(169, 218, 96);
+    height: 70px;
+}

@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Booking from '../../models/Booking';
+import LogInFooter from '../logInPage/LogInFooter';
+import LogInMenu from '../logInPage/LogInMenu';
 import './CleanerAccount.css'
+import OneCleaning from './OneCleaning';
 
 
 const CLeanerAccount = () => {
@@ -12,7 +15,8 @@ const CLeanerAccount = () => {
 
     const[bookings, setBookings]= useState<Booking[]>([]);
 
-     const fetchData = () => {
+/*     const fetchData = () => 
+    {
        try
        {
            fetch('http://localhost:5001/bookings')
@@ -29,8 +33,23 @@ const CLeanerAccount = () => {
        {
            console.log(error);
        }   
-     }
+    } */
 
+    const fetchData = async() => 
+    {
+       try
+       {
+           const resp = await fetch('http://localhost:5001/bookings')
+           const data = await resp.json();     
+           setBookings(data); 
+           console.log('Bookings'); 
+           console.log(bookings);                  
+       }    
+       catch(error)
+       {
+           console.log(error);
+       }   
+    }
     
     useEffect(() => {
         fetchData();
@@ -41,22 +60,36 @@ const CLeanerAccount = () => {
     console.log(bookings); 
 
     const bookingsList = bookings.filter(booking => booking.cleanerName === data).map((booking) => (
-    <ul>
-                <li>{booking.customerName}</li>
-                <li>{booking.cleanerName}</li>
-                <li>{booking.level}</li>
-                <li>{booking.time}</li>
-    </ul>
+        <OneCleaning
+        key={booking._id}
+        customerName={booking.customerName}
+        cleanerName={booking.cleanerName}
+        level={booking.level}
+        time={booking.time}
+        date={booking.date.toString()}></OneCleaning>
 ) )
 
 
     return(<>
-     <div className="cleaner-account-wrapper">
-        <p> Cleaner page</p>
-        <p>{data}</p>
-        {bookingsList}
+    <LogInMenu></LogInMenu>
+    <div className="cleaner-account-wrapper">
+        <div className="cleaner-account-content">
+        <div className="cleaner-background-image"></div>
+         <div className='cleaner-account-title'>
+                <h1>Hello, {data}!!!</h1>
+                <h2>Your bookings:</h2>
+         </div>   
+         <div className='cleaner-list-of-bookings'>   
+                <table className='cleaner-table'>
+                    <tbody>
+                    {bookingsList}
+                    </tbody>
+                </table>      
+            </div>
+        </div>
+        
      </div>
-    
+     <LogInFooter></LogInFooter>   
     </>)
 }
 

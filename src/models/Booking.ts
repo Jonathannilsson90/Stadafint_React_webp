@@ -1,16 +1,17 @@
-enum Level{
+export enum Level{
     Basic,
     Topp,
     Dimond,
     Window
 }
 
+
 class Booking
 {
     _id: string;
     customerName: string;
     cleanerName: string;
-    level: Level;
+    level: string;
     time: string;
     date: Date;
     status: boolean
@@ -21,7 +22,7 @@ class Booking
                 date : Date, 
                 time: string, 
                 customerName: string, 
-                level: Level, 
+                level: string, 
                 cleanerName: string, 
                 status: boolean)
     {

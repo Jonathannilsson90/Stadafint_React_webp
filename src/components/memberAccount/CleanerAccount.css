@@ -1,3 +1,57 @@
+
 .cleaner-account-wrapper{
-    margin-top: 100px;
+    
+    margin-top: 50px;
+    min-height: 500px;
+}
+
+.cleaner-account-content{
+    width: 80%;
+    margin: auto;
+}
+
+.cleaner-background-image{
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/cleaner-customer-pages.jpeg');
+    filter: blur(0px); 
+}
+
+.cleaner-account-title{
+    background-color: rgba(220, 219, 219, 0.008); 
+    /* border: 3px solid rgb(169, 218, 96); */
+    border: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+    width: 520px;
+    /* padding: 20px;  */
+    text-align: center;
+}
+
+.cleaner-account-title{
+    text-align: center;
+}
+
+.cleaner-list-of-bookings{
+    text-align: center;
+}
+
+.cleaner-table {
+    width:  100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px auto 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+td{
+    width: 20%;
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse; 
 }
