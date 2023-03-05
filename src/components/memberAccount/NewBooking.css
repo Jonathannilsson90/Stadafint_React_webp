@@ -1,0 +1,15 @@
+.form-wrapper{
+    margin-top: 20px;
+    
+}
+
+.form-content{
+    background-color: rgb(157, 155, 155);
+    width: 80%;
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}

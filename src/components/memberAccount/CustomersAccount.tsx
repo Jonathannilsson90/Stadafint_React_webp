@@ -6,6 +6,7 @@ import LogInMenu from '../logInPage/LogInMenu';
 import LogInFooter from '../logInPage/LogInFooter';
 import PlannedBookings from './PlannedBookings';
 import PerformedBookings from './PerformedBookings';
+import NewBooking from './NewBooking';
 
 
 
@@ -134,6 +135,11 @@ const CustomerAccount = () => {
                 </div>
 
                 <div className='customer-list-of-bookings'>
+
+                    <div className='customer-create-bookings'>
+                        <h2>Cteate a new booking:</h2>
+                        <NewBooking></NewBooking>
+                    </div>
 
                     <div className='customer-planned-bookings'>
                          <h2>Planned cleanings:</h2>

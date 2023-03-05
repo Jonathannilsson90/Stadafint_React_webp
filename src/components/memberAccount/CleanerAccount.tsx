@@ -55,7 +55,6 @@ const CLeanerAccount = () => {
         fetchData();
     }, []); 
 
-
     console.log('Bookings1'); 
     console.log(bookings); 
 
@@ -68,7 +67,6 @@ const CLeanerAccount = () => {
         time={booking.time}
         date={booking.date.toString()}></OneCleaning>
 ) )
-
 
     return(<>
     <LogInMenu></LogInMenu>

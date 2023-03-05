@@ -71,4 +71,8 @@ td{
     background-color: rgb(243, 125, 8);
     text-decoration: underline;
     color:black;
-  }
+}
+
+.customer-list-of-bookings h3{
+    color: orangered;
+}
