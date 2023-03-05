@@ -19,35 +19,43 @@ const CustomerAccount = () => {
     const [bookings, setBookings] = useState<Booking[]>([]);
     const [checkedBookings, setCheckedBookings] = useState<string[]>([]);
 
-    const fetchData = () => {
+    const fetchData = async() => {
         try {
-            fetch('http://localhost:5001/bookings')
-                .then(res => res.json())
-                .then((data) => {
-                    console.log(data);
-                    setBookings(data);
-                    console.log(bookings);
-                })
+            const resp = await fetch('http://localhost:5001/bookings')
+            const data = await resp.json();     
+            setBookings(data); 
+            console.log('Bookings'); 
+            console.log(bookings);  
         }
         catch (error) {
             console.log(error);
         }
     }
 
+    const deleteData = async(id: string) => {
+        console.log('inside deleteData in customer account');
+        try {
+            const resp = await fetch('http://localhost:5001/bookings' + '/' +id,
+            {
+                method: 'DELETE', 
+            })
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+
+
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [deleteData]);
 
-    const planned = bookings.filter((booking) => booking.status === false);
-    const performed = bookings.filter((booking) => booking.status === true);
-    console.log('Planned');
-    console.log(planned);
-    console.log('performed');
-    console.log(performed);
 
     const onDeleteTaskHandler = (id : string) => {
         console.log('inside onDeleteTaskHandler in customer account');
         console.log(id);
+        deleteData(id)
     }
 
     const onCheckboxHandler = (id : string) => {
@@ -55,8 +63,7 @@ const CustomerAccount = () => {
         console.log(id);
         setCheckedBookings
         (
-          (checkedBookings) => {return [...checkedBookings, id]}
-          
+          (checkedBookings) => {return [...checkedBookings, id]}       
         );
     }
 
@@ -110,7 +117,8 @@ const CustomerAccount = () => {
                 <div className='customer-list-of-bookings'>
 
                     <div className='customer-planned-bookings'>
-                        <h2>Planned cleanings:</h2>
+                         <h2>Planned cleanings:</h2>
+                        {plannedCleanings.length === 0 && <h3>You don't have any planned cleanings</h3>}
                         <table className='customer-table'>
                             <tbody>
                                 {plannedCleanings}
@@ -120,14 +128,15 @@ const CustomerAccount = () => {
 
                     <div className='customer-performed-bookings'>
                         <h2>Performed cleanings:</h2>
+                        {performedCleanings.length === 0 && <h3>You don't have any performed cleanings</h3>}
                         <table className='customer-table'>
                             <tbody>
                                 {performedCleanings}
                             </tbody>
                         </table>
-                        <button 
+                        {performedCleanings.length !== 0 &&<button 
                         className="customer-perform-bookings-button"
-                        onClick={onDeleteCheckedBookings}><i>Delete All Selected cleanings</i></button>
+                        onClick={onDeleteCheckedBookings}><i>Delete All Selected cleanings</i></button>}
                     </div>
 
                 </div>

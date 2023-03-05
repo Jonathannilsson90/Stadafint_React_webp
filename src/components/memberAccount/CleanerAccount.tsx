@@ -79,7 +79,8 @@ const CLeanerAccount = () => {
                 <h1>Hello, {data}!!!</h1>
                 <h2>Your cleanings:</h2>
          </div>   
-         <div className='cleaner-list-of-bookings'>   
+         <div className='cleaner-list-of-bookings'> 
+                {bookingsList.length === 0 && <h2>You don't have any planned cleanings!</h2>}  
                 <table className='cleaner-table'>
                     <tbody>
                     {bookingsList}
