@@ -17,6 +17,7 @@ const CustomerAccount = () => {
     console.log(data)
 
     const [bookings, setBookings] = useState<Booking[]>([]);
+    const [checkedBookings, setCheckedBookings] = useState<string[]>([]);
 
     const fetchData = () => {
         try {
@@ -33,7 +34,6 @@ const CustomerAccount = () => {
         }
     }
 
-
     useEffect(() => {
         fetchData();
     }, []);
@@ -45,27 +45,57 @@ const CustomerAccount = () => {
     console.log('performed');
     console.log(performed);
 
+    const onDeleteTaskHandler = (id : string) => {
+        console.log('inside onDeleteTaskHandler in customer account');
+        console.log(id);
+    }
+
+    const onCheckboxHandler = (id : string) => {
+        console.log('inside onCheskboxHsndler in customer account');
+        console.log(id);
+        setCheckedBookings
+        (
+          (checkedBookings) => {return [...checkedBookings, id]}
+          
+        );
+    }
+
+    const onDeleteCheckedBookings = () => {
+        console.log('inside onDeleteCheckedBookings in customer account');
+        console.log('checkedBookings in onDeleteCheckedBookings');
+        console.log(checkedBookings);
+    }
+
+
     const plannedCleanings = bookings.filter(booking => (booking.customerName === data && booking.status === false)).map((booking) => (
         <PlannedBookings
             key={booking._id}
+            id={booking._id}
             customerName={booking.customerName}
             cleanerName={booking.cleanerName}
             level={booking.level}
             time={booking.time}
-            date={booking.date.toString()}></PlannedBookings>
+            date={booking.date.toString()}
+            onDeleteTaskHandler={() => onDeleteTaskHandler(booking._id)}></PlannedBookings>
     ))
 
+    
     const performedCleanings = bookings.filter(booking => (booking.customerName === data && booking.status === true)).map((booking) => (
         <PerformedBookings
             key={booking._id}
+            id={booking._id}
             customerName={booking.customerName}
             cleanerName={booking.cleanerName}
             level={booking.level}
             time={booking.time}
-            date={booking.date.toString()}></PerformedBookings>
+            date={booking.date.toString()}
+            onDeleteTaskHandler={() => onDeleteTaskHandler(booking._id)}
+            onCheckboxHandler= {() => onCheckboxHandler(booking._id)}></PerformedBookings>
     ))
 
 
+    console.log('checkedBookings2');
+    console.log(checkedBookings);
 
     return (<>
         <LogInMenu></LogInMenu>
@@ -95,6 +125,9 @@ const CustomerAccount = () => {
                                 {performedCleanings}
                             </tbody>
                         </table>
+                        <button 
+                        className="customer-perform-bookings-button"
+                        onClick={onDeleteCheckedBookings}><i>Delete All Selected cleanings</i></button>
                     </div>
 
                 </div>

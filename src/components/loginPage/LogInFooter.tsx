@@ -15,8 +15,8 @@ const LogInFooter = () => {
                     </div>
                 </div>
 
-                <ul className="login-footer-list">
-                    <Link to={"/"}><li className="list">Home page</li></Link>
+                <ul style={{textDecoration: 'none'}} className="login-footer-list">
+                    <Link to={"/"} style={{ textDecoration: 'none' }}><li className="list">Home</li></Link>
                 </ul>
             </div>
         </footer>

@@ -1,8 +1,9 @@
 li{
 text-decoration: none;
+list-style-type: none;
 }
 
-button {
+.planned-bookings-button {
     background-color: rgb(245, 177, 51);
     color: black;
     font-size: 16px;
@@ -15,7 +16,7 @@ button {
   }
     
  
-button:hover{
+.planned-bookings-button:hover{
     background-color: rgb(243, 125, 8);
     text-decoration: underline;
     color:black;

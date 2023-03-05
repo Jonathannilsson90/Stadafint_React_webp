@@ -54,3 +54,21 @@ td{
     border: 1px solid black;
     border-collapse: collapse; 
 }
+
+.customer-perform-bookings-button{
+    background-color: rgb(245, 177, 51);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 1s;
+    height: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.customer-perform-bookings-button:hover{
+    background-color: rgb(243, 125, 8);
+    text-decoration: underline;
+    color:black;
+  }

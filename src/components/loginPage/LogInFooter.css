@@ -5,3 +5,7 @@
     background-color: rgb(169, 218, 96);
     height: 70px;
 }
+.list{
+    list-style-type:none;
+    text-decoration: none;
+}
