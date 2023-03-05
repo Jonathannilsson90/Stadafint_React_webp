@@ -34,6 +34,7 @@ const CustomerAccount = () => {
 
     const deleteData = async(id: string) => {
         console.log('inside deleteData in customer account');
+
         try {
             const resp = await fetch('http://localhost:5001/bookings' + '/' +id,
             {
@@ -43,34 +44,52 @@ const CustomerAccount = () => {
         catch (error) {
             console.log(error);
         }
+        //fetchData();
     }
 
+    const deleteAllData = async(checkedBookings : string[]) => {
+        console.log('inside deleteAllData in customer account');
 
+        for(let id of checkedBookings){
+
+            try {
+                const resp = await fetch('http://localhost:5001/bookings' + '/' +id,
+                {
+                    method: 'DELETE', 
+                })
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
+    }
 
     useEffect(() => {
         fetchData();
-    }, [deleteData]);
+    }, [deleteData, deleteAllData]);
 
 
     const onDeleteTaskHandler = (id : string) => {
         console.log('inside onDeleteTaskHandler in customer account');
         console.log(id);
-        deleteData(id)
+        deleteData(id);
     }
 
     const onCheckboxHandler = (id : string) => {
-        console.log('inside onCheskboxHsndler in customer account');
+        console.log('inside onCheskboxHandler in customer account');
         console.log(id);
         setCheckedBookings
         (
           (checkedBookings) => {return [...checkedBookings, id]}       
         );
+        
     }
 
     const onDeleteCheckedBookings = () => {
         console.log('inside onDeleteCheckedBookings in customer account');
         console.log('checkedBookings in onDeleteCheckedBookings');
         console.log(checkedBookings);
+        deleteAllData(checkedBookings);
     }
 
 

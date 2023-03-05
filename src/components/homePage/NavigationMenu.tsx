@@ -22,7 +22,7 @@ const NavigationMenu = (props : INavigationMenu) => {
                             <span>Diamond Clean</span>
                         </div>
                         <div className="menu-center">
-                            <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}><a>Home</a></button></Link> 
+                            <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}>Home</button></Link> 
                             
                             <Link to= {"/"}><button className="menubtn" data-element='contact-section-wrapper' onClick={scrollToElementClickHandler}>Contact</button></Link> 
                             <Link to= {"/"}><button className="menubtn" data-element='offered-services-section-wrapper' onClick={scrollToElementClickHandler}>Services</button></Link>

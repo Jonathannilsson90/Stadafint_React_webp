@@ -8,6 +8,7 @@ const ServiceSection = () => {
     
     const props = [
         {
+            id: 1,
             title: "Basic Cleaning",
             text: 'Basic Cleaning is professional service on a budget.'
                 + ' Like the name suggests, this service doesn’t include'
@@ -16,13 +17,15 @@ const ServiceSection = () => {
             image: BasicCleaning
         },
         {
-            title: 'Top Cleaning',
+            id: 2,
+            itle: 'Top Cleaning',
             text: 'Our company delivers a Top Cleaning service that covers '
                 + ' all the areas that are traditionally covered by Basic Cleaning'
                 + ' and some additional areas, inside and outside. ',
             image: TopCleaning
         },
         {
+            id: 3,
             title: 'Diamond Cleaning',
             text: 'Diamond Cleaning is a servise exclusively delivered by our company.'
                 + ' Our Dimond option includes not only all of Top Cleaning, but'
@@ -30,6 +33,7 @@ const ServiceSection = () => {
             image: DiamondCleaning
         },
         {
+            id: 4,
             title: 'Window Cleaning',
             text: 'We deliver professional window cleaning at fixed prices and'
                 + 'with a quality guarantee, so'
@@ -51,7 +55,7 @@ const ServiceSection = () => {
                 <div className='offered-services-section-content'>
                     {props.map((card) =>
                     (
-                        <div className='offered-services-card'>
+                        <div key={card.id} className='offered-services-card'>
                             <div className='offered-services-image'>
                                 <img className='servise-image' src={card.image} />
                             </div>
