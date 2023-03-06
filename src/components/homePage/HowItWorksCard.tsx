@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HowItWorks.css'
 
 interface IHowItWorksCard {
@@ -17,14 +18,16 @@ const HowItWorksCard = (props : IHowItWorksCard) => {
     el?.classList.add('how-card' + props.num);
 
     return (
-        <div className= 'how-card' style={{marginTop : (props.num===1 || props.num===3) ? 100 : 10 }}>
+        <>
+            <div className= 'how-card' style={{marginTop : (props.num===1 || props.num===3) ? 100 : 10 }}>
             <div className="how-card-number">
-            <button className='circle-btn' 
+            <Link to= {"/login"}><button className='circle-btn' 
                     style={{fontSize : info ? 32 : 20 }}
                     onMouseOver={() => setInfo(false)} 
                     onMouseLeave={() => setInfo(true)}>
-                        <span className='circle' style={{paddingTop : info ? 40 : 50}}>{info ? props.num : props.circleText}</span>
-                </button>
+                        <span className='circle' 
+                        style={{paddingTop : info ? 40 : 50}}>
+                        {info ? props.num : props.circleText}</span></button></Link>
             </div>
 
             <div className="how-card-content">
@@ -32,6 +35,8 @@ const HowItWorksCard = (props : IHowItWorksCard) => {
                 <p>{props.pText}</p>
             </div>
         </div>
+        </>
+
     )
 }
 

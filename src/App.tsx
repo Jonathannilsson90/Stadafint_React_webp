@@ -3,7 +3,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './components/homePage/HomePage';
-import LoginPage from './components/loginPage/LoginPage';
+import LoginPage from './components/logInPage/LoginPage';
 
 
 
