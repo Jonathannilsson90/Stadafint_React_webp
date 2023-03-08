@@ -27,7 +27,7 @@ const Footer = (props: IFooter) => {
                 <div 
                     className="vertical-line">
                 </div> 
-                <ul>
+                <ul className="footer-list">
                     <li className="list-title">Main menu</li>
                     <li className="list" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}>Home</li>
                     <li className="list" data-element='contact-section-wrapper' onClick={scrollToElementClickHandler}>Contact</li>
@@ -36,14 +36,14 @@ const Footer = (props: IFooter) => {
                     <li className="list" data-element='how-section-wrapper' onClick={scrollToElementClickHandler}>How it works</li>
 
                 </ul>
-                <ul>
+                <ul className="footer-list">
                     <li className="list-title">Address locations </li>
                     <li className="list">Skarpnäck</li>
                     <li className="list">Sätra</li>
                     <li className="list">Årsta</li>
                     <li className="list">Kista</li>
                 </ul>
-                <ul>
+                <ul className="footer-list">
                     <li className="list-title">Follow us</li>
                     <li className="list">Facebook</li>
                     <li className="list">Linkedin</li>

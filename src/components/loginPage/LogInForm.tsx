@@ -6,7 +6,7 @@ import Booking from "../../models/Booking";
 import './LogInForm.css'
 
 interface ILogInForm {
-    onSubmitHandler(name: string): void
+    onSubmitHandler: (name: string) => void
     text: string
     isCustomer: boolean
     display: boolean
@@ -17,11 +17,10 @@ const LogInForm = (props: ILogInForm) => {
 
     const [name, setName] = useState('');
 
-    console.log('Filtered in form');
-
     const submitHandler = (e: React.FormEvent) => {
         e.preventDefault();
         props.onSubmitHandler(name);
+
     }
 
     return (
@@ -48,7 +47,7 @@ const LogInForm = (props: ILogInForm) => {
                 </div>
 
                 <div style={{ display: props.display ? 'block' : 'none' }}>
-                    <button className="login-section-button" type="submit" >Log in</button>
+                    <button className="login-section-button" type="submit">Log in</button>
                 </div>
 
                 <div className="logged-in-buttons" style={{ display: !props.display ? 'flex' : 'none' }}>
