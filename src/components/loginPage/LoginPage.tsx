@@ -18,15 +18,12 @@ const LogInPage = () => {
   const [text, setText] = useState('');
      
 
-  const fetchData = () => {
+  const fetchData = async () => {
     try
     {
-        fetch('https://stadafint-server-production.up.railway.app/user/all') 
+        const resp = await fetch('https://stadafint-server-production.up.railway.app/user/all') 
         //fetch('http://localhost:5001/members/')
-        .then(res => res.json())
-        .then((data) => {
-          console.log('data:'); 
-          console.log(data);  
+        const data = await resp.json();
            
           const transformData = data.users.map((d :User) => {
             return{
@@ -35,11 +32,7 @@ const LogInPage = () => {
               isCustomer : d.isCustomer
             }
           })
-
-          setUsers(transformData);
-          console.log('users: no data??'); 
-          console.log(users);   
-        })                
+          setUsers(transformData);                       
     }    
     catch(error)
     {
@@ -50,9 +43,6 @@ const LogInPage = () => {
   useEffect(() => {
     fetchData();
   }, []); 
-
-  console.log('users1 between functions');
-  console.log(users);
 
   const onSubmitHandler = (name :string) => {
     console.log('In onSubmitHandler');
@@ -77,7 +67,6 @@ const LogInPage = () => {
       setDisplay(true)
     };
   }
-
 
   console.log('isCustomer');
   console.log(isCustomer);  
