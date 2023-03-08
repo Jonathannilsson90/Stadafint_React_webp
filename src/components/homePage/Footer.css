@@ -15,7 +15,7 @@ ul li.list:hover{
     color: white;
 }
 
-ul{
+.footer-list, .login-footer-list{
     list-style: none;
     text-decoration: none;
 }

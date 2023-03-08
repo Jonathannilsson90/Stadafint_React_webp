@@ -1,32 +1,38 @@
-enum Level{
+export enum Level{
     Basic,
     Topp,
     Dimond,
     Window
 }
 
+
 class Booking
 {
-    date: Date;
+    _id: string;
+    customerName: string;
+    cleanerName: string;
+    level: string;
     time: string;
-    customer: string;
-    level: Level;
-    cleaner: string;
-    status: boolean;
+    date: Date;
+    status: boolean
 
-    constructor(date : Date, 
+
+    constructor(
+                _id: string,
+                date : Date, 
                 time: string, 
-                customer: string, 
-                level: Level, 
-                cleaner: string, 
+                customerName: string, 
+                level: string, 
+                cleanerName: string, 
                 status: boolean)
     {
+        this._id = _id;
         this.date = date;
         this.time = time;
-        this.customer = customer;
+        this.customerName = customerName;
         this.level = level;
-        this.cleaner = cleaner;
-        this.status = status;
+        this.cleanerName = cleanerName;
+        this.status = status
     }
 }
 export default Booking
