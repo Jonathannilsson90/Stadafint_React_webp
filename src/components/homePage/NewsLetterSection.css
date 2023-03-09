@@ -6,7 +6,7 @@
     font-family: "terfens", sans-serif; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/newsLetter.png');   
+    background-image: url('../../assets/newsLetter.png');   
 }
 
 .newsletter-section-wrapper form{

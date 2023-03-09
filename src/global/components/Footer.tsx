@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
-import './Footer.css'
-import Dimond from '../images/logo2.webp'
+import '../css/Footer.css'
+import Dimond from '../../assets/logo2.webp'
 import { useState } from "react";
+import { IFooter } from "../interfases";
 
-interface IFooter {
+/* interface IFooter {
     onScrollToElementClickHandler : (el : string) => void;
-}
+} */
 
 const Footer = (props: IFooter) => {
    
