@@ -8,9 +8,12 @@ function CustomerHero () {
     return(
     
     <div className="hero">
-            <h1>Välkommen {data}!</h1>
-            <h2>Boka din städning hos oss</h2>
-    
+            <div className="main-header">
+
+            <h1>Welcome {data}!</h1>
+            <p>Hurry and get your chance for the most incredible cleaning service you've ever experienced</p>
+            
+            </div>
     </div>)
 }
 
