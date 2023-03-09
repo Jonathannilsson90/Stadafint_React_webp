@@ -1,8 +1,8 @@
 import './ServiceSection.css'
-import BasicCleaning from '../images/basic-cleaning.png'
-import TopCleaning from '../images/top-cleaning.png'
-import DiamondCleaning from '../images/dimond-cleaning.png'
-import WindowCleaning from '../images/window-cleaning.png'
+import BasicCleaning from '../../assets/basic-cleaning.png'
+import TopCleaning from '../../assets/top-cleaning.png'
+import DiamondCleaning from '../../assets/diamond-cleaning.png'
+import WindowCleaning from '../../assets/window-cleaning.png'
 
 const ServiceSection = () => {
     
@@ -14,7 +14,7 @@ const ServiceSection = () => {
                 + ' Like the name suggests, this service doesn’t include'
                 + ' everything, just the things that are essential to maintaining'
                 + ' a clean, comfortable home.',
-            image: BasicCleaning
+            image: BasicCleaning,
         },
         {
             id: 2,

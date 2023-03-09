@@ -1,4 +1,4 @@
-import { truncateSync } from 'fs';
+
 import { useState } from 'react';
 import './WhyChooseUs.css'
 import WhyChooseUsCard from './WhyChooseUsCard';

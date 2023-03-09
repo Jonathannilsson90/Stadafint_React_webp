@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import './NavigationMenu.css'
-import Dimond from '../images/logo2.webp'
+import '../css/NavigationMenu.css'
+import Dimond from '../../assets/logo2.webp'
+import { INavigationMenu } from '../interfases';
 
-interface INavigationMenu {
+/* interface INavigationMenu {
     onScrollToElementClickHandler : (el : string) => void;
-}
+} */
 
 const NavigationMenu = (props : INavigationMenu) => {
 
