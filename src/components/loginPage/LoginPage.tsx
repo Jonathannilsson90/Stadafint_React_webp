@@ -6,7 +6,7 @@ import LogInFooter from './LogInFooter';
 import LogInForm from './LogInForm'
 import LogInMenu from './LogInMenu';
 
-import './LogInPage.css'
+import './LoginPage.css'
 
 
 
