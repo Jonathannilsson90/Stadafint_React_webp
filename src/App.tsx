@@ -6,7 +6,9 @@ import HomePage from './components/homePage/HomePage';
 
 import CustomerAccount from './components/usersAccount/CustomersAccount';
 import CleanerAccount from './components/usersAccount/CleanerAccount';
+
 import LogInPage from './components/logInPage/LogInPage';
+
 
 
 function App() {
