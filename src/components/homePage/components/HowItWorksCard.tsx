@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './HowItWorks.css'
+import '../css/HowItWorks.css'
 
 interface IHowItWorksCard {
     info       : boolean
