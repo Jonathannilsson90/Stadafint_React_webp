@@ -1,5 +1,6 @@
 
 import { useLocation } from 'react-router-dom';
+import CustomerPage from '../customerPage/CustomerPage';
 
 import './CleanerAccount.css'
 

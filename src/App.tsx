@@ -13,6 +13,7 @@ import Footer from './global/components/Footer';
 
 
 
+
 function App() {
 
   const  onScrollToElementClickHandler =(el : string) =>{

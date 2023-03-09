@@ -1,6 +1,13 @@
+import CustomerHero from './components/CustomerHero';
+
 const CustomerPage = () => {
+
     return(
-        <p className="p">Customer page</p>
+        <div>
+            <p className="p">Customer page</p>
+
+            <CustomerHero />
+        </div>
     )
 }
 
