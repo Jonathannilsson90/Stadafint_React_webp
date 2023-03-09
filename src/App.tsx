@@ -7,11 +7,7 @@ import HomePage from './components/homePage/HomePage';
 import NavigationMenu from './components/homePage/NavigationMenu';
 import CustomerAccount from './components/usersAccount/CustomersAccount';
 import CleanerAccount from './components/usersAccount/CleanerAccount';
-import LogInPage from './components/logInPage/LogInPage';
-
-
-
-
+import LogInPage from './components/loginPage/LoginPage';
 
 function App() {
 
