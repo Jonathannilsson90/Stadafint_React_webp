@@ -1,7 +1,6 @@
 .newsletter-section-wrapper{
     height: 230px;
     width: 60%;
-
     text-align: center;
     margin: 20px auto;
     font-family: "terfens", sans-serif; 
@@ -11,7 +10,6 @@
 }
 
 .newsletter-section-wrapper form{
-
     display: flex;
     justify-content: center;
 }
