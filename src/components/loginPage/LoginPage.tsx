@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Booking from '../../models/Booking';
 import User from '../../models/User';
-import LogInForm from './LogInForm'
+import LogInForm from './LogInForm';
 
 
 import './LogInPage.css'
