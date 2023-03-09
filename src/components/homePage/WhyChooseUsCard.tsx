@@ -6,7 +6,7 @@ interface IWhyChooseUsCard {
     text    : string
     title   : string
     icon    : string
-    display :boolean
+    //display :boolean
 }
 const WhyChooseUsCard = (props : IWhyChooseUsCard) => {
 

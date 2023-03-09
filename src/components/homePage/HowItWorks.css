@@ -12,13 +12,11 @@
 .how-section-title{
     display: flex;
     flex-direction: column;
-  
     align-items: flex-end;
 }
 
 .how-section-title h2{
     color: rgb(9, 54, 137)
-
 }
 
 .offered-services-section-content{
@@ -59,7 +57,6 @@
 }
 
 .circle{
-
         height: 120px;
         width: 120px;
         background-color: rgb(245, 202, 123);

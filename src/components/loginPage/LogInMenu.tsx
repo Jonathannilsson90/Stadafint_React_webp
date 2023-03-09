@@ -16,7 +16,7 @@ const LogInMenu = () => {
                         </div>
 
                         <div className="menu-center">
-                            <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper'><li>Home</li></button></Link>                          
+                            <Link to= {"/"}><button className="menubtn" data-element='header-section-wrapper'>Home</button></Link>                          
                         </div>
                         <div className="menu-right">
                             <Link to= {"/"}><button className="menubtn loginbtn">Log out</button></Link>

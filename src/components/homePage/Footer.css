@@ -1,9 +1,9 @@
 .footer-container{
+    background-color: rgb(169, 218, 96);
+    height: 230px;
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(169, 218, 96);
-    height: 230px;
 }
 
 ul li{
@@ -39,12 +39,6 @@ ul li.list-title{
     text-align: center;
     /* background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125)); */
 }
-/* .footer-about:hover{
-    padding-top: 10px;
-    width: 15%;
-    text-align: center;
-    background: radial-gradient(rgb(207, 204, 204), rgb(121, 120, 120));
-} */
 
 .footer-logo{
     font-family:fantasy;

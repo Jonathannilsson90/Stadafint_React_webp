@@ -13,19 +13,8 @@
     height: 200px;
     width: 30%;
     margin: 30px 20px 20px 100px;  
-    /* opacity: 0; */
-    /* transition: all 0.5s ease-in-out; */
-    /* animation: fadeIn 5s; */
     transition: all 0.8s ease-in-out;
 }
-
-/* .header-section-content-wrapper:hover{
-    text-shadow: 1px 1px white;
-} */
-
-/* .header-section-content-wrapper:hover{
-    opacity: 1;
-} */
 
 .header-section-title{
     font-size: 40px;
@@ -48,7 +37,6 @@
 }
 
 .header-section-button{
-
     margin-top: 20px;
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, Navigate, useNavigate, useNavigation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { redirect } from "react-router-dom";
 import Booking from "../../models/Booking";
@@ -13,14 +13,12 @@ interface ILogInForm {
 }
 
 const LogInForm = (props: ILogInForm) => {
-    //const navigation = useNavigation();
 
     const [name, setName] = useState('');
 
     const submitHandler = (e: React.FormEvent) => {
         e.preventDefault();
         props.onSubmitHandler(name);
-
     }
 
     return (
