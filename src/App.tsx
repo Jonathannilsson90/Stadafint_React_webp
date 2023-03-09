@@ -4,13 +4,9 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './components/homePage/HomePage';
 
-import NavigationMenu from './components/homePage/NavigationMenu';
 import CustomerAccount from './components/usersAccount/CustomersAccount';
 import CleanerAccount from './components/usersAccount/CleanerAccount';
 import LogInPage from './components/logInPage/LogInPage';
-
-
-
 
 
 function App() {

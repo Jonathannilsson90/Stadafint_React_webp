@@ -1,15 +1,13 @@
 .contact-section-wrapper{
     width: 90%;
     height: 200px;
-    display: flex;
-    flex-wrap: nowrap;
-    /* background-color: rgb(236, 237, 239); */
     margin: auto;
     display: flex;
+    flex-wrap: nowrap;
     justify-content:space-between;
+    background-image: url('../images/contact-us.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/contact-us.png');
 }
 
 .contact-title{
@@ -18,7 +16,6 @@
     font-weight: bold;
     font-size: 20px;
 }
-
 
 .contact-card{
     padding-top: 40px;

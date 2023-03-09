@@ -63,7 +63,6 @@
     color: gray;
 }
 
-
 .more-info {
     background-color: rgb(245, 177, 51);
     color: black;
@@ -77,7 +76,6 @@
     margin-bottom: 20px;
 }
     
- 
 .more-info:hover{
     background-color: rgb(243, 125, 8);
     text-decoration: underline;

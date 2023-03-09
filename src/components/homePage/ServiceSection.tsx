@@ -18,7 +18,7 @@ const ServiceSection = () => {
         },
         {
             id: 2,
-            itle: 'Top Cleaning',
+            title: 'Top Cleaning',
             text: 'Our company delivers a Top Cleaning service that covers '
                 + ' all the areas that are traditionally covered by Basic Cleaning'
                 + ' and some additional areas, inside and outside. ',

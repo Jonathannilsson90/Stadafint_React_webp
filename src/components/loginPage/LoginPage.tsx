@@ -8,8 +8,6 @@ import LogInMenu from './LogInMenu';
 
 import './LogInPage.css'
 
-
-
 const LogInPage = () => {
 
   const[users, setUsers]= useState<User[]>([]);
@@ -17,7 +15,6 @@ const LogInPage = () => {
   const [display, setDisplay]  =  useState(true)
   const [text, setText] = useState('');
      
-
   const fetchData = async () => {
     try
     {
@@ -45,14 +42,14 @@ const LogInPage = () => {
   }, []); 
 
   const onSubmitHandler = (name :string) => {
-    console.log('In onSubmitHandler');
+/*     console.log('In onSubmitHandler');
     console.log(name);
     console.log('users onside submithandler before map')
-    console.log(users);
+    console.log(users); */
 
     const filtered = users.filter((value) => value.name === name);
-    console.log('Filtered')
-    console.log(filtered);
+/*     console.log('Filtered')
+    console.log(filtered); */
 
     if (filtered.length !== 0)
     {
@@ -68,8 +65,8 @@ const LogInPage = () => {
     };
   }
 
-  console.log('isCustomer');
-  console.log(isCustomer);  
+/*   console.log('isCustomer');
+  console.log(isCustomer); */  
     
   return (
       <>

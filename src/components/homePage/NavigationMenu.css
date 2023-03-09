@@ -52,7 +52,6 @@
 /* Menu button hover  */
 .menubtn:hover{
   background-color: rgb(119, 194, 8);
-  /* rgb(119, 194, 8); */
   font-size: 18px;
   color:white;
 } 
