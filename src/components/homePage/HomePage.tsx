@@ -1,10 +1,10 @@
-import './HomePage.css'
-import ContactUsSection from './ContactUsSection'
-import HeaderSection from './HeaderSection'
-import ServiceSection from './ServiceSection'
-import ChooseUsSection from './WhyChooseUs'
-import HowItWorks from './HowItWorks'
-import NewsLetter from './NewsLetterSection'
+import './css/HomePage.css'
+import ContactUsSection from './components/ContactUsSection'
+import HeaderSection from './components/HeaderSection'
+import ServiceSection from './components/ServiceSection'
+import ChooseUsSection from './components/WhyChooseUs'
+import HowItWorks from './components/HowItWorks'
+import NewsLetter from './components/NewsLetterSection'
 
 
 const HomePage = () => {

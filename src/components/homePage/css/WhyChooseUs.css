@@ -9,7 +9,7 @@
     justify-content:space-between;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../assets/choose-us-section-2.png');
+    background-image: url('../../../assets/choose-us-section-2.png');
 }
 
 .choose-us-card{

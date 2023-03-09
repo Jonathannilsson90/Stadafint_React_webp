@@ -1,4 +1,4 @@
-import './NewsLetterSection.css'
+import '../css/NewsLetterSection.css'
 
 
 const NewsLetter = () => {

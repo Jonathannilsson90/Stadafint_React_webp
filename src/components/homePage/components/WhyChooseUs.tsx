@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import './WhyChooseUs.css'
+import '../css/WhyChooseUs.css'
 import WhyChooseUsCard from './WhyChooseUsCard';
 
 const ChooseUsSection = () => {
