@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-import Booking from '../../models/Booking';
 import User from '../../models/User';
-import LogInForm from './LogInForm'
-
-
-import './LogInPage.css'
+import LogInForm from './components/LogInForm'
+//import './css/LogInPage.css'
+import './css/LogInPage.css'
 
 const LogInPage = () => {
 
@@ -12,6 +10,8 @@ const LogInPage = () => {
   const [isCustomer, setIsCustomer] = useState(false);
   const [display, setDisplay]  =  useState(true)
   const [text, setText] = useState('');
+
+  const [login, setLogin] = useState(false);
      
   const fetchData = async () => {
     try
@@ -53,7 +53,9 @@ const LogInPage = () => {
     {
       setText(name);
       setDisplay(false);
-      setIsCustomer(filtered[0].isCustomer);    
+      setIsCustomer(filtered[0].isCustomer);  
+      setLogin(true);
+    //loginButtonTestHandler(login)
     };
 
     if (filtered.length === 0)

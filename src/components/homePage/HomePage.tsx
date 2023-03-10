@@ -9,13 +9,13 @@ import NewsLetter from './components/NewsLetterSection'
 
 const HomePage = () => {
 
-    const  onScrollToElementClickHandler =(el : string) =>{
+/*     const  onScrollToElementClickHandler =(el : string) =>{
         let element = document.querySelector('.' + el);
         console.log(element);
         if (element) {
             element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
           }
-    }
+    } */
 
     return (
         <div>

@@ -1,16 +1,14 @@
+import '../css/LogInForm.css'
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import { ILogInForm } from "../interfaces";
 
-import { redirect } from "react-router-dom";
-import Booking from "../../models/Booking";
-import './LogInForm.css'
-
-interface ILogInForm {
+/* interface ILogInForm {
     onSubmitHandler: (name: string) => void
     text: string
     isCustomer: boolean
     display: boolean
-}
+} */
 
 const LogInForm = (props: ILogInForm) => {
 
@@ -20,6 +18,7 @@ const LogInForm = (props: ILogInForm) => {
         e.preventDefault();
         props.onSubmitHandler(name);
     }
+
 
     return (
         <div className='login-section-wrapper'>
