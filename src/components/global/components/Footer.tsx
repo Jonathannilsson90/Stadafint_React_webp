@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import '../css/Footer.css'
-import Dimond from '../../assets/logo2.webp'
+import Diamond from '../../../assets/logo2.webp'
 import { useState } from "react";
 import { IFooter } from "../interfases";
 
@@ -20,7 +20,7 @@ const Footer = (props: IFooter) => {
             <div className="footer-container">
                 <div className="footer-about">
                     <div className="footer-logo">
-                        <img className='logo-img' src={Dimond}></img>
+                        <img className='logo-img' src={Diamond}></img>
                         <span>Diamond Clean</span>
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>

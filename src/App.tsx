@@ -4,11 +4,12 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './components/homePage/HomePage';
 
-import CustomerAccount from './components/usersAccount/CustomersAccount';
-import CleanerAccount from './components/usersAccount/CleanerAccount';
+import CustomerAccount from './components/usersAccount/components/CustomersAccount';
+import CleanerAccount from './components/usersAccount/components/CleanerAccount';
 import LogInPage from './components/logInPage/LogInPage'
-import NavigationMenu from './global/components/NavigationMenu';
-import Footer from './global/components/Footer';
+import NavigationMenu from './components/global/components/NavigationMenu';
+import Footer from './components/global/components/Footer';
+import CustomerPage from './components/customerPage/CustomerPage';
 
 
 
@@ -33,7 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/login' element={<LogInPage/>} />
-          <Route path='/login/customer' element={<CustomerAccount/>} />
+          <Route path='/login/customer' element={<CustomerPage/>} />
           <Route path='/login/cleaner' element={<CleanerAccount/>} />
           <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
         </Routes>
