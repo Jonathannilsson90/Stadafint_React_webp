@@ -43,9 +43,10 @@ const LogInForm = (props: ILogInForm) => {
                     <h1 style={{ fontSize: props.display ? 16 : 46 }}>{props.text}</h1>
                 </div>
 
-                <div style={{ display: props.display ? 'block' : 'none' }}>
+                 <div style={{ display: props.display ? 'block' : 'none' }}>
                     <button className="login-section-button" type="submit">Log in</button>
-                </div>
+                    
+                </div> 
 
                 <div className="logged-in-buttons" style={{ display: !props.display ? 'flex' : 'none' }}>
                     {props.isCustomer && <Link to={"/login/customer"} state={name}><button className="login-section-button btn" type="button">My Account</button></Link>}

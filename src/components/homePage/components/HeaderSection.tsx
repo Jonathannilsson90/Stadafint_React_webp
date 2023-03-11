@@ -1,6 +1,4 @@
 import '../css/HeaderSection.css'
-//import './HeaderSection.css'
-//import { Animation } from 'animation';
 
 const HeaderSection = () => {
 
