@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import '../css/WhyChooseUs.css'
+import { IWhyChooseUsCard } from '../interfaces';
 
-
-interface IWhyChooseUsCard {
+/* interface IWhyChooseUsCard {
     text    : string
     title   : string
     icon    : string
     //display :boolean
-}
+} */
+
 const WhyChooseUsCard = (props : IWhyChooseUsCard) => {
 
     const [display, setDisplay] = useState(true);

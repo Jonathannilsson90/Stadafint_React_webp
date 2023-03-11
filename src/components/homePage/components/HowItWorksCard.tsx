@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/HowItWorks.css'
+import { IHowItWorksCard } from '../interfaces';
 
-interface IHowItWorksCard {
+/* interface IHowItWorksCard {
     info       : boolean
     circleText : string
     hText      : string
     pText      : string
     num        : number
-}
+} */
 
 const HowItWorksCard = (props : IHowItWorksCard) => {
     
