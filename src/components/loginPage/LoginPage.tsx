@@ -1,11 +1,8 @@
-import { ResultType } from '@remix-run/router/dist/utils';
-import { useEffect, useState } from 'react'
-import User from '../../models/User';
-
-import { fetchData2} from './api';
-import LogInForm from './components/LogInForm'
-//import './css/LogInPage.css'
 import './css/LogInPage.css'
+import LogInForm from './components/LogInForm'
+import User from '../../models/User';
+import { useEffect, useState } from 'react'
+import { fetchData2} from './api';
 import { ILogInPage } from './interfaces';
 
 
@@ -17,9 +14,9 @@ const LogInPage = (props: ILogInPage) => {
   const [display, setDisplay]  =  useState(true)
   const [text, setText] = useState('');
   const [login, setLogin] = useState(false);
-  const [paht, setPath] = useState("/")
+  const [path, setPath] = useState("/")
      
-   const fetchData = async () => {
+   /* const fetchData = async () => {
     try
     {
         const resp = await fetch('https://stadafint-server-production.up.railway.app/user/all') 
@@ -39,21 +36,23 @@ const LogInPage = (props: ILogInPage) => {
     {
         console.log(error);
     }   
-  }  
+  }   */
      
-  useEffect(() => { 
-    fetchData()
+  useEffect(() => 
+  { (
+      async function() 
+      {
+      let res : User[] = await fetchData2() as User[];
+      setUsers(res);
+      } 
+    )()  
   }, []); 
 
   
 
 
   const onSubmitHandler = (name :string) => {
-/*     console.log('In onSubmitHandler');
-    console.log(name);
-    console.log('users onside submithandler before map')
-    console.log(users); */
-
+    
     const filtered = users.filter((value) => value.name === name);
     console.log('Filtered')
     console.log(filtered); 

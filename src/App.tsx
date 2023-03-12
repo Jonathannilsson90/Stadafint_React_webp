@@ -21,6 +21,7 @@ function App() {
   const [loginText, setLoginText] = useState('Log in'); 
   const [load, setLoad] = useState('/login');
 
+  const [el, setEl] = useState<Element>();
 
   const loginButtonTestHandler = (login: boolean) => {
     console.log('loginButtonTestHandler in app.tsx');
@@ -42,7 +43,7 @@ function App() {
 
 }
 
-  const  onScrollToElementClickHandler = (el : string) =>{
+/*   const  onScrollToElementClickHandler = (el : string) =>{
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
@@ -50,14 +51,57 @@ function App() {
     console.log('El');
     console.log(el);
 
-    let element = document.querySelector('.' + el);
+    
+    let element = document.querySelector('.' + el)!;
     console.log('Element');
     console.log(element);
 
     if (element) {
         element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
       }
-  }
+  }  */
+
+   const  onScrollToElementClickHandler = (el : string) =>{
+    setLogin(false);
+    setLoginText('Log in');
+    setLoad('/login');
+    console.log('scrollToElementClickHandler in app');
+    console.log('El');
+    console.log(el);
+
+    let selector : string = '.' + el;
+    console.log('Selector');
+    console.log(selector);
+
+    async function waitForElement(selector : string, timeout = 15000) {
+      const start = Date.now();
+    
+      while (Date.now() - start < timeout) {
+        const el = document.querySelector(selector);
+        if (el) {
+          console.log('El:');
+          console.log(el);
+          //let el1 = document.querySelector(selector)!  
+          el.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
+          return el!;
+        }
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    
+      return null;
+    }
+
+    waitForElement(selector);
+   
+/*     let element = document.querySelector('.' + el)!;
+    console.log('Element');
+    console.log(element);
+
+    
+    if (returnElement) {
+        returnElement.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
+      } */
+  } 
 
 /*   useEffect(() => { 
     //setLogin(false);
