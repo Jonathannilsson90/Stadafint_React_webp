@@ -4,7 +4,7 @@ import User from "../../models/User";
 
 
 export const fetchData2= async () =>  {
-/*     //const[users, setUsers]= useState<User[]>([]);
+    //const[users, setUsers]= useState<User[]>([]);
     try
     {
         
@@ -19,10 +19,10 @@ export const fetchData2= async () =>  {
               isCustomer : d.isCustomer
             }
           })
-          setUsers(transformData!);                       
+          return (transformData!);                       
     }    
     catch(error)
     {
         console.log(error);
-    }   */ 
+    }   
 }
