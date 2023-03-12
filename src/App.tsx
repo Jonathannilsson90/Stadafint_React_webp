@@ -23,7 +23,7 @@ function App() {
 
   const [el, setEl] = useState<Element>();
 
-  const loginButtonTestHandler = (login: boolean) => {
+  const loginButtonTextHandler = (login: boolean) => {
     console.log('loginButtonTestHandler in app.tsx');
     console.log('login');
     console.log(login);
@@ -38,9 +38,9 @@ function App() {
       setLoginText('Log in');
       setLoad('/login');
     };
+
     console.log('loginText');
     console.log(loginText);
-
 }
 
 /*   const  onScrollToElementClickHandler = (el : string) =>{
@@ -79,35 +79,22 @@ function App() {
       while (Date.now() - start < timeout) {
         const el = document.querySelector(selector);
         if (el) {
-          console.log('El:');
-          console.log(el);
-          //let el1 = document.querySelector(selector)!  
           el.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
           return el!;
         }
         await new Promise(resolve => setTimeout(resolve, 500));
-      }
-    
+      } 
       return null;
     }
-
     waitForElement(selector);
-   
-/*     let element = document.querySelector('.' + el)!;
-    console.log('Element');
-    console.log(element);
-
-    
-    if (returnElement) {
-        returnElement.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
-      } */
   } 
 
-/*   useEffect(() => { 
-    //setLogin(false);
-    //setLoginText('Log in');
-  }, []);  */
-
+  const onLogOutClickHandler = () => {
+    console.log('onLogOutClickHandler in app');
+    setLogin(false);
+    setLoginText('Log in');
+    setLoad('/login');
+  }
 
   return (
     <div className="App">
@@ -120,8 +107,8 @@ function App() {
           load={load}></NavigationMenu> 
         <Routes>
           <Route path='/' element={<HomePage
-            onScrollToElementClickHandler={onScrollToElementClickHandler}/>} />
-          <Route path='/login' element={<LogInPage loginButtonTestHandler={loginButtonTestHandler}/>} />
+            onLogOutClickHandler={onLogOutClickHandler}/>} />
+          <Route path='/login' element={<LogInPage loginButtonTextHandler={loginButtonTextHandler}/>} />
           <Route path='/login/customer' element={<CustomerPage/>} />
           <Route path='/login/cleaner' element={<CleanerPage/>} />
           <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />

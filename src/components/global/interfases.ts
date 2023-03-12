@@ -4,7 +4,7 @@ export interface IFooter {
 
 export interface INavigationMenu {
     onScrollToElementClickHandler : (el : string) => void;
-    loginText: string;
-    login: boolean;
-    load: string;
+    loginText : string;
+    login     : boolean;
+    load      : string;
 }

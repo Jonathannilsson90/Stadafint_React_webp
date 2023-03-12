@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    
+}
+
 .footer-container{
     background-color: rgb(169, 218, 96);
     height: 230px;
@@ -20,7 +25,6 @@ ul li.list:hover{
     text-decoration: none;
 }
 
-
 ul li{
     font-size: 17px;
     margin-bottom: 0px;
@@ -37,7 +41,6 @@ ul li.list-title{
     padding-top: 10px;
     width: 15%;
     text-align: center;
-    /* background: radial-gradient(rgb(179, 177, 177), rgb(126, 125, 125)); */
 }
 
 .footer-logo{
@@ -57,7 +60,7 @@ ul li.list-title{
   transition: all 0.5s ease-in-out;
 }
 
- .footer-about-text:hover{
+.footer-about-text:hover{
     color:white;
 } 
 

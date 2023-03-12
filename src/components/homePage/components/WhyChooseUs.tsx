@@ -1,6 +1,7 @@
+import '../css/WhyChooseUs.css'
 
 import { useState } from 'react';
-import '../css/WhyChooseUs.css'
+
 import WhyChooseUsCard from './WhyChooseUsCard';
 
 const ChooseUsSection = () => {
@@ -10,9 +11,9 @@ const ChooseUsSection = () => {
         <div className='choose-us-section-wrapper'>
 
             <WhyChooseUsCard
-             icon={"fa-solid fa-people-group fa-2xl"}
-             title={'Expert Team'}
-             text={'We have 15 years of cleaning experience serving residential and commercial customers nationwide.'}
+                icon={"fa-solid fa-people-group fa-2xl"}
+                title={'Expert Team'}
+                text={'We have 15 years of cleaning experience serving residential and commercial customers nationwide.'}
             ></WhyChooseUsCard>
 
             <div

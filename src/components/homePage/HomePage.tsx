@@ -11,13 +11,13 @@ import { IHomePage } from './interfaces'
 
 const HomePage = (props :IHomePage) => {
 
-    const location = useLocation();
+/*     const location = useLocation();
     const data = location.state;
     console.log('data in customer account')
     console.log(data);
   
     console.log('Data');
-    console.log(data);
+    console.log(data);   */
     
 /*      const  onScrollToElementClickHandler =(el : string) =>{
         let element = document.querySelector('.' + el);
@@ -27,18 +27,16 @@ const HomePage = (props :IHomePage) => {
           }
     }  */
 
-    props.onScrollToElementClickHandler(data)
+    props.onLogOutClickHandler()
 
     return (
         <div>
-            {/* <NavigationMenu onScrollToElementClickHandler={onScrollToElementClickHandler}></NavigationMenu>  */}
             <HeaderSection></HeaderSection>
             <ContactUsSection></ContactUsSection>
             <ServiceSection></ServiceSection>
             <ChooseUsSection></ChooseUsSection>
             <HowItWorks></HowItWorks>
             <NewsLetter></NewsLetter>
-            {/* <Footer onScrollToElementClickHandler={onScrollToElementClickHandler}></Footer> */}
         </div>
     )
 }
