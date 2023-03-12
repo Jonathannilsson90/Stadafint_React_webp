@@ -6,6 +6,6 @@ export interface ILogInForm {
 }
 
 export interface ILogInPage {
-    loginButtonTestHandler: (login : boolean) => void
+    loginButtonTextHandler: (login : boolean) => void
 
 }

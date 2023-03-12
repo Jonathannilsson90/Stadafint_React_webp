@@ -77,7 +77,7 @@ const LogInPage = (props: ILogInPage) => {
 
   console.log('login in login page'); 
   console.log(login); 
-  props.loginButtonTestHandler(login)
+  props.loginButtonTextHandler(login)
 
 /*   console.log('isCustomer');
   console.log(isCustomer); */  

@@ -1,8 +1,9 @@
 import '../css/ServiceSection.css'
-import BasicCleaning from '../../../assets/basic-cleaning.png'
-import TopCleaning from '../../../assets/top-cleaning.png'
+
+import BasicCleaning   from '../../../assets/basic-cleaning.png'
+import TopCleaning     from '../../../assets/top-cleaning.png'
 import DiamondCleaning from '../../../assets/diamond-cleaning.png'
-import WindowCleaning from '../../../assets/window-cleaning.png'
+import WindowCleaning  from '../../../assets/window-cleaning.png'
 
 const ServiceSection = () => {
     
@@ -42,7 +43,8 @@ const ServiceSection = () => {
             image: WindowCleaning
         }
     ]
-
+    
+    //-------------------------------------------------------------------   
     const oneCard = props.map((card) =>
     (
         <div key={card.id} className='offered-services-card'>
@@ -57,6 +59,7 @@ const ServiceSection = () => {
         </div>
     ))
 
+    //-------------------------------------------------------------------  
     return (
         <section className='offered-services-section-wrapper'>
             <div className='offered-services-section'>

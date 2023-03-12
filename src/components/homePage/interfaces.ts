@@ -10,9 +10,15 @@ export interface IWhyChooseUsCard {
     text    : string
     title   : string
     icon    : string
-    //display :boolean
+
 }
 
 export interface IHomePage {
-    onScrollToElementClickHandler : (el : string) => void;
+    onLogOutClickHandler:  () => void;
+}
+
+export interface IContactUsCard {
+    text   : string
+    title   : string
+    icon    : string
 }

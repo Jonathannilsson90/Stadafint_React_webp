@@ -21,14 +21,15 @@
     padding-top: 40px;
     width: 34%;
     text-align: center;
-    /* background: radial-gradient(rgb(188, 232, 247), rgb(116, 200, 223)); */
 }
+
 .contact-text{
     text-shadow: 2px 2px white;
     font-size: 20px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
+
 .contact-text:hover{
     font-size: 22px;
 }

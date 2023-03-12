@@ -1,11 +1,14 @@
-import { useState } from 'react'
 import '../css/WhyChooseUs.css'
+
+import { useState } from 'react'
+
 import { IWhyChooseUsCard } from '../interfaces';
 
 
 const WhyChooseUsCard = (props : IWhyChooseUsCard) => {
 
-    const [display, setDisplay] = useState(true);
+//---------------------  UseStates ----------------------------------
+const [display, setDisplay] = useState(true);
 
 //-------------------------------------------------------------------
 return (
