@@ -3,7 +3,7 @@ import User from "../../models/User";
 
 
 
-export const fetchData2= async () =>  {
+export const fetchData= async () =>  {
     //const[users, setUsers]= useState<User[]>([]);
     try
     {

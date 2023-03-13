@@ -1,15 +1,16 @@
-import './css/LogInPage.css'
-import LogInForm from './components/LogInForm'
-import User from '../../models/User';
 import { useEffect, useState } from 'react'
-import { fetchData2} from './api';
-import { ILogInPage } from './interfaces';
+import { fetchData}            from './api';
+import { ILogInPage }          from './interfaces';
+
+import LogInForm from './components/LogInForm'
+import User      from '../../models/User';
 
 
 
 const LogInPage = (props: ILogInPage) => {
 
-  const[users, setUsers]= useState<User[]>([]);
+  //-------------------------- UseStates ------------------------------
+  const [users, setUsers]= useState<User[]>([]);
   const [isCustomer, setIsCustomer] = useState(false);
   const [display, setDisplay]  =  useState(true)
   const [text, setText] = useState('');
@@ -37,20 +38,19 @@ const LogInPage = (props: ILogInPage) => {
         console.log(error);
     }   
   }   */
-     
+   
+  //-------------------------------------------------------------------
   useEffect(() => 
   { (
       async function() 
       {
-      let res : User[] = await fetchData2() as User[];
+      let res : User[] = await fetchData() as User[];
       setUsers(res);
       } 
     )()  
   }, []); 
 
-  
-
-
+  //-------------------------------------------------------------------
   const onSubmitHandler = (name :string) => {
     
     const filtered = users.filter((value) => value.name === name);
@@ -75,13 +75,16 @@ const LogInPage = (props: ILogInPage) => {
 
   }
 
-  console.log('login in login page'); 
-  console.log(login); 
+/*   console.log('login in login page'); 
+  console.log(login);  */
+
+  //-------------------------------------------------------------------
   props.loginButtonTextHandler(login)
 
 /*   console.log('isCustomer');
   console.log(isCustomer); */  
-    
+   
+  //-------------------------------------------------------------------
   return (
       <>
            <LogInForm  onSubmitHandler={onSubmitHandler}

@@ -1,30 +1,27 @@
 import '../css/LogInForm.css'
-import { useState } from "react"
-import { Link } from "react-router-dom";
+
+import { useState }   from "react"
+import { Link }       from "react-router-dom";
+
 import { ILogInForm } from "../interfaces";
 
-/* interface ILogInForm {
-    onSubmitHandler: (name: string) => void
-    text: string
-    isCustomer: boolean
-    display: boolean
-} */
 
 const LogInForm = (props: ILogInForm) => {
 
+    //-------------------------- UseStates ------------------------------
     const [name, setName] = useState('');
 
+    //-------------------------------------------------------------------
     const submitHandler = (e: React.FormEvent) => {
         e.preventDefault();
         props.onSubmitHandler(name);
     }
 
-
+    //-------------------------------------------------------------------
     return (
         <div className='login-section-wrapper'>
 
             <div className="login-section-background-image"></div>
-            {/* <div className="bg-image"></div> */}
 
             <form action="" className='login-form' onSubmit={submitHandler}>
 
@@ -54,8 +51,6 @@ const LogInForm = (props: ILogInForm) => {
                 </div>
 
             </form>
-
-            {/* <p style={{ visibility: props.filtered.length !== 0 ?  'hidden' : 'visible'  }}> */}
         </div>
     )
 }
