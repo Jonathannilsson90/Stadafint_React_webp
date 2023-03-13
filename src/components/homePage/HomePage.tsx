@@ -29,6 +29,7 @@ const HomePage = (props :IHomePage) => {
 
     props.onLogOutClickHandler()
 
+    //-------------------------------------------------------------------
     return (
         <div>
             <HeaderSection></HeaderSection>
