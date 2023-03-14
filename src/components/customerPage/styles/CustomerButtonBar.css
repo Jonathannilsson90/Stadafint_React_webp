@@ -1,0 +1,36 @@
+.button-bar {
+    border: black solid;
+}
+
+.button-bar h2 {
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    margin: 2rem;
+    gap: 2rem;
+}
+
+
+#btn {
+    height: 7rem;
+    border: black dotted; /* remove this */
+    display: grid;
+    justify-content: center;
+
+}
+
+.btn-1 {
+    
+}
+
+.btn-2 {
+    
+}
+
+.btn-3 {
+    
+}

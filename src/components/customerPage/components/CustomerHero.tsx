@@ -1,4 +1,6 @@
 import { useLocation } from "react-router-dom";
+import '../styles/CustomerHero.css';
+import CleaberScrub from '../../../assets/CleanerScrub.png'
 
 function CustomerHero () {
 
@@ -8,11 +10,15 @@ function CustomerHero () {
     return(
     
     <div className="hero">
-            <div className="main-header">
+            <div className="main-hero">
 
             <h1>Welcome {data}!</h1>
-            <p>Hurry and get your chance for the most incredible cleaning service you've ever experienced</p>
-            
+            <p>Hurry and get your chance for <br/> the most incredible cleaning service <br/> you've ever experienced</p>
+
+
+                {/* FIX THIS!!!! */}
+            <img src="../../../assets/CleanerScrub.png" alt="hej"></img>
+
             </div>
     </div>)
 }
