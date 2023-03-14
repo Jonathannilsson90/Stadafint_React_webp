@@ -2,16 +2,16 @@
     
     /* TEMPORARY */
     border: black solid;
-    height: 20rem;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
 }
 
-#booking-small-container {
-
+.booking-form {
+    display: flex;
+    justify-content: space-between;
 }
 
-.booking-header {
-    width: 20%
+#booking-form-section {
 }

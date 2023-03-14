@@ -5,33 +5,38 @@ function CustomerBooking () {
     return(
         <div className="booking-container">
             
-            <h2 id="booking-small-container"className="booking-header">Book an appointment</h2>
+            <h2>Book an appointment</h2>
 
-            
-            <div id="booking-small-container"className="selection-container">
-                <form>
-                    <p>Select date and time:</p>
-                    <input type="datetime-local"/>
-                    
-                    <p>Select cleaning type:</p>
-                    <select id="size" name="size">
-                    <option value="standard">Standard</option>
-                    <option value="plus">Plus</option>
-                    <option value="super">Super</option>
-                    </select>
+                <form className="booking-form">
+                    <div id="booking-form-section">
+                        <p>Select date and time:</p>
+                        <input type="datetime-local"/>
+                    </div>
+                        
+                    <div id="booking-form-section">
+                        <p>Select cleaning type:</p>
+                        <select id="size" name="size">
+                        <option value="standard">Standard</option>
+                        <option value="plus">Plus</option>
+                        <option value="super">Super</option>
+                        </select>
+                    </div>
 
-                    <p>Select cleaner:</p>
-                    <select id="size" name="size">
-                    <option value="rickard">Rickard</option>
-                    <option value="bosse">Bosse</option>
-                    <option value="Agneta">Agneta</option>
-                    </select>
-                    
-                    <br/>
-                    <button>Book</button>
+                    <div id="booking-form-section">
+                        <p>Select cleaner:</p>
+                        <select id="size" name="size">
+                        <option value="rickard">Rickard</option>
+                        <option value="bosse">Bosse</option>
+                        <option value="Agneta">Agneta</option>
+                        </select>
+                    </div>
+                        
+                    <div id="booking-form-section">
+                        <br/>
+                        <button>Book</button>
+                    </div>
 
                 </form>
-            </div>
 
         </div>
     )

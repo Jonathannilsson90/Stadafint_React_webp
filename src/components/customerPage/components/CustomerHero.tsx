@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import '../styles/CustomerHero.css';
-import CleaberScrub from '../../../assets/CleanerScrub.png'
+import CleanerScrub from '../../../assets/CleanerScrub.png'
 
 function CustomerHero () {
 
