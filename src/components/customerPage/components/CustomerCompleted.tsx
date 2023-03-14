@@ -10,30 +10,30 @@ function CustomerCompleted () {
                 <thead>
                     <tr>
                     <th>Time and Date</th>
-                    <th>Cleaner</th>
                     <th>Type</th>
+                    <th>Cleaner</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>March 15, 2023 10:00 AM</td>
-                        <td>Rickard</td>
                         <td>Plus</td>
+                        <td>Rickard</td>
                     </tr>
                     <tr>
                         <td>March 16, 2023 2:00 PM</td>
-                        <td>Rickard</td>
                         <td>Standard</td>
+                        <td>Rickard</td>
                     </tr>
                     <tr>
                         <td>March 18, 2023 9:30 AM</td>
-                        <td>Agneta</td>
                         <td>Super</td>
+                        <td>Agneta</td>
                     </tr>
                     <tr>
                         <td>March 19, 2023 3:00 PM</td>
-                        <td>Bosse</td>
                         <td>Standard</td>
+                        <td>Bosse</td>
                     </tr>
                     
                 </tbody>
