@@ -1,4 +1,17 @@
 .booking-container {
+    
+    /* TEMPORARY */
     border: black solid;
-    height: 5rem;
+    height: 20rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+#booking-small-container {
+
+}
+
+.booking-header {
+    width: 20%
 }

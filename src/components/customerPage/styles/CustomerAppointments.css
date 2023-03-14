@@ -1,4 +1,23 @@
 .appointments-container {
+    /* TEMPORARY */
     border: black solid;
-    height: 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+    
+
+}
+
+.appointments-container table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.appointments-container th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.appointments-container li {
+    display: table-row;
 }
