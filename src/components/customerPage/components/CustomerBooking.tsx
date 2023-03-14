@@ -5,7 +5,9 @@ function CustomerBooking () {
     return(
         <div className="booking-container">
             
+            <div className="booking-header">
             <h2>Book an appointment</h2>
+            </div>
 
                 <form className="booking-form">
                     <div id="booking-form-section">
@@ -33,7 +35,7 @@ function CustomerBooking () {
                         
                     <div id="booking-form-section">
                         <br/>
-                        <button>Book</button>
+                        <button>Confirm</button>
                     </div>
 
                 </form>

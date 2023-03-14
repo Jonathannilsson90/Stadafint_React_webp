@@ -4,7 +4,10 @@ function CustomerCompleted () {
 
     return(
         <div className="completed-container">
-            <h2>Completed Appointments</h2>
+            
+            <div className="completed-header">
+                <h2>Completed appointments</h2>
+            </div>
 
             <table>
                 <thead>

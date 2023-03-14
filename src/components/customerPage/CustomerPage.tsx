@@ -5,6 +5,8 @@ import CustomerBooking from './components/CustomerBooking';
 import CustomerAppointments from './components/CustomerAppointments'
 import CustomerCompleted from './components/CustomerCompleted'
 
+//TODO: FIX CSS BY COMPILING
+
 const CustomerPage = () => {
 
     return(

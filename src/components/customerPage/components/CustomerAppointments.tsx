@@ -4,7 +4,10 @@ function CustomerAppointments () {
 
     return(
         <div className="appointments-container">
+            
+            <div className="appointments-header">
             <h2>Booked appointments</h2>
+            </div>
 
             <table>
                 <thead>

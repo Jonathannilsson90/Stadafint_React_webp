@@ -1,5 +1,10 @@
+body {
+    background-color: #f9f9f9;;
+}
+
 .main-page{
     margin-top: 50px;
     display: grid;
     gap: 1rem;
+    
 }

@@ -6,7 +6,7 @@ function CustomerButtonBar () {
 
     <div className="button-bar">
 
-        <h2>What would you like to do?</h2>
+        <h2>How can we assist you today?</h2>
 
         <div className="buttons">
 
@@ -15,11 +15,11 @@ function CustomerButtonBar () {
             </div>
 
         <div className="btn-2" id="btn">
-            <p>Booked appointments</p>
+            <p>Check booked appointments</p>
             </div>
 
         <div className="btn-3" id="btn">
-            <p>Completed appointments</p>
+            <p>Check completed appointments</p>
             </div>
 
         </div>
