@@ -15,7 +15,7 @@ const LogInPage = (props: ILogInPage) => {
   const [display, setDisplay]  =  useState(true)
   const [text, setText] = useState('');
   const [login, setLogin] = useState(false);
-  const [path, setPath] = useState("/")
+  //const [path, setPath] = useState("/")
      
    /* const fetchData = async () => {
     try

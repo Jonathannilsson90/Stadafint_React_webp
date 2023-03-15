@@ -109,8 +109,8 @@ function App() {
           <Route path='/' element={<HomePage
             onLogOutClickHandler={onLogOutClickHandler}/>} />
           <Route path='/login' element={<LogInPage loginButtonTextHandler={loginButtonTextHandler}/>} />
-          <Route path='/login/customer' element={<CustomerPage/>} />
-          <Route path='/login/cleaner' element={<CleanerPage/>} />
+          <Route path='/login/customer/:name' element={<CustomerPage/>} />
+          <Route path='/login/cleaner/:name' element={<CleanerPage/>} />
           <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
         </Routes>
         <Footer onScrollToElementClickHandler={onScrollToElementClickHandler}></Footer>
