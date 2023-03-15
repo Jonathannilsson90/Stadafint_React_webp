@@ -3,10 +3,10 @@ import '../styles/CustomerCompleted.css';
 function CustomerCompleted () {
 
     return(
-        <div className="completed-container">
+        <div className="customer-containers">
             
             <div className="completed-header">
-                <h2>Completed appointments</h2>
+                <h2><span className="colored-word">Completed</span> appointments</h2>
             </div>
 
             <table>

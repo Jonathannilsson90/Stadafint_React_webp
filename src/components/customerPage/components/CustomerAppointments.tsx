@@ -3,10 +3,10 @@ import '../styles/CustomerAppointments.css'
 function CustomerAppointments () {
 
     return(
-        <div className="appointments-container">
+        <div className="customer-containers">
             
             <div className="appointments-header">
-            <h2>Booked appointments</h2>
+            <h2><span className="colored-word">Booked</span> appointments</h2>
             </div>
 
             <table>
