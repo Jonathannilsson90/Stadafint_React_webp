@@ -1,4 +1,5 @@
 import '../styles/CustomerBooking.css'
+import {getCleaners, getCustomer} from './api'
 
 function CustomerBooking () {
 
@@ -76,6 +77,8 @@ function CustomerBooking () {
                     </div>
 
                 </form>
+                <button onClick={getCleaners}>Cleaners</button>
+                <button onClick={getCustomer}>Customer</button>
 
         </div>
     )
