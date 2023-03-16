@@ -15,9 +15,7 @@ function CustomerHero () {
             <h1>Welcome {data}!</h1>
             <p>Hurry and get your chance for <br/> the most incredible cleaning service <br/> you've ever experienced</p>
 
-
-                {/* FIX THIS!!!! */}
-            <img src="../../../assets/CleanerScrub.png" alt="hej"></img>
+            <img src= {CleanerScrub} alt="Hero picture"></img>
 
             </div>
     </div>)
