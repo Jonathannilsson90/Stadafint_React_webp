@@ -24,6 +24,13 @@
     cursor: pointer;
 }
 
+.booking-radio {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    background-color:#f9f9f9;
+    accent-color: rgb(169, 218, 96);
+}
+
 #booking-button {
     background-color: rgb(169, 218, 96);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);

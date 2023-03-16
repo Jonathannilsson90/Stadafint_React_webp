@@ -34,20 +34,19 @@ function CustomerBooking () {
                         <option value="18:00">18:00</option>
                         <option value="19:00">19:00</option>
                         <option value="20:00">20:00</option>
-
                         </select>
                     </div>
 
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaning type:</p>
-                        <input type="radio" name="type" value="Basic"></input>
-                        <label>Basic</label>
-                        <input type="radio" name="type" value="Topp"></input>
-                        <label>Topp</label>
-                        <input type="radio" name="type" value="Diamond"></input>
-                        <label>Diamond</label>
-                        <input type="radio" name="type" value="Window"></input>
-                        <label>Window</label>
+                        <input className="booking-radio" type="radio" name="type" value="Basic"></input>
+                        <label className="booking-radio" >Basic</label>
+                        <input className="booking-radio" type="radio" name="type" value="Topp"></input>
+                        <label className="booking-radio">Topp</label>
+                        <input className="booking-radio" type="radio" name="type" value="Diamond"></input>
+                        <label className="booking-radio">Diamond</label>
+                        <input className="booking-radio" type="radio" name="type" value="Window"></input>
+                        <label className="booking-radio">Window</label>
                     </div>
 
 
