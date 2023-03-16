@@ -96,6 +96,7 @@ function App() {
 
   return (
     <div className="App">
+
       <BrowserRouter>
         
           <NavigationMenu
@@ -115,6 +116,7 @@ function App() {
    
 
       </BrowserRouter>
+
 
 
     </div>

@@ -1,11 +1,3 @@
-export enum Level{
-    Basic,
-    Topp,
-    Dimond,
-    Window
-}
-
-
 class Booking
 {
     _id: string;
