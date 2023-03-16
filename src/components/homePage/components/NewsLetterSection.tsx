@@ -1,7 +1,9 @@
-import './NewsLetterSection.css'
+import '../css/NewsLetterSection.css'
 
 
 const NewsLetter = () => {
+    
+    //-------------------------------------------------------------------
     return(
         <div className="newsletter-section-wrapper">
             <h1>NewsLetter</h1>

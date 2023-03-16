@@ -5,21 +5,19 @@
 .login-section-wrapper{
     width: 90%;
     min-height: 700px;
-    margin: auto;
-
+    margin: 50px auto;
 }
 
 .login-section-background-image{
     height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../assets/login-page.jpg');
+    background-image: url('../../../assets/login-page.jpg');
     filter: blur(2px); 
 }
 
 .login-form {
     background-color: rgb(150, 151, 149); 
-    /* border: 3px solid rgb(169, 218, 96); */
     border: none;
     position: absolute;
     top: 30%;
@@ -27,7 +25,6 @@
     transform: translate(-50%, -50%); 
     z-index: 2;
     width: 520px;
-    /* padding: 20px;  */
     text-align: center;
 }
 
@@ -41,7 +38,6 @@
     color: black;
     padding-top: 30px;
 }
-
 
 .login-section-button {
     background-color: rgb(245, 177, 51);

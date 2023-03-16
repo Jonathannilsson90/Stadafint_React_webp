@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import HowItWorksCard from './HowItWorksCard';
-import './HowItWorks.css'
+import '../css/HowItWorks.css'
 
 const HowItWorks = () => {
 
+    //---------------------  UseStates ----------------------------------
     const[info, setInfo]= useState(true);
- 
+
+    
+    //-------------------------------------------------------------------
     return (
         <div className="how-section-wrapper">
             <div className="how-section">

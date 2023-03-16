@@ -1,19 +1,19 @@
+import '../css/WhyChooseUs.css'
 
 import { useState } from 'react';
-import './WhyChooseUs.css'
+
 import WhyChooseUsCard from './WhyChooseUsCard';
 
 const ChooseUsSection = () => {
-   //const [display, setDisplay] = useState(true);
 
+    //-------------------------------------------------------------------
     return (
         <div className='choose-us-section-wrapper'>
 
             <WhyChooseUsCard
-             //display={display}
-             icon={"fa-solid fa-people-group fa-2xl"}
-             title={'Expert Team'}
-             text={'We have 15 years of cleaning experience serving residential and commercial customers nationwide.'}
+                icon={"fa-solid fa-people-group fa-2xl"}
+                title={'Expert Team'}
+                text={'We have 15 years of cleaning experience serving residential and commercial customers nationwide.'}
             ></WhyChooseUsCard>
 
             <div
@@ -21,7 +21,6 @@ const ChooseUsSection = () => {
             </div>
 
             <WhyChooseUsCard
-                //display={display}
                 icon={"fa-solid fa-thumbs-up fa-2xl"}
                 title={'100% Satisfaction'}
                 text={'We have cleaned all kinds of different types of flooring, carpets, counters and other materials.'}
@@ -32,7 +31,6 @@ const ChooseUsSection = () => {
             </div>
 
             <WhyChooseUsCard
-                //display={display}
                 icon={"fa-solid fa-leaf fa-2xl"}
                 title={'Eco-friendly'}
                 text={'We bring only eco-friendly, organic and none-toxic cleaning supplies.'}
@@ -43,7 +41,6 @@ const ChooseUsSection = () => {
             </div>
 
             <WhyChooseUsCard
-                //display={display}
                 icon={"fa-solid fa-piggy-bank fa-2xl"}
                 title={'Competitive Prices'}
                 text={'Our cleaning prices start at $104 for homes and $94 for apartments.'}

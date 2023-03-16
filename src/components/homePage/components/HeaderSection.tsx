@@ -1,8 +1,8 @@
-import './HeaderSection.css'
-//import { Animation } from 'animation';
+import '../css/HeaderSection.css'
 
 const HeaderSection = () => {
 
+    //-------------------------------------------------------------------
     return (
         <div className='header-section-wrapper'>
             <div className="header-section-content-wrapper">

@@ -6,7 +6,7 @@
     font-family: "terfens", sans-serif; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../assets/newsLetter.png');   
+    background-image: url('../../../assets/newsLetter.png');   
 }
 
 .newsletter-section-wrapper form{
@@ -18,7 +18,7 @@
     padding-top: 20px;
 }
 
- .newsletter-section-wrapper button{
+.newsletter-section-wrapper button{
     background-color: rgb(245, 177, 51);
     color: black;
     font-size: 16px;

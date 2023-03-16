@@ -1,8 +1,9 @@
-import './ServiceSection.css'
-import BasicCleaning from '../../assets/basic-cleaning.png'
-import TopCleaning from '../../assets/top-cleaning.png'
-import DiamondCleaning from '../../assets/diamond-cleaning.png'
-import WindowCleaning from '../../assets/window-cleaning.png'
+import '../css/ServiceSection.css'
+
+import BasicCleaning   from '../../../assets/basic-cleaning.png'
+import TopCleaning     from '../../../assets/top-cleaning.png'
+import DiamondCleaning from '../../../assets/diamond-cleaning.png'
+import WindowCleaning  from '../../../assets/window-cleaning.png'
 
 const ServiceSection = () => {
     
@@ -42,7 +43,23 @@ const ServiceSection = () => {
             image: WindowCleaning
         }
     ]
+    
+    //-------------------------------------------------------------------   
+    const oneCard = props.map((card) =>
+    (
+        <div key={card.id} className='offered-services-card'>
+            <div className='offered-services-image'>
+                <img className='servise-image' src={card.image} />
+            </div>
+            <div className='offered-services-text'>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+            </div>
+            <button className='more-info'>More info</button>
+        </div>
+    ))
 
+    //-------------------------------------------------------------------  
     return (
         <section className='offered-services-section-wrapper'>
             <div className='offered-services-section'>
@@ -53,19 +70,7 @@ const ServiceSection = () => {
                 <hr className='service-hr'/>
 
                 <div className='offered-services-section-content'>
-                    {props.map((card) =>
-                    (
-                        <div key={card.id} className='offered-services-card'>
-                            <div className='offered-services-image'>
-                                <img className='servise-image' src={card.image} />
-                            </div>
-                            <div className='offered-services-text'>
-                                <h3>{card.title}</h3>
-                                <p>{card.text}</p>
-                            </div>
-                            <button className='more-info'>More info</button>
-                        </div>
-                    ))}
+                    {oneCard}
                 </div>
             </div>
 
