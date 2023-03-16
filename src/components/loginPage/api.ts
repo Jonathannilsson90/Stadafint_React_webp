@@ -1,7 +1,4 @@
-import { useState } from "react";
 import User from "../../models/User";
-
-
 
 export const fetchData= async () =>  {
     //const[users, setUsers]= useState<User[]>([]);
