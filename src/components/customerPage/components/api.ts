@@ -1,12 +1,10 @@
 import User from "../../../models/User";
+import { fetchAPIData } from "../../global/api";
 
 export const getCleaners = async () => {
   try {
-    const response = await fetch(
-      "https://stadafint-server-production.up.railway.app/user/all"
-    );
-
-    const data = await response.json();
+  
+    const data = await fetchAPIData("user/all")
 
     const customerData: User[] = data.users.filter(
       (item: User) => !item.isCustomer
@@ -25,11 +23,8 @@ export const getCleaners = async () => {
 
 export const getCustomer = async () => {
     try {
-      const response = await fetch(
-        "https://stadafint-server-production.up.railway.app/user/all"
-      );
   
-      const data = await response.json();
+      const data = await fetchAPIData("user/all")
   
       const customerData: User[] = data.users.filter(
         (item: User) => item.isCustomer
