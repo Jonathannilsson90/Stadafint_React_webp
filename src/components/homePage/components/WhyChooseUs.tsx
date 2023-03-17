@@ -1,8 +1,6 @@
-import '../css/WhyChooseUs.css'
+import 'src/components/homePage/css/WhyChooseUs.css'
 
-import { useState } from 'react';
-
-import WhyChooseUsCard from './WhyChooseUsCard';
+import WhyChooseUsCard from 'src/components/homePage/components/WhyChooseUsCard';
 
 const ChooseUsSection = () => {
 

@@ -1,24 +1,26 @@
-import '../css/Footer.css'
+import 'src/components/global/css/Footer.css'
 
 import { Link }    from "react-router-dom"
 import { IFooter } from "../interfases";
 
-import Diamond from '../../../assets/logo2.webp'
+import Diamond from 'src/assets/logo2.webp'
 
 
 const Footer = (props: IFooter) => {
    
+    //-------------------------------------------------------------------
     const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
         let el = event.currentTarget.dataset.element!;
         props.onScrollToElementClickHandler(el)
     }
 
+    //-------------------------------------------------------------------
     return (
         <footer className='footer'>
             <div className="footer-container">
                 <div className="footer-about">
                     <div className="footer-logo">
-                        <img className='logo-img' src={Diamond}></img>
+                        <img className='logo-img' src={Diamond} alt='logo-picture'></img>
                         <span>Diamond Clean</span>
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>

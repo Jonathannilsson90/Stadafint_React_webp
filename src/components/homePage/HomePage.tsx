@@ -1,4 +1,4 @@
-import './css/HomePage.css'
+
 
 import ContactUsSection from './components/ContactUsSection'
 import HeaderSection    from './components/HeaderSection'
@@ -7,7 +7,7 @@ import ChooseUsSection  from './components/WhyChooseUs'
 import HowItWorks       from './components/HowItWorks'
 import NewsLetter       from './components/NewsLetterSection'
 
-import { IHomePage } from './interfaces'
+import { IHomePage } from 'src/components/homePage/interfaces'
 
 
 const HomePage = (props :IHomePage) => {

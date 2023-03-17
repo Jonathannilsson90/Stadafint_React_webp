@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import HomePage       from './components/homePage/HomePage';
 import LogInPage      from './components/logInPage/LoginPage';
 import NavigationMenu from './components/global/components/NavigationMenu';
@@ -9,12 +9,7 @@ import Footer         from './components/global/components/Footer';
 import CustomerPage   from './components/customerPage/CustomerPage';
 import CleanerPage    from './components/cleanerPage/CleanerPage';
 
-
-
-
-
 function App() {
-
 
 
   const [login, setLogin] = useState(false);
@@ -22,7 +17,7 @@ function App() {
   const [load, setLoad] = useState('/login');
 
   //const [el, setEl] = useState<Element>();
-
+  //-------------------------------------------------------------------
   const loginButtonTextHandler = (login: boolean) => {
     console.log('loginButtonTestHandler in app.tsx');
     console.log('login');
@@ -58,7 +53,8 @@ function App() {
           element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
         }
     }  */
-
+    
+  //-------------------------------------------------------------------
   const onScrollToElementClickHandler = (el: string) => {
     setLogin(false);
     setLoginText('Log in');
@@ -87,6 +83,7 @@ function App() {
     waitForElement(selector);
   }
 
+  //-------------------------------------------------------------------
   const onLogOutClickHandler = () => {
     console.log('onLogOutClickHandler in app');
     setLogin(false);

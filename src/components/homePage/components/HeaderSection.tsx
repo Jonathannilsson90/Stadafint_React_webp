@@ -1,4 +1,4 @@
-import '../css/HeaderSection.css'
+import 'src/components/homePage/css/HeaderSection.css'
 
 const HeaderSection = () => {
 

@@ -1,8 +1,9 @@
-import '../css/NavigationMenu.css'
+import 'src/components/global/css/NavigationMenu.css'
+
 import { Link }            from 'react-router-dom';
 import { INavigationMenu } from '../interfases';
 
-import Diamond from '../../../assets/logo2.webp'
+import Diamond from 'src/assets/logo2.webp'
 
 const NavigationMenu = (props : INavigationMenu) => {
 
@@ -28,7 +29,7 @@ const NavigationMenu = (props : INavigationMenu) => {
             <header className="navigation">
                 <div className="menu">
                     <div className="menu-logo">
-                        <img className='logo-img' src={Diamond}></img>
+                        <img className='logo-img' src={Diamond} alt='logo-picture'></img>
                         <span>Diamond Clean</span>
                     </div>
                     <div className="menu-center">
