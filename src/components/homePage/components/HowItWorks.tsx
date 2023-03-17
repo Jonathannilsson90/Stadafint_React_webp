@@ -1,8 +1,8 @@
-import 'src/components/homePage/css/HowItWorks.css'
+import '../css/HowItWorks.css'
 
 import { useState } from 'react'
 
-import HowItWorksCard from 'src/components/homePage/components/HowItWorksCard';
+import HowItWorksCard from './HowItWorksCard';
 
 
 const HowItWorks = () => {

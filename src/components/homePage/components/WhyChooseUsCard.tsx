@@ -1,8 +1,8 @@
-import 'src/components/homePage/css/WhyChooseUs.css'
+import '../css/WhyChooseUs.css'
 
 import { useState } from 'react'
 
-import { IWhyChooseUsCard } from 'src/components/homePage/interfaces';
+import { IWhyChooseUsCard } from '../interfaces';
 
 
 const WhyChooseUsCard = (props: IWhyChooseUsCard) => {

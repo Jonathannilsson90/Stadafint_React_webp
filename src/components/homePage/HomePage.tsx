@@ -7,7 +7,7 @@ import ChooseUsSection  from './components/WhyChooseUs'
 import HowItWorks       from './components/HowItWorks'
 import NewsLetter       from './components/NewsLetterSection'
 
-import { IHomePage } from 'src/components/homePage/interfaces'
+import { IHomePage } from './interfaces'
 
 
 const HomePage = (props :IHomePage) => {
