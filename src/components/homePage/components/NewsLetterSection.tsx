@@ -1,4 +1,4 @@
-import 'src/components/homePage/css/NewsLetterSection.css'
+import '../css/NewsLetterSection.css'
 
 
 const NewsLetter = () => {

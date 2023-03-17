@@ -1,6 +1,6 @@
-import 'src/components/homePage/css/WhyChooseUs.css'
+import '../css/WhyChooseUs.css'
 
-import WhyChooseUsCard from 'src/components/homePage/components/WhyChooseUsCard';
+import WhyChooseUsCard from './WhyChooseUsCard';
 
 const ChooseUsSection = () => {
 

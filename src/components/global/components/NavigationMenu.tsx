@@ -1,9 +1,9 @@
-import 'src/components/global/css/NavigationMenu.css'
+import '../css/NavigationMenu.css'
 
 import { Link }            from 'react-router-dom';
 import { INavigationMenu } from '../interfases';
 
-import Diamond from 'src/assets/logo2.webp'
+import Diamond from '../../../assets/logo2.webp'
 
 const NavigationMenu = (props : INavigationMenu) => {
 

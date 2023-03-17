@@ -1,8 +1,8 @@
-import 'src/components/homePage/css/HowItWorks.css'
+import '../css/HowItWorks.css'
 
 import { useState }        from 'react';
 import { Link }            from 'react-router-dom';
-import { IHowItWorksCard } from 'src/components/homePage/interfaces';
+import { IHowItWorksCard } from '../interfaces';
 
 
 const HowItWorksCard = (props : IHowItWorksCard) => {

@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content:space-between;
-    background-image: url('src/assets/contact-us.png');
+    background-image: url('../../../assets/contact-us.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

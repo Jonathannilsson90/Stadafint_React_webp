@@ -1,9 +1,9 @@
-import 'src/components/global/css/Footer.css'
+import '../css/Footer.css'
 
 import { Link }    from "react-router-dom"
 import { IFooter } from "../interfases";
 
-import Diamond from 'src/assets/logo2.webp'
+import Diamond from '../../../assets/logo2.webp'
 
 
 const Footer = (props: IFooter) => {

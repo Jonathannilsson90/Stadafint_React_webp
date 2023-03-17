@@ -1,4 +1,4 @@
-import 'src/components/homePage/css/ContactUsSection.css'
+import '../css/ContactUsSection.css'
 
 const ContactUsSection = () => {
     
