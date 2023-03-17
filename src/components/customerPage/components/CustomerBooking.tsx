@@ -1,5 +1,6 @@
 import '../styles/CustomerBooking.css'
 import {getCleaners, getCustomer} from './api'
+import CleanerList from './forms/CleaningForm'
 
 function CustomerBooking () {
 
@@ -63,9 +64,9 @@ function CustomerBooking () {
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaner:</p>
                         <select id="booking-input">
-                        <option value="rickard">Rickard</option>
-                        <option value="bosse">Bosse</option>
-                        <option value="Agneta">Agneta</option>
+                  
+                        <CleanerList/>
+                          
                         </select>
                     </div>
                         
@@ -78,8 +79,9 @@ function CustomerBooking () {
 
                 </form>
                 <button onClick={getCleaners}>Cleaners</button>
+                
                 <button onClick={getCustomer}>Customer</button>
-
+               
         </div>
     )
 }
