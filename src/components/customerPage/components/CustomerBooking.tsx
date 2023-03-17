@@ -64,7 +64,7 @@ function CustomerBooking () {
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaner:</p>
                         <select id="booking-input">
-                  
+                        <option value=""></option>
                         <CleanerList/>
                           
                         </select>

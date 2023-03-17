@@ -1,15 +1,14 @@
-import React, { useEffect, useState, ReactElement } from 'react';
+import { useEffect, useState,} from 'react';
 import { getCleaners } from '../api';
 
 const CleanerList = () => {
-  const [cleanerElements, setCleanerElements] = useState<ReactElement[]>([]);
+  const [cleanerNames, setCleanerNames] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchCleaners = async () => {
       const names = await getCleaners();
       if (names) {
-        const elements = names.map((name) => <option>{name}</option>);
-        setCleanerElements(elements);
+        setCleanerNames(names);
       }
     }
     fetchCleaners();
@@ -17,7 +16,9 @@ const CleanerList = () => {
 
   return (
     <>
-    {cleanerElements}
+    {cleanerNames.map((name) => (
+        <option key={name}>{name}</option>
+    ))}
     </>
    
   );
