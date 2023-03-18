@@ -38,6 +38,21 @@ function CustomerAppointments () {
                         <td>Standard</td>
                         <td>Bosse</td>
                     </tr>
+                    <tr>
+                        <td>March 19, 2023 3:00 PM</td>
+                        <td>Standard</td>
+                        <td>Bosse</td>
+                    </tr>
+                    <tr>
+                        <td>March 19, 2023 3:00 PM</td>
+                        <td>Standard</td>
+                        <td>Bosse</td>
+                    </tr>
+                    <tr>
+                        <td>March 19, 2023 3:00 PM</td>
+                        <td>Standard</td>
+                        <td>Bosse</td>
+                    </tr>
                     
                 </tbody>
             </table>

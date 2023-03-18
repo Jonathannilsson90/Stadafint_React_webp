@@ -19,7 +19,7 @@ function CustomerBooking () {
                     <div className="booking-form-section">
                     <p className="booking-p">Select time:</p>
                         <select id="booking-input">
-                        <option value=""></option>
+                        <option value="">---</option>
                         <option value="07:00">07:00</option>
                         <option value="08:00">08:00</option>
                         <option value="09:00">09:00</option>
@@ -53,6 +53,7 @@ function CustomerBooking () {
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaning type:</p>
                         <select id="booking-input">
+                        <option value="">---</option>
                         <option value="standard">Standard</option>
                         <option value="plus">Plus</option>
                         <option value="super">Super</option>
@@ -62,6 +63,7 @@ function CustomerBooking () {
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaner:</p>
                         <select id="booking-input">
+                        <option value="">---</option>
                         <option value="rickard">Rickard</option>
                         <option value="bosse">Bosse</option>
                         <option value="Agneta">Agneta</option>

@@ -1,26 +1,27 @@
 import '../styles/CustomerButtonBar.css';
 
 function CustomerButtonBar () {
-    return(<>
+        
 
+    return(<>
 
     <div className="button-bar">
 
-        <h2>How can we assist you today?</h2>
+        <h2 className="buttons-h2">How can we assist you today?</h2>
 
         <div className="buttons">
 
-        <div className="btn-1" id="btn">
-            <p>Book an appointment</p>
-            </div>
+        <button className="btn-1" id="btn">
+            <span>Book</span> an appointment
+            </button>
 
-        <div className="btn-2" id="btn">
-            <p>Check booked appointments</p>
-            </div>
+        <button className="btn-2" id="btn">
+            Check <span>booked</span> appointments
+            </button>
 
-        <div className="btn-3" id="btn">
-            <p>Check completed appointments</p>
-            </div>
+        <button className="btn-3" id="btn">
+            Check <span>completed</span> appointments
+            </button>
 
         </div>
 
