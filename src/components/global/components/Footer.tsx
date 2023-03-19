@@ -21,7 +21,7 @@ const Footer = (props: IFooter) => {
                 <div className="footer-about">
                     <div className="footer-logo">
                         <img className='logo-img' src={Diamond} alt='logo-picture'></img>
-                        <span>Diamond Clean</span>
+                        <span style={{fontFamily : 'fantasy'}}>Diamond Clean</span>
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>
                 </div>
