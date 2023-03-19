@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    
+    font-family: "terfens"
 }
 
 .footer-container{
@@ -44,7 +44,7 @@ ul li.list-title{
 }
 
 .footer-logo{
-    font-family:fantasy;
+    font-family :fantasy;
     font-weight: bold;
     display: flex;
     align-items: center;

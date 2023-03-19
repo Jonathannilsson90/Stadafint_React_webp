@@ -4,7 +4,7 @@ export const fetchData = async () :Promise<any> =>  {
     try
     {
         
-        const resp = await fetch('https://stadafint-server-production.up.railway.app/user/all') 
+        const resp = await fetch('https://stadafint-server-production.up.railway.app/user/all'); 
         const data = await resp.json();
            
           const transformData : User[] = data.users.map((d :User) => {

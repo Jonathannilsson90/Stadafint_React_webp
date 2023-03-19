@@ -30,7 +30,7 @@ const NavigationMenu = (props : INavigationMenu) => {
                 <div className="menu">
                     <div className="menu-logo">
                         <img className='logo-img' src={Diamond} alt='logo-picture'></img>
-                        <span>Diamond Clean</span>
+                        <span style={{fontFamily : 'fantasy'}}>Diamond Clean</span>
                     </div>
                     <div className="menu-center">
                         <Link to={"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}>Home</button></Link>            
