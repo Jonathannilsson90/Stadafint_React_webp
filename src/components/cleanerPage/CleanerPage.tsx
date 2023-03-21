@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Booking from "../../models/Booking";
-import './CleanerPage.css'
-import { TableItem, TableItemd } from "./Tableitem";
+import './css/CleanerPage.css'
+import { TableItem, TableItemd } from "./components/CleanerItem";
 
 
 
