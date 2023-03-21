@@ -1,6 +1,6 @@
-import "./tableitem.css";
+import './css/CleanerItem.css'
 
-interface ITableItem {
+interface IClenerItem {
   customername: string;
   cleanername: string;
   time: string;
@@ -16,7 +16,7 @@ export const TableItem = ({
   level,
   status,
 /*   handleToggle */
-}: ITableItem) => {
+}: IClenerItem) => {
   return (
     <>
       <tr>
@@ -37,7 +37,7 @@ export const TableItemd = ({
   time,
   level, 
 /*   handleToggle */
-}: ITableItem) => {
+}: IClenerItem) => {
   return (
     <>
       <tr>

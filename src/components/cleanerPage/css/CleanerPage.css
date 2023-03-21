@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Noto+Sans+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
+.contrainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(59, 59, 59);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+table {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  border-collapse: collapse;
+  width: 40rem;
+  box-shadow: 3px 4px 0.4em rgba(0, 0, 0, 0.062);
+}
+
+thead{
+  background-color: rgb(59, 59, 59);
+  color: white;
+}
+thead tr td{  
+  border: none;
+}
