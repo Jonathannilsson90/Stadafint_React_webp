@@ -1,4 +1,5 @@
 import '../css/NavigationMenu.css'
+
 import { Link }            from 'react-router-dom';
 import { INavigationMenu } from '../interfases';
 
@@ -6,19 +7,10 @@ import Diamond from '../../../assets/logo2.webp'
 
 const NavigationMenu = (props : INavigationMenu) => {
 
-/*     
-    console.log('Props log in text ');
-    console.log(props.loginText);
-    console.log('props login');
-    console.log(props.login);
-    console.log('props load');
-    console.log(props.load); */
-
     //-------------------------------------------------------------------
     const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
         console.log('scrollToElementClickHandler in navigation menu');   
         let el = event.currentTarget.dataset.element!;
-        console.log(el);
         props.onScrollToElementClickHandler(el)
     }
 
@@ -37,8 +29,8 @@ const NavigationMenu = (props : INavigationMenu) => {
             <header className="navigation">
                 <div className="menu">
                     <div className="menu-logo">
-                        <img className='logo-img' src={Diamond}></img>
-                        <span>Diamond Clean</span>
+                        <img className='logo-img' src={Diamond} alt='logo-picture'></img>
+                        <span style={{fontFamily : 'fantasy'}}>Diamond Clean</span>
                     </div>
                     <div className="menu-center">
                         <Link to={"/"}><button className="menubtn" data-element='header-section-wrapper' onClick={scrollToElementClickHandler}>Home</button></Link>            

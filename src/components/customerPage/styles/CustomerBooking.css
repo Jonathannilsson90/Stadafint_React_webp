@@ -1,0 +1,55 @@
+.booking-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.booking-p {
+    background-image: linear-gradient(to left, transparent 40%, orange  40%);
+    background-position: 0 1.2em;
+    background-size: 100% 4px;
+    background-repeat: no-repeat;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#booking-input {
+    border: none;
+    background-color: #f9f9f9;
+    width: 100%;
+    cursor: pointer;
+}
+
+.booking-radio {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    background-color:#f9f9f9;
+    accent-color: rgb(169, 218, 96);
+}
+
+#booking-button {
+    background-color: rgb(169, 218, 96);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#booking-button:hover {
+    background-color: rgb(191, 247, 108);
+    color: white;
+}
+
+#booking-button:active {
+    transform: translateY(2px);
+}

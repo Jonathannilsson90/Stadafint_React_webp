@@ -1,0 +1,19 @@
+.completed-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.completed-container table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.completed-container th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.completed-container li {
+    display: table-row;
+}

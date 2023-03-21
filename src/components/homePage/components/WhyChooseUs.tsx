@@ -1,7 +1,5 @@
 import '../css/WhyChooseUs.css'
 
-import { useState } from 'react';
-
 import WhyChooseUsCard from './WhyChooseUsCard';
 
 const ChooseUsSection = () => {

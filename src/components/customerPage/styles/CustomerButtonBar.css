@@ -1,0 +1,60 @@
+.button-bar {
+    background-color: #f9f9f9;
+    padding-bottom: 0.5rem;
+    position: sticky;
+    top: -30px;
+    height: auto;
+}
+
+.button-bar h2 {
+    text-align: center;
+}
+
+.buttons-h2 {
+    background-image: linear-gradient(to left, transparent 40%, orange  40%);
+    background-position: 51% 1.2em;
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-size: 25rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#btn {
+    height: 4rem;
+    background: white;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid rgb(169, 218, 96) 4px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+#btn:hover {
+    transform: scale(1.1);
+}
+
+
+.btn-1 {
+    
+}
+
+.btn-2 {
+    
+}
+
+.btn-3 {
+    
+}

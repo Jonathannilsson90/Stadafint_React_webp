@@ -8,18 +8,20 @@ import Diamond from '../../../assets/logo2.webp'
 
 const Footer = (props: IFooter) => {
    
+    //-------------------------------------------------------------------
     const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
         let el = event.currentTarget.dataset.element!;
         props.onScrollToElementClickHandler(el)
     }
 
+    //-------------------------------------------------------------------
     return (
         <footer className='footer'>
             <div className="footer-container">
                 <div className="footer-about">
                     <div className="footer-logo">
-                        <img className='logo-img' src={Diamond}></img>
-                        <span>Diamond Clean</span>
+                        <img className='logo-img' src={Diamond} alt='logo-picture'></img>
+                        <span style={{fontFamily : 'fantasy'}}>Diamond Clean</span>
                     </div>
                     <p className='footer-about-text'>We are a professional cleaning company offering all types of cleaning services</p>
                 </div>

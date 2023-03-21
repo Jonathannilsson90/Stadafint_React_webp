@@ -1,6 +1,9 @@
-import { useState } from 'react'
-import HowItWorksCard from './HowItWorksCard';
 import '../css/HowItWorks.css'
+
+import { useState } from 'react'
+
+import HowItWorksCard from './HowItWorksCard';
+
 
 const HowItWorks = () => {
 

@@ -1,12 +1,14 @@
 import '../css/LogInForm.css'
 
-import { useState }   from "react"
-import { Link }       from "react-router-dom";
+import { useState }    from "react"
+import { useNavigate } from "react-router-dom";
 
 import { ILogInForm } from "../interfaces";
 
 
-const LogInForm = (props: ILogInForm) => {
+const LogInForm = (props: ILogInForm) => { 
+    let navigation = useNavigate();
+
 
     //-------------------------- UseStates ------------------------------
     const [name, setName] = useState('');
@@ -46,8 +48,14 @@ const LogInForm = (props: ILogInForm) => {
                 </div> 
 
                 <div className="logged-in-buttons" style={{ display: !props.display ? 'flex' : 'none' }}>
-                    {props.isCustomer && <Link to={"/login/customer"} state={name}><button className="login-section-button btn" type="button">My Account</button></Link>}
-                    {!props.isCustomer && <Link to={"/login/cleaner"} state={name}><button className="login-section-button btn" type="button">My Account</button></Link>}
+                    {/* {props.isCustomer && <Link to={"/login/customer"} state={name}><button className="login-section-button btn" type="button">My Account</button></Link>}
+                    {!props.isCustomer && <Link to={"/login/cleaner"} state={name}><button className="login-section-button btn" type="button">My Account</button></Link>} */}
+                    {props.isCustomer && <button className="login-section-button btn" 
+                                                type="button"
+                                                onClick={() => navigation(`/login/customer/${name}`)}>My Account</button>}
+                    {!props.isCustomer &&<button className="login-section-button btn" 
+                                                type="button"
+                                                onClick={() => navigation(`/login/cleaner/${name}`)}>My Account</button>}
                 </div>
 
             </form>

@@ -49,7 +49,7 @@ const ServiceSection = () => {
     (
         <div key={card.id} className='offered-services-card'>
             <div className='offered-services-image'>
-                <img className='servise-image' src={card.image} />
+                <img className='servise-image' src={card.image} alt='service'/>
             </div>
             <div className='offered-services-text'>
                 <h3>{card.title}</h3>
