@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
@@ -35,19 +35,10 @@ function App() {
     //console.log(loginText);
   }
 
-  /*   const  onScrollToElementClickHandler = (el : string) =>{
-      setLogin(false);
-      setLoginText('Log in');
-      setLoad('/login');
-      console.log('scrollToElementClickHandler in app');
-      console.log('El');
-      console.log(el);
-  
-      
+  /*   const  onScrollToElementClickHandler = (el : string) =>{      
       let element = document.querySelector('.' + el)!;
       console.log('Element');
       console.log(element);
-  
       if (element) {
           element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
         }
@@ -58,10 +49,6 @@ function App() {
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
-    //console.log('scrollToElementClickHandler in app');
-    //console.log('El');
-    //console.log(el);
-
     let selector: string = '.' + el;
 
     async function waitForElement(selector: string, timeout = 15000) {
@@ -82,12 +69,15 @@ function App() {
   }
 
   //-------------------------------------------------------------------
-  const onLogOutClickHandler = () => {
+  
+/*   const onLogOutClickHandler = () => {
     //console.log('onLogOutClickHandler in app');
+    
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
-  }
+  }  */
+
 
   return (
     <div className="App">
@@ -101,7 +91,7 @@ function App() {
             load={load}></NavigationMenu>
           <Routes>
             <Route path='/' element={<HomePage
-              onLogOutClickHandler={onLogOutClickHandler} />} />
+              loginButtonTextHandler={loginButtonTextHandler}/>} />
             <Route path='/login' element={<LogInPage loginButtonTextHandler={loginButtonTextHandler} />} />
             <Route path='/login/customer/:name' element={<CustomerPage/>} />
             <Route path='/login/cleaner/:name' element={<CleanerPage/>} />

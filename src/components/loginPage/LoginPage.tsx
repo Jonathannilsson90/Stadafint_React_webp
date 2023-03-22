@@ -138,11 +138,11 @@ const LogInPage = (props: ILogInPage) => {
       <>
       <NameContext.Provider value={{text, setText}}>
           <LogInForm  onSubmitHandler={onSubmitHandler}
-                          onAddNewCustomerHandler={onAddNewCustomerHandler}
+                      onAddNewCustomerHandler={onAddNewCustomerHandler}
                           // text={text}
-                          display={display}
-                          newCustomer={newCustomer}
-                          isCustomer={isCustomer} ></LogInForm> 
+                      display={display}
+                      newCustomer={newCustomer}
+                      isCustomer={isCustomer} ></LogInForm> 
           </NameContext.Provider>
       </> 
   )

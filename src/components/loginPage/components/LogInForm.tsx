@@ -8,6 +8,7 @@ import { NameContext } from '../LoginPage';
 
 
 const LogInForm = (props: ILogInForm) => { 
+
     let navigation = useNavigate();
 
     const {text} = useContext(NameContext)
@@ -21,9 +22,9 @@ const LogInForm = (props: ILogInForm) => {
         props.onSubmitHandler(name);
     }
 
+    //-------------------------------------------------------------------
     const addNewCustomerHandler = (name : string) => {
         props.onAddNewCustomerHandler(name);            
-        //navigation(`/login/customer/${name}`)
     }
 
     //-------------------------------------------------------------------
