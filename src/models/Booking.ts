@@ -5,13 +5,13 @@ class Booking
     cleanerName: string;
     level: string;
     time: string;
-    date: Date;
+    date: string;
     status: boolean
 
 
     constructor(
                 _id: string,
-                date : Date, 
+                date : string, 
                 time: string, 
                 customerName: string, 
                 level: string, 

@@ -1,8 +1,11 @@
+
 import '../styles/CustomerBooking.css'
-import {getCleaners, getCustomer} from './api'
-import CleanerList from './forms/CleaningForm'
+import { CleanerList } from './forms/CleaningForm'
+
 
 function CustomerBooking () {
+
+
 
     return(
         <div className="customer-containers">
@@ -51,17 +54,6 @@ function CustomerBooking () {
                         <label className="booking-radio">Window</label>
                     </div>
 
-
-                    <div className="booking-form-section">
-                        <p className="booking-p">Select cleaning type:</p>
-                        <select id="booking-input">
-                        <option value="">---</option>
-                        <option value="standard">Standard</option>
-                        <option value="plus">Plus</option>
-                        <option value="super">Super</option>
-                        </select>
-                    </div>
-
                     <div className="booking-form-section">
                         <p className="booking-p">Select cleaner:</p>
                         <select id="booking-input">
@@ -74,14 +66,10 @@ function CustomerBooking () {
                     <div id="booking-form-section">
                         <br/>
                         <button id="booking-button">Confirm</button>
-                        {/* Add preventDefault() to avoid bug */}
 
                     </div>
 
                 </form>
-                <button onClick={getCleaners}>Cleaners</button>
-                
-                <button onClick={getCustomer}>Customer</button>
                
         </div>
     )
