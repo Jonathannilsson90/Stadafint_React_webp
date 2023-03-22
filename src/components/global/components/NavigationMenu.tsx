@@ -9,7 +9,7 @@ const NavigationMenu = (props : INavigationMenu) => {
 
     //-------------------------------------------------------------------
     const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
-        console.log('scrollToElementClickHandler in navigation menu');   
+        //console.log('scrollToElementClickHandler in navigation menu');   
         let el = event.currentTarget.dataset.element!;
         props.onScrollToElementClickHandler(el)
     }
