@@ -21,7 +21,7 @@ const HomePage = (props :IHomePage) => {
           }
     }  */
 
-    props.onLogOutClickHandler()
+    props.loginButtonTextHandler(false)
 
     //-------------------------------------------------------------------
     return (

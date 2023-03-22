@@ -14,7 +14,8 @@ export interface IWhyChooseUsCard {
 }
 
 export interface IHomePage {
-    onLogOutClickHandler:  () => void;
+    //onLogOutClickHandler:  () => void;
+    loginButtonTextHandler :  (login : boolean) => void;
 }
 
 export interface IContactUsCard {
