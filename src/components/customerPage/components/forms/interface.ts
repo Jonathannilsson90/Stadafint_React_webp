@@ -1,11 +1,11 @@
-interface BookingData {
-    customerName: string;
-    cleanerName: string;
-    level: string;
+
+
+interface FormData {
+    customername: string;
+    cleanername: string;
     time: string;
+    level: string;
     date: string;
-    status:boolean
-
-}
-
-export default BookingData
+  }
+  
+export default FormData

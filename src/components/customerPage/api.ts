@@ -1,5 +1,8 @@
+
+import { createContext } from "react";
 import User from "../../models/User";
 import { fetchAPIData } from "../global/api";
+
 
 export const getCleaners = async () => {
   try {
@@ -17,6 +20,17 @@ export const getCleaners = async () => {
     console.log(error);
   }
 };
+
+
+interface APIContextProps {
+  apiUrl: string;
+}
+
+const APIContext = createContext<APIContextProps>({
+  apiUrl: 'https://stadafint-server-production.up.railway.app/'
+});
+
+export default APIContext;
 
 
 //Get customers from the API
