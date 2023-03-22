@@ -11,7 +11,6 @@ import CleanerPage    from './components/cleanerPage/CleanerPage';
 
 function App() {
 
-
   const [login, setLogin] = useState(false);
   const [loginText, setLoginText] = useState('Log in');
   const [load, setLoad] = useState('/login');
@@ -19,9 +18,9 @@ function App() {
   //const [el, setEl] = useState<Element>();
   //-------------------------------------------------------------------
   const loginButtonTextHandler = (login: boolean) => {
-    console.log('loginButtonTestHandler in app.tsx');
-    console.log('login');
-    console.log(login);
+    //console.log('loginButtonTestHandler in app.tsx');
+    //console.log('login');
+    //console.log(login);
 
     if (login) {
       setLoginText('Log out');
@@ -32,8 +31,8 @@ function App() {
       setLoad('/login');
     };
 
-    console.log('loginText');
-    console.log(loginText);
+    //console.log('loginText');
+    //console.log(loginText);
   }
 
   /*   const  onScrollToElementClickHandler = (el : string) =>{
@@ -59,13 +58,11 @@ function App() {
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
-    console.log('scrollToElementClickHandler in app');
-    console.log('El');
-    console.log(el);
+    //console.log('scrollToElementClickHandler in app');
+    //console.log('El');
+    //console.log(el);
 
     let selector: string = '.' + el;
-    console.log('Selector');
-    console.log(selector);
 
     async function waitForElement(selector: string, timeout = 15000) {
       const start = Date.now();
@@ -80,12 +77,13 @@ function App() {
       }
       return null;
     }
+
     waitForElement(selector);
   }
 
   //-------------------------------------------------------------------
   const onLogOutClickHandler = () => {
-    console.log('onLogOutClickHandler in app');
+    //console.log('onLogOutClickHandler in app');
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
