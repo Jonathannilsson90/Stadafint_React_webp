@@ -12,13 +12,6 @@ import { IHomePage } from './interfaces'
 
 const HomePage = (props :IHomePage) => {
 
-/*     const location = useLocation();
-    const data = location.state;
-    console.log('data in customer account')
-    console.log(data);
-  
-    console.log('Data');
-    console.log(data);   */
     
 /*      const  onScrollToElementClickHandler =(el : string) =>{
         let element = document.querySelector('.' + el);
