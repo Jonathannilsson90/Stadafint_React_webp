@@ -104,7 +104,7 @@ const {register, handleSubmit, formState: {errors}} = useForm<FormData>()
             {...register('level', {required: true})}
           ></input>
           <label className="booking-radio">Window</label>
-          {errors.level && <div className="error">*Please check one button.</div>}
+          {errors.level && <div className="error">*Please select one type of cleaning.</div>}
         </div>
 
         <div className="booking-form-section">
@@ -116,7 +116,7 @@ const {register, handleSubmit, formState: {errors}} = useForm<FormData>()
             <option value=""></option>
             <CleanerList />
           </select>
-          {errors.cleanername && <div className="error">*Please desired cleaner.</div> }
+          {errors.cleanername && <div className="error">*Please select desired cleaner.</div> }
         </div>
 
         <div id="booking-form-section">
