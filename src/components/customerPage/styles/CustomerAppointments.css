@@ -4,16 +4,43 @@
     align-items: center;
 }
 
-.appointments-container table {
-    border: 1px solid black;
+.appointments-container-table {
     border-collapse: collapse;
+    width: 98%;
+    margin-left: 2rem;
 }
 
 .appointments-container th, td {
     border: 1px solid black;
     padding: 8px;
 }
+#appointments-delete-button {
 
-.appointments-container li {
-    display: table-row;
+    background-color: rgb(169, 218, 96);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#appointments-delete-button:hover {
+background-color: rgb(191, 247, 108);
+    color: white;
+}
+
+.appointments-table-header {
+    text-decoration: underline orange 2px;;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.appointments-container-table input {
+    accent-color: rgb(169, 218, 96);
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
 }

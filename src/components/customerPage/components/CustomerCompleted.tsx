@@ -9,32 +9,37 @@ function CustomerCompleted () {
                 <h2><span className="colored-word">Completed</span> appointments</h2>
             </div>
 
-            <table>
-                <thead>
+            <table className="completed-container-table">
+                <thead className="completed-table-header">
                     <tr>
-                    <th>Time and Date</th>
+                    <th>Date</th>
+                    <th>Time</th>
                     <th>Type</th>
                     <th>Cleaner</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>March 15, 2023 10:00 AM</td>
+                        <td>March 15, 2023</td>
+                        <td>10:00 AM</td>
                         <td>Plus</td>
                         <td>Rickard</td>
                     </tr>
                     <tr>
-                        <td>March 16, 2023 2:00 PM</td>
+                        <td>March 15, 2023</td>
+                        <td>10:00 AM</td>
                         <td>Standard</td>
                         <td>Rickard</td>
                     </tr>
                     <tr>
-                        <td>March 18, 2023 9:30 AM</td>
+                        <td>March 15, 2023</td>
+                        <td>10:00 AM</td>
                         <td>Super</td>
                         <td>Agneta</td>
                     </tr>
                     <tr>
-                        <td>March 19, 2023 3:00 PM</td>
+                        <td>March 15, 2023</td>
+                        <td>10:00 AM</td>
                         <td>Standard</td>
                         <td>Bosse</td>
                     </tr>
