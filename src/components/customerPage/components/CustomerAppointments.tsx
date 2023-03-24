@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 interface Booking {
     _id: string;
+    customername: string;
     cleanername: string;
     time: string;
     level: string;
@@ -37,21 +38,24 @@ interface Booking {
               <th>Time</th>
               <th>Type</th>
               <th>Cleaner</th>
-              <button id="appointments-delete-button">Delete</button>
             </tr>
           </thead>
           <tbody>
             {booking.map((booking, index) => (
               <tr key={index}>
-                <td>{booking.date}</td>
-                <td>{booking.time}</td>
-                <td>{booking.level}</td>
-                <td>{booking.cleanername}</td>
-                <td><input type="checkbox"></input></td>
+                <td className="hejda">{booking.date}</td>
+                <td className="hejda">{booking.time}</td>
+                <td className="hejda">{booking.level}</td>
+                <td className="hejda">{booking.cleanername}</td>
+                <input type="checkbox"></input>
               </tr>
             ))}
           </tbody>
         </table>
+
+        <div className="appointments-delete-container">
+          <button id="appointments-delete-button">Delete</button>
+        </div>
       </div>
     );
   }
