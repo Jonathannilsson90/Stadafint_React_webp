@@ -6,7 +6,6 @@ import CustomerAppointments from './components/CustomerAppointments'
 import CustomerCompleted from './components/CustomerCompleted'
 import APIContext from './api';
 
-//TODO: FIX CSS BY COMPILING
 
 const CustomerPage = () => {
     const apiUrl = 'https://stadafint-server-production.up.railway.app/'
@@ -16,7 +15,7 @@ const CustomerPage = () => {
             <CustomerHero />
             <CustomerButtonBar />
             <CustomerBooking />
-            <CustomerAppointments />
+            <CustomerAppointments/>
             <CustomerCompleted />
         </div>
             </APIContext.Provider>
