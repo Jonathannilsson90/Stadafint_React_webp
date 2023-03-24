@@ -15,12 +15,10 @@ function App() {
   const [loginText, setLoginText] = useState('Log in');
   const [load, setLoad] = useState('/login');
 
-  //const [el, setEl] = useState<Element>();
+  
+
   //-------------------------------------------------------------------
   const loginButtonTextHandler = (login: boolean) => {
-    //console.log('loginButtonTestHandler in app.tsx');
-    //console.log('login');
-    //console.log(login);
 
     if (login) {
       setLoginText('Log out');
@@ -30,9 +28,6 @@ function App() {
       setLoginText('Log in');
       setLoad('/login');
     };
-
-    //console.log('loginText');
-    //console.log(loginText);
   }
 
   /*   const  onScrollToElementClickHandler = (el : string) =>{      
@@ -46,9 +41,11 @@ function App() {
     
   //-------------------------------------------------------------------
   const onScrollToElementClickHandler = (el: string) => {
+
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
+
     let selector: string = '.' + el;
 
     async function waitForElement(selector: string, timeout = 15000) {

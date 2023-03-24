@@ -23,17 +23,13 @@ export const fetchData = async () :Promise<any> =>  {
 }
 
 
-
-
 export const addData = async (name: string) => 
 {
              
   let newCustomer = {
       name: name,
-      isCustomer: true
-      
+      isCustomer: true    
   } 
-
       try
   {
       const res = await fetch('https://stadafint-server-production.up.railway.app/user/register', 

@@ -17,6 +17,7 @@ export const NameContext = createContext<INameContext>({
   setText: () => {}
 });
 
+
 const LogInPage = (props: ILogInPage) => {
 
   //-------------------------- UseStates ------------------------------
@@ -61,13 +62,14 @@ const LogInPage = (props: ILogInPage) => {
   }, []); 
 
   //-------------------------------------------------------------------
-  const onSubmitHandler = (name :string) => {
-    
+  const onSubmitHandler = async (name :string) => {
+
     const filtered = users.filter((value) => value.name === name);
 
+    console.log('inside onSubmitHandler'); 
+    console.log(users);
     if (filtered.length !== 0)
     {
-      //console.log('inside filtered.length !== 0'); 
       setText(name);
       setDisplay(false);
       setIsCustomer(filtered[0].isCustomer);  
@@ -86,36 +88,10 @@ const LogInPage = (props: ILogInPage) => {
   }
 
   //-------------------------------------------------------------------
-  const onAddNewCustomerHandler = (name: string) => {
-    //console.log('inside onAddNewCustomerHandler'); 
+  const onAddNewCustomerHandler = async (name: string) => {
+    console.log('inside onAddNewCustomerHandler'); 
+    console.log(users); 
     
-
-/*     const addData = async (name: string) => 
-    {
-                 
-      let newCustomer = {
-          name: name,
-          isCustomer: true
-          
-      } 
-  
-          try
-      {
-          const res = await fetch('https://stadafint-server-production.up.railway.app/user/register', 
-          {
-              method: 'POST',
-              body: JSON.stringify(newCustomer),
-              headers: 
-              {
-                  'Content-Type': 'application/json',
-              }
-          })    
-      }
-      catch(error) 
-      {
-          console.log(error);     
-      } 
-    } */
 
     setText(name);
     setDisplay(false);
@@ -124,9 +100,10 @@ const LogInPage = (props: ILogInPage) => {
     setNewCustomer(true);  
 
   props.loginButtonTextHandler(login);
-  addData(name); 
 
-  }
+  let res = await addData(name);
+  
+}
 
   //-------------------------------------------------------------------
   

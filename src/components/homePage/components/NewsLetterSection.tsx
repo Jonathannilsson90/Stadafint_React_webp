@@ -1,6 +1,5 @@
 import '../css/NewsLetterSection.css'
 
-
 const NewsLetter = () => {
     
     //-------------------------------------------------------------------
