@@ -11,15 +11,15 @@ import APIContext from './api';
 const CustomerPage = () => {
     const apiUrl = 'https://stadafint-server-production.up.railway.app/'
     return(
-           <APIContext.Provider value={{apiUrl}}>
         <div className="main-page">
+            <APIContext.Provider value={{apiUrl}}>
             <CustomerHero />
             <CustomerButtonBar />
             <CustomerBooking />
             <CustomerAppointments />
             <CustomerCompleted />
-        </div>
             </APIContext.Provider>
+        </div>
     )
 }
 
