@@ -53,3 +53,8 @@
 #booking-button:active {
     transform: translateY(2px);
 }
+
+.error {
+    font-size: 10px;
+
+}
