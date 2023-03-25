@@ -1,43 +1,36 @@
 import '../styles/CustomerAppointments.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import BookedAppointments from './interface';
 
-interface Booking {
-    _id: string;
-    customername: string;
-    cleanername: string;
-    time: string;
-    level: string;
-    date: string;
-}
-  
 function CustomerAppointments() {
-  const [booking, setBooking] = useState<Booking[]>([]);
+  const [booking, setBooking] = useState<BookedAppointments[]>([]);
+  
+  // Filter like jonathan
 
-  useEffect(() => {
-    async function fetchBookings() {
-      try {
-        const response = await axios.get(
-          `https://stadafint-server-production.up.railway.app/booking/allbookings`
-          );
-        setBooking(response.data);
-      } catch (error) {
-        console.error(error);
-      }
+  async function fetchBookings() {
+    try {
+      const response = await axios.get(
+        `https://stadafint-server-production.up.railway.app/booking/allbookings`
+      );
+      setBooking(response.data);
+    } catch (error) {
+      console.error(error);
     }
-    fetchBookings();
-  }, []);
+  }
+  
+  fetchBookings();
 
-  // async function handleDelete() {
+  // async function handleDelete(props: BookedAppointments) {
   //   try {
   //     const response = await axios.delete(
-  //       `https://stadafint-server-production.up.railway.app/deletebooking/:bookingId`
+  //       `https://stadafint-server-production.up.railway.app/deletebooking/:${props._id}`
   //       );
   //   } catch (error) {
   //     console.log(error)
   //   }
   // }
-
+  
   return (
     <div className="customer-containers">
       <div className="appointments-header">
@@ -63,11 +56,18 @@ function CustomerAppointments() {
               {/* REMOVE FOLLOWING */}
               <td>{booking.customername}</td>
               <td>{booking._id}</td>
-              <input type="checkbox" id="appointment-checkbox"></input>
+              <input type="checkbox" id={booking._id}></input>
             </tr>
           ))}
-        
-        </tbody>
+
+          <tr>
+              <td>March 15, 2023</td>
+              <td>10:00 AM</td>
+              <td>Standard</td>
+              <td>Rickard</td>
+              <input type="checkbox"></input>
+          </tr>
+          </tbody>
       </table>
 
       <div className="appointments-delete-container">
