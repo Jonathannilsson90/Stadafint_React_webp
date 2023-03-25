@@ -1,6 +1,6 @@
 import "../styles/CustomerBooking.css";
 
-import { useContext} from "react";
+import { useContext, useState} from "react";
 import axios from "axios";
 import APIContext from "../api";
 import FormData from "./forms/interface";
@@ -14,7 +14,7 @@ function CustomerBooking() {
   const { name } = useParams<{ name?: string }>();
   const customername = name ?? "Default Name";
   
-const {register, handleSubmit, formState: {errors}} = useForm<FormData>()
+const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
 
 
   const onSubmit = async (formData: FormData) => {
@@ -24,6 +24,7 @@ const {register, handleSubmit, formState: {errors}} = useForm<FormData>()
         const response = await axios.post(
           `${apiUrl}booking/createbooking`, completeData
         );
+        reset()
         console.log(response.data);
       } catch (error) {
         console.error(error);
@@ -122,7 +123,6 @@ const {register, handleSubmit, formState: {errors}} = useForm<FormData>()
         <div id="booking-form-section">
           <br />
           <button id="booking-button" type="submit">Confirm</button>
-
         </div>
       </form>
     </div>

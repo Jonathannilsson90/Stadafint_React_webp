@@ -9,5 +9,5 @@ export interface ILogInForm {
 
 export interface ILogInPage {
     loginButtonTextHandler: (login : boolean) => void
-
 }
+
