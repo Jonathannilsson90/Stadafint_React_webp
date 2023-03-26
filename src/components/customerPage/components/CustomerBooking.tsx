@@ -24,8 +24,8 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
         const response = await axios.post(
           `${apiUrl}booking/createbooking`, completeData
         );
-        reset()
         console.log(response.data);
+        reset()
       } catch (error) {
         console.error(error);
       }
@@ -101,7 +101,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
           <input
             className="booking-radio"
             type="radio"
-            value="WINDOW"
+            value="WINDOWS"
             {...register('level', {required: true})}
           ></input>
           <label className="booking-radio">Window</label>
