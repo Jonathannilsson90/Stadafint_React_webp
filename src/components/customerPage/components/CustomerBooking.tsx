@@ -29,7 +29,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
         reset()
       } catch (error) {
         console.error(error);
-        if(isAxiosError(error) && error.response && error.response.status === 400){
+        if(isAxiosError(error) && error.response && error.response.status === 409){
           setErrorMessage('This time is not available, please try another one.')
         } else {
           setErrorMessage('An unexpected error has occured, please try again later.')
