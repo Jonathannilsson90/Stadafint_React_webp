@@ -1,11 +1,13 @@
 import '../styles/CustomerAppointments.css';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BookedAppointments from './interface';
+import { useParams } from "react-router-dom"
 
 function CustomerAppointments() {
   const [booking, setBooking] = useState<BookedAppointments[]>([]);
-  
+  let {name} = useParams()
+
   // Filter like jonathan
 
   async function fetchBookings() {
@@ -46,8 +48,7 @@ function CustomerAppointments() {
           </tr>
         </thead>
         <tbody>
-          {/* .filer() */}
-          {booking.map((booking, index) => (
+          {booking.filter((bookingArray) => bookingArray.customername === name).map((booking, index) =>  (
             <tr key={index}>
               <td>{booking.date}</td>
               <td>{booking.time}</td>
@@ -59,14 +60,6 @@ function CustomerAppointments() {
               <input type="checkbox" id={booking._id}></input>
             </tr>
           ))}
-
-          <tr>
-              <td>March 15, 2023</td>
-              <td>10:00 AM</td>
-              <td>Standard</td>
-              <td>Rickard</td>
-              <input type="checkbox"></input>
-          </tr>
           </tbody>
       </table>
 

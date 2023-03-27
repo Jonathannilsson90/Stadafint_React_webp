@@ -1,6 +1,5 @@
 import '../styles/CustomerHero.css';
 import { useParams } from "react-router-dom"
-import CleanerScrub from '../../../assets/CleanerScrub.png'
 
 function CustomerHero () {
 
