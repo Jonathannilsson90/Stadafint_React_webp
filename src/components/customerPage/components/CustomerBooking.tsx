@@ -1,18 +1,18 @@
 import "../styles/CustomerBooking.css";
 
-import { useContext, useState} from "react";
-import axios from "axios";
-import APIContext from "../api";
+import { useState} from "react";
+import axios, { isAxiosError } from "axios";
 import FormData from "./forms/interface";
 import { CleanerList } from "./forms/CleaningForm";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+const apiUrl = 'https://stadafint-server-production.up.railway.app/'
 function CustomerBooking() {
 
-  const { apiUrl } = useContext(APIContext);
+
   const { name } = useParams<{ name?: string }>();
   const customername = name ?? "Default Name";
+  const [errorMessage, setErrorMessage] = useState('')
   
 const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
 
@@ -25,9 +25,15 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
           `${apiUrl}booking/createbooking`, completeData
         );
         console.log(response.data);
+        setErrorMessage('')
         reset()
       } catch (error) {
         console.error(error);
+        if(isAxiosError(error) && error.response && error.response.status === 400){
+          setErrorMessage('This time is not available, please try another one.')
+        } else {
+          setErrorMessage('An unexpected error has occured, please try again later.')
+        }
       }
     } 
 
@@ -123,6 +129,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
         <div id="booking-form-section">
           <br />
           <button id="booking-button" type="submit">Confirm</button>
+      {errorMessage && <div className="error">{errorMessage}</div>}
         </div>
       </form>
     </div>
