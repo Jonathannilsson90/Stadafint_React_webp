@@ -6,7 +6,7 @@ interface IClenerItem {
   time: string;
   level: string;
   status: boolean;
-/*   handleToggle: (customername: string) =>void */
+  handleToggle: (customername: string) =>void 
 }
 
 export const TableItem = ({
@@ -15,7 +15,7 @@ export const TableItem = ({
   time,
   level,
   status,
-/*   handleToggle */
+  handleToggle 
 }: IClenerItem) => {
   return (
     <>
@@ -25,7 +25,7 @@ export const TableItem = ({
         <td>{time}</td>
         <td>{level}</td>
         <td>
-          <button /*  onClick={()=>handleToggle(customername)} */>Done</button>
+          <button onClick={()=>handleToggle(customername)}>Done</button>
         </td>
       </tr>
     </>
