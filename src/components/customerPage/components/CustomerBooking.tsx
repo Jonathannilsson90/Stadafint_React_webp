@@ -14,7 +14,7 @@ function CustomerBooking() {
   const customername = name ?? "Default Name";
   const [errorMessage, setErrorMessage] = useState('')
   
-const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
+const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} = useForm<FormData>()
 
 
   const onSubmit = async (formData: FormData) => {
@@ -24,6 +24,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
         const response = await axios.post(
           `${apiUrl}booking/createbooking`, completeData
         );
+  
         console.log(response.data);
         setErrorMessage('')
         reset()
@@ -32,7 +33,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
         if(isAxiosError(error) && error.response && error.response.status === 409){
           setErrorMessage('This time is not available, please try another one.')
         } else {
-          setErrorMessage('An unexpected error has occured, please try again later.')
+          setErrorMessage('An unexpected error has occurred, please try again later.')
         }
       }
     } 
@@ -130,6 +131,7 @@ const {register, handleSubmit, reset, formState: {errors}} = useForm<FormData>()
           <br />
           <button id="booking-button" type="submit">Confirm</button>
       {errorMessage && <div className="error">{errorMessage}</div>}
+      {isSubmitSuccessful && <div className="success">Booking confirmed!</div>}
         </div>
       </form>
     </div>
