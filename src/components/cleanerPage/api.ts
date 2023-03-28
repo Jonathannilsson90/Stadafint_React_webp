@@ -2,6 +2,7 @@
 import { createContext } from "react";
 import User from "../../models/User";
 import { fetchAPIData } from "../global/api";
+import { data } from "./CleanerPage";
 
 
 export const getCleanersName = async () => {
@@ -35,3 +36,8 @@ export const getCleaner = async () => {
       console.log(error);
     }
 };
+const getrightcleaner =()=>{
+    if (data === getCleanersName){
+      return
+    }
+  }
