@@ -29,13 +29,23 @@ function CustomerAppointments() {
     }
   }
 
-  async function handleDelete(id: string) {
-    try {
-      const response = await axios.delete(
-        `https://stadafint-server-production.up.railway.app/booking/deletebooking/${id}`
+  async function handleDelete(checkedRows: string[]) {
+
+    console.log("starting array " + checkedRows)
+
+    while (checkedRows.length > 0) {
+      const removeId = checkedRows.shift();
+
+      console.log("deleted " + removeId);
+      console.log("Array contains: " + checkedRows);
+
+      try {
+        const response = await axios.delete(
+          `https://stadafint-server-production.up.railway.app/booking/deletebooking/${removeId}`
         );
-    } catch (error) {
-      console.log(error)
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
   
@@ -69,7 +79,7 @@ function CustomerAppointments() {
       </table>
 
       <div className="appointments-delete-container">
-        <button id="appointments-delete-button" onClick={() => console.log(checkedRows)}>Cancel</button>
+        <button id="appointments-delete-button" onClick={() => handleDelete(checkedRows)}>Cancel</button>
       </div>
     </div>
   );
