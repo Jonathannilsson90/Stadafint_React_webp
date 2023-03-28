@@ -130,8 +130,8 @@ const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} =
         <div id="booking-form-section">
           <br />
           <button id="booking-button" type="submit">Confirm</button>
-      {errorMessage && <div className="error">{errorMessage}</div>}
-      {isSubmitSuccessful && <div className="success">Booking confirmed!</div>}
+      {errorMessage ? ( <div className="error">{errorMessage}</div>) :isSubmitSuccessful ? (<div className="success">Booking confirmed!</div>) : null}
+      
         </div>
       </form>
     </div>
