@@ -12,11 +12,6 @@
     box-shadow: none;
 }
 
-.appointments-container th, td {
-    border: 1px solid black;
-    padding: 8px;
-}
-
 #appointments-delete-button {
     background-color: rgb(169, 218, 96);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);

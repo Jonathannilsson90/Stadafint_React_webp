@@ -6,9 +6,8 @@ import { useParams } from "react-router-dom"
 
 function CustomerAppointments() {
   const [booking, setBooking] = useState<BookedAppointments[]>([]);
+  const [checkedRows, setCheckedRows] = useState<string[]>([]);
   let {name} = useParams()
-
-  // Filter like jonathan
 
   async function fetchBookings() {
     try {
@@ -23,15 +22,42 @@ function CustomerAppointments() {
   
   fetchBookings();
 
-  // async function handleDelete(props: BookedAppointments) {
-  //   try {
-  //     const response = await axios.delete(
-  //       `https://stadafint-server-production.up.railway.app/deletebooking/:${props._id}`
-  //       );
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
+  function HandleChecked(id: string) {
+    if (checkedRows.includes(id)) {
+
+      setCheckedRows(checkedRows.filter((rowId) => rowId !== id));
+    } else {
+
+      setCheckedRows([...checkedRows, id]);
+    }
+  }
+
+
+  async function handleDelete(checkedRows: string[]) {
+    
+    //bryt ut array
+    //loop
+
+    //FIXXX!!!!!!!!!!!
+
+    console.log("starting array " + checkedRows)
+
+    while (checkedRows.length > 0) {
+      const removeId = checkedRows.shift();
+  
+      console.log("deleted " + removeId);
+      console.log("Array contains: " + checkedRows);
+  
+      try {
+        const response = await axios.delete(
+          `https://stadafint-server-production.up.railway.app/booking/deletebooking/${removeId}`
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+  };
   
   return (
     <div className="customer-containers">
@@ -54,17 +80,16 @@ function CustomerAppointments() {
               <td>{booking.time}</td>
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
-              {/* REMOVE FOLLOWING */}
-              <td>{booking.customername}</td>
               <td>{booking._id}</td>
-              <input type="checkbox" id={booking._id}></input>
+
+              <input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input>
             </tr>
           ))}
-          </tbody>
+        </tbody>
       </table>
 
       <div className="appointments-delete-container">
-        <button id="appointments-delete-button">Cancel</button>
+        <button id="appointments-delete-button" onClick={() => handleDelete(checkedRows)}>Cancel</button>
       </div>
     </div>
   );
