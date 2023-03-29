@@ -1,7 +1,7 @@
 import '../styles/CustomerAppointments.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import BookedAppointments from './interface';
+import {BookedAppointments} from './interface';
 import { useParams } from "react-router-dom"
 
 function CustomerAppointments() {
