@@ -32,22 +32,7 @@ const dummyData = [
 
 
 
-
-
-
-
 const CleanerPage = () => {
-
-
-  // Get
-
-
-
-
-
-
-
-
 
 
     //-------------Data in from home(landing) page end-------------
