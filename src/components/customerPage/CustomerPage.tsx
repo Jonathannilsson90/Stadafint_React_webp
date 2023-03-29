@@ -6,7 +6,6 @@ import CustomerAppointments from './components/CustomerAppointments'
 import CustomerCompleted from './components/CustomerCompleted'
 
 
-//TODO: FIX CSS BY COMPILING
 
 const CustomerPage = () => {
    
@@ -16,7 +15,7 @@ const CustomerPage = () => {
             <CustomerHero />
             <CustomerButtonBar />
             <CustomerBooking />
-            <CustomerAppointments />
+            <CustomerAppointments/>
             <CustomerCompleted />
           
         </div>

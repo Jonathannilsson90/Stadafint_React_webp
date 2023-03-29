@@ -4,9 +4,10 @@
     align-items: center;
 }
 
-.completed-container table {
-    border: 1px solid black;
+.completed-container-table {
     border-collapse: collapse;
+    width: 98%;
+    margin-left: 2rem;
 }
 
 .completed-container th, td {
@@ -16,4 +17,11 @@
 
 .completed-container li {
     display: table-row;
+}
+
+.completed-table-header {
+    text-decoration: underline orange 2px;;
+    background-color: white;
+    color: black;
+    text-align: left;
 }

@@ -1,42 +1,50 @@
 import "../styles/CustomerBooking.css";
 
-import { useState} from "react";
+import { useState } from "react";
 import axios, { isAxiosError } from "axios";
-import FormData from "./forms/interface";
-import { CleanerList } from "./forms/CleaningForm";
+import { FormData } from "./interface";
+import { CleanerList } from "./CleanerList";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
-const apiUrl = 'https://stadafint-server-production.up.railway.app/'
+import { apiUrl } from "src/components/global/api";
 function CustomerBooking() {
-
-
   const { name } = useParams<{ name?: string }>();
   const customername = name ?? "Default Name";
-  const [errorMessage, setErrorMessage] = useState('')
-  
-const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} = useForm<FormData>()
+  const [errorMessage, setErrorMessage] = useState("");
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitSuccessful },
+  } = useForm<FormData>();
 
   const onSubmit = async (formData: FormData) => {
- 
-      try {
-        const completeData = {...formData, customername: customername}
-        const response = await axios.post(
-          `${apiUrl}booking/createbooking`, completeData
+    try {
+      const completeData = { ...formData, customername: customername };
+      const response = await axios.post(
+        `${apiUrl}booking/createbooking`,
+        completeData
+      );
+
+      console.log(response.data);
+      setErrorMessage("");
+      reset();
+    } catch (error) {
+      console.error(error);
+      if (
+        isAxiosError(error) &&
+        error.response &&
+        error.response.status === 409
+      ) {
+        setErrorMessage("This time is not available, please try another one.");
+      } else {
+        setErrorMessage(
+          "An unexpected error has occurred, please try again later."
         );
-  
-        console.log(response.data);
-        setErrorMessage('')
-        reset()
-      } catch (error) {
-        console.error(error);
-        if(isAxiosError(error) && error.response && error.response.status === 409){
-          setErrorMessage('This time is not available, please try another one.')
-        } else {
-          setErrorMessage('An unexpected error has occurred, please try again later.')
-        }
       }
-    } 
+    }
+  };
 
   return (
     <div className="customer-containers">
@@ -52,17 +60,16 @@ const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} =
           <input
             type="date"
             id="booking-input"
-        {...register("date", {required: true})}
+            {...register("date", { required: true })}
           />
-          {errors.date && <div className="error">*Please select desired date.</div>}
+          {errors.date && (
+            <div className="error">*Please select desired date.</div>
+          )}
         </div>
 
         <div className="booking-form-section">
           <p className="booking-p">Select time:</p>
-          <select
-   {...register('time', {required:true})}
-            id="booking-input"
-          >
+          <select {...register("time", { required: true })} id="booking-input">
             <option value=""></option>
             <option value="07:00">07:00</option>
             <option value="08:00">08:00</option>
@@ -79,7 +86,9 @@ const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} =
             <option value="19:00">19:00</option>
             <option value="20:00">20:00</option>
           </select>
-          {errors.time && <div className="error">*Please select desired time.</div>}
+          {errors.time && (
+            <div className="error">*Please select desired time.</div>
+          )}
         </div>
 
         <div>
@@ -88,50 +97,59 @@ const {register, handleSubmit, reset, formState: {errors, isSubmitSuccessful}} =
             className="booking-radio"
             type="radio"
             value="BASIC"
-{...register('level', {required: true})}
+            {...register("level", { required: true })}
           ></input>
           <label className="booking-radio">Basic</label>
           <input
             className="booking-radio"
             type="radio"
             value="TOP"
-            {...register('level', {required: true})}
+            {...register("level", { required: true })}
           ></input>
           <label className="booking-radio">Top</label>
           <input
             className="booking-radio"
             type="radio"
             value="DIAMOND"
-            {...register('level', {required: true})}
+            {...register("level", { required: true })}
           ></input>
           <label className="booking-radio">Diamond</label>
           <input
             className="booking-radio"
             type="radio"
             value="WINDOWS"
-            {...register('level', {required: true})}
+            {...register("level", { required: true })}
           ></input>
           <label className="booking-radio">Window</label>
-          {errors.level && <div className="error">*Please select one type of cleaning.</div>}
+          {errors.level && (
+            <div className="error">*Please select one type of cleaning.</div>
+          )}
         </div>
 
         <div className="booking-form-section">
           <p className="booking-p">Select cleaner:</p>
           <select
-{...register("cleanername", {required: true})}
+            {...register("cleanername", { required: true })}
             id="booking-input"
           >
             <option value=""></option>
             <CleanerList />
           </select>
-          {errors.cleanername && <div className="error">*Please select desired cleaner.</div> }
+          {errors.cleanername && (
+            <div className="error">*Please select desired cleaner.</div>
+          )}
         </div>
 
         <div id="booking-form-section">
           <br />
-          <button id="booking-button" type="submit">Confirm</button>
-      {errorMessage && <div className="error">{errorMessage}</div>}
-      {isSubmitSuccessful && <div className="success">Booking confirmed!</div>}
+          <button id="booking-button" type="submit">
+            Confirm
+          </button>
+          {errorMessage ? (
+            <div className="error">{errorMessage}</div>
+          ) : isSubmitSuccessful ? (
+            <div className="success">Booking confirmed!</div>
+          ) : null}
         </div>
       </form>
     </div>

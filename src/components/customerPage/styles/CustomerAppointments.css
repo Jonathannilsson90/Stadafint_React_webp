@@ -4,16 +4,50 @@
     align-items: center;
 }
 
-.appointments-container table {
-    border: 1px solid black;
+.appointments-container-table {
     border-collapse: collapse;
+    width: 100%;
+    margin-left: 2rem;
+    background-color: transparent;
+    box-shadow: none;
 }
 
-.appointments-container th, td {
-    border: 1px solid black;
-    padding: 8px;
+#appointments-delete-button {
+    background-color: rgb(169, 218, 96);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    margin-right: 30px;
 }
 
-.appointments-container li {
-    display: table-row;
+#appointments-delete-button:hover {
+    background-color: rgb(191, 247, 108);
+    color: white;
+}
+
+.appointments-table-header {
+    text-decoration: underline orange 2px;;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.appointments-container-table input {
+    accent-color: orange;
+    width: 25px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.appointments-delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
