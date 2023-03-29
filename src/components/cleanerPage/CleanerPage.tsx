@@ -4,7 +4,7 @@ import Booking from "../../models/Booking";
 import './css/CleanerPage.css'
 import { TableItem, TableItemd } from "./components/CleanerItem";
 import { getCleanersName } from "./api";
-
+const apiUrl = 'https://stadafint-server-production.up.railway.app/'
 
 
 //Commenting the code due to the nead of data in from data base, havent lernt how to yet tho :)
@@ -26,9 +26,30 @@ const dummyData = [
 
     //-------------Data in from home(landing) page start-------------
     const location = useLocation();
-    export const data = location.state;
+    export const givenCleanerName = location.state;
+
+
+
+
+
+
+
+
 
 const CleanerPage = () => {
+
+
+  // Get
+
+
+
+
+
+
+
+
+
+
     //-------------Data in from home(landing) page end-------------
     //Data in from server side
     const [stadningData, setstadningData] = useState<Booking[]>(dummyData);
@@ -43,14 +64,6 @@ const CleanerPage = () => {
         })
       );
     };
-
-
-    const getrightcleaner =()=>{
-      if (data === getCleanersName){
-        return<></>
-      }
-    }
-
 
 
     const map = stadningData.map((c) => {
@@ -88,7 +101,8 @@ const CleanerPage = () => {
     return (
       <>
         <div className="contrainer">
-          <h1>Table Template for Städafint</h1>
+          <h1>Hello {givenCleanerName} </h1>
+          <h3>These are youre jobes</h3>
           
           {/* //----------------Boked Jobs----------------*/}
           <h2>Booked Jobs</h2>

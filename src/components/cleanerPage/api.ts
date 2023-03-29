@@ -2,7 +2,7 @@
 import { createContext } from "react";
 import User from "../../models/User";
 import { fetchAPIData } from "../global/api";
-import { data } from "./CleanerPage";
+import { givenCleanerName } from "./CleanerPage";
 
 
 export const getCleanersName = async () => {
@@ -21,23 +21,3 @@ export const getCleanersName = async () => {
       console.log(error);
     }
 };
-
-export const getCleaner = async () => {
-    try {
-      const data = await fetchAPIData("user/all");
-  
-      const customerData: User[] = data.users.filter(
-        (item: User) => !item.isCustomer
-      );
-  
-      const cleanerArray = [...customerData];
-      return cleanerArray;
-    } catch (error) {
-      console.log(error);
-    }
-};
-const getrightcleaner =()=>{
-    if (data === getCleanersName){
-      return
-    }
-  }
