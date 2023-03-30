@@ -1,39 +1,45 @@
-/* import '../css/ClenerItem.css' */
+ import '../css/ClenerItem.css' 
 
 interface IClenerItem {
-  customername: string;
-  cleanername: string;
+  customerName: string;
+  cleanerName: string;
   time: string;
   level: string;
   status: boolean;
-  handleToggle: (customername: string) =>void 
+  handleToggle: (customerName: string, _id:string) =>void 
+  id: string;
 }
 
 export const TableItem = ({
-  customername,
-  cleanername,
+  customerName,
+  cleanerName,
   time,
   level,
   status,
-  handleToggle 
+  handleToggle,
+  id
 }: IClenerItem) => {
   return (
     <>
-      <tr>
-        <td>{cleanername}</td>
-        <td>{customername}</td>
+      <tr className="tr-cleaner">
+        <td>{cleanerName}</td>
+        <td>{customerName}</td>
         <td>{time}</td>
         <td>{level}</td>
         <td>
-          <button onClick={()=>handleToggle(customername)}>Done</button>
+          <button onClick={()=>handleToggle(customerName, id)}>Done</button>
         </td>
       </tr>
     </>
   );
 };
+
+
+
+
 export const TableItemd = ({
-  customername,
-  cleanername,
+  customerName,
+  cleanerName,
   time,
   level, 
 /*   handleToggle */
@@ -41,8 +47,8 @@ export const TableItemd = ({
   return (
     <>
       <tr>
-        <td>{cleanername}</td>
-        <td>{customername}</td>
+        <td>{cleanerName}</td>
+        <td>{customerName}</td>
         <td>{time}</td>
         <td>{level}</td>
         <td>Cleaned</td>

@@ -1,43 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Booking from "../../models/Booking";
+import { BookedAppointments } from "../customerPage/components/interface";
 import './css/CleanerPage.css'
 import { TableItem, TableItemd } from "./components/CleanerItem";
-//const apiUrl = 'https://stadafint-server-production.up.railway.app/'
-
-
-//Commenting the code due to the nead of data in from data base, havent lernt how to yet tho :)
-const dummyData = [
-  new Booking ("1223", "kund1", "viktor", "diamant","13:00", "date", true),
-  new Booking ("1223", "kund1", "viktor", "diamant","13:00", "date", true),
-  new Booking ("1223", "kund1", "viktor", "diamant","13:00", "date", true),
-  new Booking ("1223", "kund1", "viktor", "diamant","13:00", "date", true),
-/* 
-    _id: string;
-    customerName: string;
-    cleanerName: string;
-    level: string;
-    time: string;
-    date: string;
-    status: boolean
-*/
-];
-
-
-
+import axios from "axios";
+const apiUrl = 'https://stadafint-server-production.up.railway.app/'
 
 const CleanerPage = () => {
 
     //-------------Data in from home(landing) page start-------------
     let {name} = useParams();
+    
     //-------------Data in from home(landing) page end-------------
     //Data in from server side
-    const [stadningData, setstadningData] = useState<Booking[]>(dummyData);
+    const [stadningData, setstadningData] = useState<BookedAppointments[]>([]);
+    /* class Booking
+    _id: string;
+    customername: string;
+    cleanername: string;
+    time: string;
+    level: string;
+    date: string;
+    status: boolean;
+    */
 
-    const handleToggle = (customername: string) => {
+  //get rquest. getting all bookingas from server
+    useEffect(() => {
+      const fetchBookings = async () => {
+        const response = await axios.get(
+          `${apiUrl}booking/allbookings`
+        );
+        setstadningData(response.data);
+      } 
+      fetchBookings();
+    }, []);
+
+
+    console.log()
+
+
+    const handleToggle = (customername: string, _id: string) => {
+        //-----patch request--------
+
         setstadningData(
           stadningData.map((item) => {
-          if (item.customerName === customername) {
+          if (item._id === _id) {
             return { ...item, status: !item.status };
           }
           return item;
@@ -49,8 +57,10 @@ const CleanerPage = () => {
     const map = stadningData.map((c) => {
       if(c.status === false){
         return    <TableItem
-        customername={c.customerName}
-        cleanername={c.cleanerName}
+        key={c._id}
+        id={c._id}
+        customerName={c.customername}
+        cleanerName={c.cleanername}
         time={c.time}
         level={c.level}
         status={c.status}
@@ -62,9 +72,11 @@ const CleanerPage = () => {
       if(c.status === true){
         return<>
   
-        <TableItemd       
-          customername={c.customerName}
-          cleanername={c.cleanerName}
+        <TableItemd    
+        key={c._id}  
+        id={c._id} 
+          customerName={c.customername}
+          cleanerName={c.cleanername}
           time={c.time}
           level={c.level}
           status={c.status}
@@ -75,12 +87,13 @@ const CleanerPage = () => {
     })
   
     const Thead = (
-      <thead><tr><td>Cleaner name</td><td>Customer name</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
+      <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
     )
   
     return (
       <>
         <div className="contrainer">
+          <h1 className="greating-cleaner" >hello {name}</h1>
           <h3>These are youre jobes</h3>
           
           {/* //----------------Boked Jobs----------------*/}

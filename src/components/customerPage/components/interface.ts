@@ -5,6 +5,7 @@ export interface BookedAppointments {
     time: string;
     level: string;
     date: string;
+    status: boolean;
 }
 
 export interface FormData {
