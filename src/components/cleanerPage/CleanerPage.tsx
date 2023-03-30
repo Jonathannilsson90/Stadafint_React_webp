@@ -77,17 +77,21 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
           <h1 className="greating-cleaner" >Wellcome {name}</h1>
           
           {/* //----------------Boked Jobs----------------*/}
-          <h2>Booked Jobs</h2>
+          <div className="contentspreader">
+          <h2>Booked Jobes</h2>
           <table className="table-cleaner">
             {Thead}
-            <tbody>{map}</tbody> 
+            <tbody>{map}</tbody>
           </table>
+          </div>
           {/* //----------------Done Jobs----------------*/}
+          <div className="contentspreader">
           <h2>Jobs Done</h2>
           <table className="table-cleaner">
             {Thead}
             <tbody>{mapd}</tbody>
           </table>
+          </div>
         </div>
       </>
     );

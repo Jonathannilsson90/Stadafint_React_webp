@@ -12,17 +12,24 @@
   font-weight: 600;
   border-collapse: collapse;
   width: 40rem;
-  box-shadow: 3px 4px 0.4em rgba(0, 0, 0, 0.062);
 }
 
 .thead-cleaner{
-  background-color: rgb(59, 59, 59);
-  color: white;
-}
-/* thead tr td{  
-  border: none;
-} */
+  background-color: rgb(169, 218, 96);
 
+
+}
+.contentspreader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1%;
+  padding: 1%;
+  width: 60%;
+  background-color: white;
+  box-shadow: 3px 4px 0.4em rgba(0, 0, 0, 0.062);
+  border-radius: 12px;
+}
 .greating-cleaner{
   margin-top: 8%;
 
