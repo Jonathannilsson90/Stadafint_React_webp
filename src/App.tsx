@@ -15,12 +15,10 @@ function App() {
   const [loginText, setLoginText] = useState('Log in');
   const [load, setLoad] = useState('/login');
 
-  //const [el, setEl] = useState<Element>();
+  
+
   //-------------------------------------------------------------------
   const loginButtonTextHandler = (login: boolean) => {
-    //console.log('loginButtonTestHandler in app.tsx');
-    //console.log('login');
-    //console.log(login);
 
     if (login) {
       setLoginText('Log out');
@@ -30,9 +28,6 @@ function App() {
       setLoginText('Log in');
       setLoad('/login');
     };
-
-    //console.log('loginText');
-    //console.log(loginText);
   }
 
   /*   const  onScrollToElementClickHandler = (el : string) =>{      
@@ -46,9 +41,11 @@ function App() {
     
   //-------------------------------------------------------------------
   const onScrollToElementClickHandler = (el: string) => {
+
     setLogin(false);
     setLoginText('Log in');
     setLoad('/login');
+
     let selector: string = '.' + el;
 
     async function waitForElement(selector: string, timeout = 15000) {
@@ -93,8 +90,8 @@ function App() {
             <Route path='/' element={<HomePage
               loginButtonTextHandler={loginButtonTextHandler}/>} />
             <Route path='/login' element={<LogInPage loginButtonTextHandler={loginButtonTextHandler} />} />
-            <Route path='/login/customer/:name' element={<CustomerPage/>} />
-            <Route path='/login/cleaner/:name' element={<CleanerPage/>} />
+            <Route path='/login/customer/:name' element={<CustomerPage loginButtonTextHandler={loginButtonTextHandler}/>} />
+            <Route path='/login/cleaner/:name' element={<CleanerPage loginButtonTextHandler={loginButtonTextHandler}/>} />
             <Route path='*' element={<h1>PAGE NOT FOUND</h1>} />
           </Routes>
           <Footer onScrollToElementClickHandler={onScrollToElementClickHandler}></Footer>

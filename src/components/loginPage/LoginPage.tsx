@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { addData, fetchData}            from './api';
-import { ILogInPage }          from './interfaces';
+import { addData, fetchData} from './api';
+import { ILogInPage } from './interfaces';
 
 import LogInForm from './components/LogInForm'
 import User      from '../../models/User';
@@ -11,11 +11,11 @@ interface INameContext{
   setText : Dispatch<SetStateAction<string>>
 }
 
-
 export const NameContext = createContext<INameContext>({
   text: "", 
   setText: () => {}
 });
+
 
 const LogInPage = (props: ILogInPage) => {
 
@@ -27,27 +27,6 @@ const LogInPage = (props: ILogInPage) => {
   const [login, setLogin] = useState(false);
   const [newCustomer, setNewCustomer] = useState(true);
      
-   /* const fetchData = async () => {
-    try
-    {
-        const resp = await fetch('https://stadafint-server-production.up.railway.app/user/all') 
-        //fetch('http://localhost:5001/members/')
-        const data = await resp.json();
-           
-          const transformData = data.users.map((d :User) => {
-            return{
-              _id : d._id,
-              name: d.name,
-              isCustomer : d.isCustomer
-            }
-          })
-          setUsers(transformData);                       
-    }    
-    catch(error)
-    {
-        console.log(error);
-    }   
-  }   */
    
   //-------------------------------------------------------------------
   useEffect(() => 
@@ -61,13 +40,12 @@ const LogInPage = (props: ILogInPage) => {
   }, []); 
 
   //-------------------------------------------------------------------
-  const onSubmitHandler = (name :string) => {
-    
+  const onSubmitHandler = async (name :string) => {
+
     const filtered = users.filter((value) => value.name === name);
 
     if (filtered.length !== 0)
     {
-      //console.log('inside filtered.length !== 0'); 
       setText(name);
       setDisplay(false);
       setIsCustomer(filtered[0].isCustomer);  
@@ -82,40 +60,10 @@ const LogInPage = (props: ILogInPage) => {
       setLogin(false);
       setNewCustomer(false);
     };
-
   }
 
   //-------------------------------------------------------------------
-  const onAddNewCustomerHandler = (name: string) => {
-    //console.log('inside onAddNewCustomerHandler'); 
-    
-
-/*     const addData = async (name: string) => 
-    {
-                 
-      let newCustomer = {
-          name: name,
-          isCustomer: true
-          
-      } 
-  
-          try
-      {
-          const res = await fetch('https://stadafint-server-production.up.railway.app/user/register', 
-          {
-              method: 'POST',
-              body: JSON.stringify(newCustomer),
-              headers: 
-              {
-                  'Content-Type': 'application/json',
-              }
-          })    
-      }
-      catch(error) 
-      {
-          console.log(error);     
-      } 
-    } */
+  const onAddNewCustomerHandler = async (name: string) => {
 
     setText(name);
     setDisplay(false);
@@ -124,9 +72,10 @@ const LogInPage = (props: ILogInPage) => {
     setNewCustomer(true);  
 
   props.loginButtonTextHandler(login);
-  addData(name); 
 
-  }
+  let res = await addData(name);
+  
+}
 
   //-------------------------------------------------------------------
   

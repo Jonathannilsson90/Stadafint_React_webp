@@ -64,11 +64,11 @@ const LogInForm = (props: ILogInForm) => {
 
                 <div className="logged-in-buttons" style={{ display: !props.display ? 'flex' : 'none' }}>
                     {props.isCustomer && <button className="login-section-button btn" 
-                                                type="button"
-                                                onClick={() => navigation(`/login/customer/${name}`)}>My Account</button>}
+                                                 type="button"
+                                                 onClick={() => navigation(`/login/customer/${name}`)}>My Account</button>}
                     {!props.isCustomer &&<button className="login-section-button btn" 
-                                                type="button"
-                                                onClick={() => navigation(`/login/cleaner/${name}`)}>My Account</button>}
+                                                 type="button"
+                                                 onClick={() => navigation(`/login/cleaner/${name}`)}>My Account</button>}
                 </div>
 
             </form>

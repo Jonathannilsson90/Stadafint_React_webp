@@ -1,28 +1,16 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { BookedAppointments } from "../customerPage/components/interface";
-import './css/CleanerPage.css'
-import { TableItem, TableItemd } from "./components/CleanerItem";
-import axios from "axios";
 import { apiUrl } from "../global/api";
+import { useParams } from "react-router-dom";
+import { ICleanerApointments, ICleanerPage } from "./inteface";
+import { useEffect, useState } from "react";
+import { TableItemdone } from "./components/Tableitemdone";
+import { TableItem } from "./components/Tableitem";
+import './css/CleanerPage.css'
+import axios from "axios";
 
-const CleanerPage = () => {
-
-    //-------------Data in from home(landing) page start-------------
-    let {name} = useParams();
-    
-    //-------------Data in from home(landing) page end-------------
-    //Data in from server side
-    const [stadningData, setstadningData] = useState<BookedAppointments[]>([]);
-    /* class Booking
-    _id: string;
-    customername: string;
-    cleanername: string;
-    time: string;
-    level: string;
-    date: string;
-    status: boolean;
-    */
+const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
+  loginButtonTextHandler(true) //Log out Logick
+    let {name} = useParams(); //data from login page
+    const [stadningData, setstadningData] = useState<ICleanerApointments[]>([]);    //Data in from server side
 
   //get rquest. getting all bookingas from server
     useEffect(() => {
@@ -30,29 +18,19 @@ const CleanerPage = () => {
         const response = await axios.get(
           `${apiUrl}booking/allbookings`
         );
-          const cleaner: BookedAppointments[] = response.data.filter((item: BookedAppointments)  => item.cleanername === name) ; 
+        //Filter datta and compare all cleanername with the name given
+          const cleaner: ICleanerApointments[] = response.data.filter((item: ICleanerApointments)  => item.cleanername === name) ; 
           setstadningData(cleaner);
       } 
       fetchBookings();
     }, [stadningData]);
 
+    //change status of booking to true when cleaner is done
+    const handleToggle = async (id: string ) => {
+      const completedata = {status: true}
+      const responce = await axios.patch(`${apiUrl}booking/updatebooking/${id}`, completedata)
 
-
-
-    const handleToggle = (customername: string, _id: string) => {
-        //-----patch request start--------
-
-
-        
-        //-----patch request end--------
-        setstadningData(
-          stadningData.map((item) => {
-          if (item._id === _id) {
-            return { ...item, status: !item.status };
-          }
-          return item;
-        })
-      );
+      console.log(responce)
     };
 
 
@@ -74,7 +52,7 @@ const CleanerPage = () => {
       if(c.status === true){
         return<>
   
-        <TableItemd    
+        <TableItemdone    
         key={c._id}  
         id={c._id} 
           customerName={c.customername}
@@ -83,7 +61,7 @@ const CleanerPage = () => {
           level={c.level}
           status={c.status}
           handleToggle={handleToggle} 
-          ></TableItemd>
+          ></TableItemdone>
         </>
       }
     })
@@ -92,11 +70,11 @@ const CleanerPage = () => {
       <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
     )
   
+  
     return (
       <>
         <div className="contrainer">
-          <h1 className="greating-cleaner" >hello {name}</h1>
-          <h3>These are youre jobes</h3>
+          <h1 className="greating-cleaner" >Wellcome {name}</h1>
           
           {/* //----------------Boked Jobs----------------*/}
           <h2>Booked Jobs</h2>
