@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom"
 function CustomerAppointments() {
   const [booking, setBooking] = useState<BookedAppointments[]>([]);
   const [checkedRows, setCheckedRows] = useState<string[]>([]);
+  const [resetAllCheckBoxes, setResetAllCheckBoxes] = useState(false);
+  
   let {name} = useParams()
   
   useEffect(() => {
@@ -32,13 +34,13 @@ function CustomerAppointments() {
   async function handleDelete(checkedRows: string[]) {
 
     console.log("starting array " + checkedRows)
-
+  
     while (checkedRows.length > 0) {
       const removeId = checkedRows.shift();
-
+  
       console.log("deleted " + removeId);
       console.log("Array contains: " + checkedRows);
-
+  
       try {
         const response = await axios.delete(
           `https://stadafint-server-production.up.railway.app/booking/deletebooking/${removeId}`
@@ -47,7 +49,8 @@ function CustomerAppointments() {
         console.log(error);
       }
     }
-
+    
+    setCheckedRows([]);
   }
   
   return (
@@ -72,7 +75,12 @@ function CustomerAppointments() {
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
 
-              <th><input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input></th>
+              <th><input 
+                className="appointments-tr-input" 
+                id={booking._id} type="checkbox" 
+                checked={resetAllCheckBoxes ? false : checkedRows.includes(booking._id)} 
+                onClick={() => HandleChecked(booking._id)}>
+              </input></th>
             </tr>
           ))}
         </tbody>
