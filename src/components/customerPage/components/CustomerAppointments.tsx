@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom"
 function CustomerAppointments() {
   const [booking, setBooking] = useState<BookedAppointments[]>([]);
   const [checkedRows, setCheckedRows] = useState<string[]>([]);
+  
   let {name} = useParams()
   
   useEffect(() => {
@@ -47,7 +48,7 @@ function CustomerAppointments() {
         console.log(error);
       }
     }
-
+    
   }
   
   return (
@@ -72,7 +73,11 @@ function CustomerAppointments() {
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
 
-              <th><input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input></th>
+              <th><input 
+                className="appointments-tr-input" 
+                id={booking._id} type="checkbox" 
+                onClick={() => HandleChecked(booking._id)}>
+              </input></th>
             </tr>
           ))}
         </tbody>
