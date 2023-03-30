@@ -16,3 +16,6 @@ export interface FormData {
     date: string;
   }
   
+export interface ICustomerPage {
+    loginButtonTextHandler : (login: boolean) => void
+}
