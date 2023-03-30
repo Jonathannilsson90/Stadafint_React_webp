@@ -17,7 +17,7 @@ function CustomerAppointments() {
         setBooking(response.data);
       } 
       fetchBookings();
-    }, []);
+    }, [booking]);
 
   function HandleChecked(id: string) {
     if (checkedRows.includes(id)) {
@@ -47,6 +47,7 @@ function CustomerAppointments() {
         console.log(error);
       }
     }
+
   }
   
   return (
@@ -71,7 +72,7 @@ function CustomerAppointments() {
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
 
-              <td><input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input></td>
+              <th><input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input></th>
             </tr>
           ))}
         </tbody>
