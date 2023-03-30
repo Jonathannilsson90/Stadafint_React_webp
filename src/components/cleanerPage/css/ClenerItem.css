@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Noto+Sans+Mono:wght@200&family=Roboto:ital,wght@1,100&display=swap');
-td,
-th {
+
+.tr-cleaner:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.tr-cleaner th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 2%;
@@ -8,11 +11,7 @@ th {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
 }
-tr:nth-child(even) {
-  background-color: #eeeeee;
-}
-
-button{
+.tr-cleaner th button{
   border: none;
   border-radius: 4px;
   background-color: 

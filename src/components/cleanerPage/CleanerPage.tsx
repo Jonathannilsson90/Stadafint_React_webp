@@ -1,12 +1,3 @@
-
-@viktor472
-viktor472 test
-Latest commit 3b1376b 1 hour ago
- History
- 2 contributors
-@viktor472@yulia-gutorova
-117 lines (100 sloc)  3.14 KB
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BookedAppointments } from "../customerPage/components/interface";
