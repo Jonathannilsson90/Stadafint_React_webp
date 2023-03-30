@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Booking from "../../models/Booking";
 import './css/CleanerPage.css'
 import { TableItem, TableItemd } from "./components/CleanerItem";
-import { getCleanersName } from "./api";
-const apiUrl = 'https://stadafint-server-production.up.railway.app/'
+//const apiUrl = 'https://stadafint-server-production.up.railway.app/'
 
 
 //Commenting the code due to the nead of data in from data base, havent lernt how to yet tho :)
@@ -24,17 +23,13 @@ const dummyData = [
 */
 ];
 
-    //-------------Data in from home(landing) page start-------------
-    const location = useLocation();
-    export const givenCleanerName = location.state;
-
-
 
 
 
 const CleanerPage = () => {
 
-
+    //-------------Data in from home(landing) page start-------------
+    let {name} = useParams();
     //-------------Data in from home(landing) page end-------------
     //Data in from server side
     const [stadningData, setstadningData] = useState<Booking[]>(dummyData);
@@ -86,18 +81,17 @@ const CleanerPage = () => {
     return (
       <>
         <div className="contrainer">
-          <h1>Hello {givenCleanerName} </h1>
           <h3>These are youre jobes</h3>
           
           {/* //----------------Boked Jobs----------------*/}
           <h2>Booked Jobs</h2>
-          <table>
+          <table className="table-cleaner">
             {Thead}
             <tbody>{map}</tbody> 
           </table>
           {/* //----------------Done Jobs----------------*/}
           <h2>Jobs Done</h2>
-          <table>
+          <table className="table-cleaner">
             {Thead}
             <tbody>{mapd}</tbody>
           </table>

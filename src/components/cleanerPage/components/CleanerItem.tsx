@@ -1,4 +1,4 @@
-import './css/CleanerItem.css'
+/* import '../css/ClenerItem.css' */
 
 interface IClenerItem {
   customername: string;
