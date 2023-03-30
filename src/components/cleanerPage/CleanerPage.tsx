@@ -1,15 +1,16 @@
 import { apiUrl } from "../global/api";
 import { useParams } from "react-router-dom";
-import { BookedAppointments } from "../customerPage/components/interface";
+import { ICleanerApointments, ICleanerPage } from "./inteface";
 import { useEffect, useState } from "react";
-import { TableItem, TableItemd } from "./components/CleanerItem";
+import { TableItemdone } from "./components/Tableitemdone";
+import { TableItem } from "./components/Tableitem";
 import './css/CleanerPage.css'
 import axios from "axios";
 
-const CleanerPage = () => {
-
+const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
+  loginButtonTextHandler(true) //Log out Logick
     let {name} = useParams(); //data from login page
-    const [stadningData, setstadningData] = useState<BookedAppointments[]>([]);    //Data in from server side
+    const [stadningData, setstadningData] = useState<ICleanerApointments[]>([]);    //Data in from server side
 
   //get rquest. getting all bookingas from server
     useEffect(() => {
@@ -18,7 +19,7 @@ const CleanerPage = () => {
           `${apiUrl}booking/allbookings`
         );
         //Filter datta and compare all cleanername with the name given
-          const cleaner: BookedAppointments[] = response.data.filter((item: BookedAppointments)  => item.cleanername === name) ; 
+          const cleaner: ICleanerApointments[] = response.data.filter((item: ICleanerApointments)  => item.cleanername === name) ; 
           setstadningData(cleaner);
       } 
       fetchBookings();
@@ -51,7 +52,7 @@ const CleanerPage = () => {
       if(c.status === true){
         return<>
   
-        <TableItemd    
+        <TableItemdone    
         key={c._id}  
         id={c._id} 
           customerName={c.customername}
@@ -60,7 +61,7 @@ const CleanerPage = () => {
           level={c.level}
           status={c.status}
           handleToggle={handleToggle} 
-          ></TableItemd>
+          ></TableItemdone>
         </>
       }
     })
@@ -68,6 +69,7 @@ const CleanerPage = () => {
     const Thead = (
       <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
     )
+  
   
     return (
       <>
