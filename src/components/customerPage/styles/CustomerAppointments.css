@@ -25,6 +25,11 @@
     cursor: pointer;
 }
 
+#appointments-delete-button:hover {
+    background-color: rgb(191, 247, 108);
+    color: white;
+}
+
 .appointments-button-th {
     width: 7%;
 }
@@ -38,10 +43,9 @@
     border-radius: 5px;
     padding: 0.5rem;
     cursor: pointer;
-
 }
 
-#appointments-delete-button:hover {
+.appointments-small-delete-button:hover {
     background-color: rgb(191, 247, 108);
     color: white;
 }
