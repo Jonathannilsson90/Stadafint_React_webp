@@ -7,4 +7,5 @@ export async function fetchAPIData (endpoint: string): Promise<any>{
     
     return data
 
-}
+} 
+export const apiUrl = "https://stadafint-server-production.up.railway.app/";

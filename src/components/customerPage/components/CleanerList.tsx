@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCleaners } from "../../api";
+import { getCleaners } from "../api";
 
 export const CleanerList = () => {
   const [cleanerNames, setCleanerNames] = useState<string[]>([]);
