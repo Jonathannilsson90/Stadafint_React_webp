@@ -22,9 +22,7 @@
     padding: 1rem;
     font-weight: bolder;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
     cursor: pointer;
-    margin-right: 30px;
 }
 
 #appointments-delete-button:hover {
