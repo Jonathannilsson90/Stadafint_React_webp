@@ -58,6 +58,10 @@
     color:black;
 } 
 
+.btn{
+    width: 150px;
+}
+
 .name{
     height: 50px;
     width: 250px;
