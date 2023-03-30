@@ -70,7 +70,6 @@ function CustomerAppointments() {
               <td>{booking.time}</td>
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
-              <td>{booking._id}</td>
 
               <input className="appointments-tr-input" id={booking._id} type="checkbox" onClick={() => HandleChecked(booking._id)}></input>
             </tr>
