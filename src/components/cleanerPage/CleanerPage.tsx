@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react";
+import { apiUrl } from "../global/api";
 import { useParams } from "react-router-dom";
 import { BookedAppointments } from "../customerPage/components/interface";
-import './css/CleanerPage.css'
+import { useEffect, useState } from "react";
 import { TableItem, TableItemd } from "./components/CleanerItem";
+import './css/CleanerPage.css'
 import axios from "axios";
-import { apiUrl } from "../global/api";
 
 const CleanerPage = () => {
 
-    //-------------Data in from home(landing) page start-------------
-    let {name} = useParams();
-    
-    //-------------Data in from home(landing) page end-------------
-    //Data in from server side
-    const [stadningData, setstadningData] = useState<BookedAppointments[]>([]);
-    /* class Booking
-    _id: string;
-    customername: string;
-    cleanername: string;
-    time: string;
-    level: string;
-    date: string;
-    status: boolean;
-    */
+    let {name} = useParams(); //data from login page
+    const [stadningData, setstadningData] = useState<BookedAppointments[]>([]);    //Data in from server side
 
   //get rquest. getting all bookingas from server
     useEffect(() => {
@@ -30,29 +17,19 @@ const CleanerPage = () => {
         const response = await axios.get(
           `${apiUrl}booking/allbookings`
         );
+        //Filter datta and compare all cleanername with the name given
           const cleaner: BookedAppointments[] = response.data.filter((item: BookedAppointments)  => item.cleanername === name) ; 
           setstadningData(cleaner);
       } 
       fetchBookings();
     }, [stadningData]);
 
+    //change status of booking to true when cleaner is done
+    const handleToggle = async (id: string ) => {
+      const completedata = {status: true}
+      const responce = await axios.patch(`${apiUrl}booking/updatebooking/${id}`, completedata)
 
-
-
-    const handleToggle = (customername: string, _id: string) => {
-        //-----patch request start--------
-
-
-        
-        //-----patch request end--------
-        setstadningData(
-          stadningData.map((item) => {
-          if (item._id === _id) {
-            return { ...item, status: !item.status };
-          }
-          return item;
-        })
-      );
+      console.log(responce)
     };
 
 
@@ -95,8 +72,7 @@ const CleanerPage = () => {
     return (
       <>
         <div className="contrainer">
-          <h1 className="greating-cleaner" >hello {name}</h1>
-          <h3>These are youre jobes</h3>
+          <h1 className="greating-cleaner" >Wellcome {name}</h1>
           
           {/* //----------------Boked Jobs----------------*/}
           <h2>Booked Jobs</h2>
