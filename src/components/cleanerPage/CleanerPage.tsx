@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Booking from "../../models/Booking";
 import { BookedAppointments } from "../customerPage/components/interface";
 import './css/CleanerPage.css'
 import { TableItem, TableItemd } from "./components/CleanerItem";
 import axios from "axios";
-const apiUrl = 'https://stadafint-server-production.up.railway.app/'
+import { apiUrl } from "../global/api";
 
 const CleanerPage = () => {
 
@@ -31,13 +30,13 @@ const CleanerPage = () => {
         const response = await axios.get(
           `${apiUrl}booking/allbookings`
         );
-        setstadningData(response.data);
+          const cleaner: BookedAppointments[] = response.data.filter((item: BookedAppointments)  => item.cleanername === name) ; 
+          setstadningData(cleaner);
       } 
       fetchBookings();
-    }, []);
+    }, [stadningData]);
 
 
-    console.log()
 
 
     const handleToggle = (customername: string, _id: string) => {
