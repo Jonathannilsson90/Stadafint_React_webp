@@ -6,7 +6,7 @@ interface IClenerItem {
   time: string;
   level: string;
   status: boolean;
-  handleToggle: (customerName: string, _id:string) =>void 
+  handleToggle: (id: string) =>void 
   id: string;
 }
 
@@ -15,7 +15,6 @@ export const TableItem = ({
   cleanerName,
   time,
   level,
-  status,
   handleToggle,
   id
 }: IClenerItem) => {
@@ -27,7 +26,7 @@ export const TableItem = ({
         <td>{time}</td>
         <td>{level}</td>
         <td>
-          <button onClick={()=>handleToggle(customerName, id)}>Done</button>
+          <button onClick={()=>handleToggle(id)}>Done</button>
         </td>
       </tr>
     </>
