@@ -6,13 +6,15 @@ export const TableItem = ({
     time,
     level,
     handleToggle,
-    id
+    id,
+    date
   }: IClenerItem) => {
     return (
       <>
         <tr className="tr-cleaner">
           <td>{cleanerName}</td>
           <td>{customerName}</td>
+          <td>{date}</td>
           <td>{time}</td>
           <td>{level}</td>
           <td>

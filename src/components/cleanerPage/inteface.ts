@@ -13,6 +13,7 @@ export interface IClenerItem {
     time: string;
     level: string;
     status: boolean;
+    date: string;
     handleToggle: (id: string) =>void 
     id: string;
 }

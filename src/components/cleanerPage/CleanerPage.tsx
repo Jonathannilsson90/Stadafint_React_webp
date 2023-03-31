@@ -39,6 +39,7 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
         return    <TableItem
         key={c._id}
         id={c._id}
+        date={c.date}
         customerName={c.customername}
         cleanerName={c.cleanername}
         time={c.time}
@@ -55,6 +56,7 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
         <TableItemdone    
         key={c._id}  
         id={c._id} 
+        date={c.date}
           customerName={c.customername}
           cleanerName={c.cleanername}
           time={c.time}
@@ -67,7 +69,7 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
     })
   
     const Thead = (
-      <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
+      <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Date</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
     )
   
   

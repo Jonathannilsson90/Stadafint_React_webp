@@ -5,6 +5,7 @@ export const TableItemdone = ({
     cleanerName,
     time,
     level, 
+    date,
   /*   handleToggle */
   }: IClenerItem) => {
     return (
@@ -12,6 +13,7 @@ export const TableItemdone = ({
         <tr>
           <td>{cleanerName}</td>
           <td>{customerName}</td>
+          <td>{date}</td>
           <td>{time}</td>
           <td>{level}</td>
           <td>Cleaned</td>
