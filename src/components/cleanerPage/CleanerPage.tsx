@@ -1,16 +1,17 @@
 import { apiUrl } from "../global/api";
 import { useParams } from "react-router-dom";
-import { ICleanerApointments, ICleanerPage } from "./inteface";
+import { ICleanerPage } from "./inteface";
 import { useEffect, useState } from "react";
 import { TableItemdone } from "./components/Tableitemdone";
 import { TableItem } from "./components/Tableitem";
 import './css/CleanerPage.css'
 import axios from "axios";
+import Booking from "src/models/Booking";
 
 const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
   loginButtonTextHandler(true) //Log out Logick
     let {name} = useParams(); //data from login page
-    const [stadningData, setstadningData] = useState<ICleanerApointments[]>([]);    //Data in from server side
+    const [stadningData, setStadningData] = useState<Booking[]>([]);    //Data in from server side
 
   //get rquest. getting all bookingas from server
     useEffect(() => {
@@ -19,8 +20,8 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
           `${apiUrl}booking/allbookings`
         );
         //Filter datta and compare all cleanername with the name given
-          const cleaner: ICleanerApointments[] = response.data.filter((item: ICleanerApointments)  => item.cleanername === name) ; 
-          setstadningData(cleaner);
+          const cleaner: Booking[] = response.data.filter((item: Booking)  => item.cleanername === name) ; 
+          setStadningData(cleaner);
       } 
       fetchBookings();
     }, [stadningData]);
@@ -41,24 +42,23 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
         id={c._id}
         date={c.date}
         customerName={c.customername}
-        cleanerName={c.cleanername}
         time={c.time}
         level={c.level}
         status={c.status}
         handleToggle={handleToggle}
       ></TableItem>
       }
+      return null
     })
     const mapd = stadningData.map((c) => {
       if(c.status === true){
         return<>
   
         <TableItemdone    
-        key={c._id}  
-        id={c._id} 
-        date={c.date}
+          key={c._id}  
+          id={c._id} 
+          date={c.date}
           customerName={c.customername}
-          cleanerName={c.cleanername}
           time={c.time}
           level={c.level}
           status={c.status}
@@ -66,21 +66,26 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
           ></TableItemdone>
         </>
       }
+      return null
     })
   
     const Thead = (
-      <thead className="thead-cleaner "><tr><td>Cleaner name</td><td>Customer name</td><td>Date</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
+      <thead className="thead-cleaner "><tr><td>Customer name</td><td>Date</td><td>Time</td><td>Level</td><td>Status</td></tr></thead>
     )
   
   
     return (
       <>
         <div className="contrainer">
-          <h1 className="greating-cleaner" >Wellcome {name}</h1>
+
+          <div className="header">
+            <h1 className="greating-cleaner" >Welcome {name}</h1>
+            <p>Here are all your appointments</p>
+          </div>
           
           {/* //----------------Boked Jobs----------------*/}
           <div className="contentspreader">
-          <h2>Booked Jobes</h2>
+          <h2>Booked appointment's</h2>
           <table className="table-cleaner">
             {Thead}
             <tbody>{map}</tbody>
@@ -88,7 +93,7 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
           </div>
           {/* //----------------Done Jobs----------------*/}
           <div className="contentspreader">
-          <h2>Jobs Done</h2>
+          <h2>Completed appointment's</h2>
           <table className="table-cleaner">
             {Thead}
             <tbody>{mapd}</tbody>

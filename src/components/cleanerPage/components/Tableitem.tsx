@@ -1,8 +1,8 @@
 import { IClenerItem } from "../inteface";
+import '../css/ClenerItem.css'
 
 export const TableItem = ({
     customerName,
-    cleanerName,
     time,
     level,
     handleToggle,
@@ -12,7 +12,6 @@ export const TableItem = ({
     return (
       <>
         <tr className="tr-cleaner">
-          <td>{cleanerName}</td>
           <td>{customerName}</td>
           <td>{date}</td>
           <td>{time}</td>

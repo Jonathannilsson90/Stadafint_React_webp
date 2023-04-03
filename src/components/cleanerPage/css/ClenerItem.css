@@ -1,17 +1,5 @@
 
-.tr-cleaner:nth-child(even) {
-  background-color: #eeeeee;
-}
-
-.tr-cleaner th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 2%;
-  font-size: medium;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-}
-.tr-cleaner th button{
+.tr-cleaner td button{
   border: none;
   border-radius: 4px;
   background-color: 
