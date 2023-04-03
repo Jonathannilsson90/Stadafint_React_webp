@@ -6,8 +6,9 @@
 
 .appointments-container-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 94%;
     margin-left: 2rem;
+    margin-right: 2rem;
     background-color: transparent;
     box-shadow: none;
 }
@@ -62,6 +63,7 @@
     width: 25px;
     height: 30px;
     margin-left: 5px;
+    padding-right: 40px;
 }
 
 .appointments-delete-container {
