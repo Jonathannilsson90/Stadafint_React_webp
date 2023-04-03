@@ -86,18 +86,22 @@ function CustomerAppointments() {
               <td>{booking.level}</td>
               <td>{booking.cleanername}</td>
 
-              <th className="appointments-button-th"><button 
-              id={booking._id} 
-              className="appointments-small-delete-button"
-              onClick={() => handleSingleDelete(booking)}>Cancel
-              </button></th>
+              <th className="appointments-button-th">
+                <button 
+                  id={booking._id} 
+                  className="appointments-small-delete-button"
+                  onClick={() => handleSingleDelete(booking)}>Cancel
+                </button>
+              </th>
 
-              <th className="appointments-button-th"><input 
-                className="appointments-tr-input" 
-                id={booking._id} type="checkbox" 
-                checked={resetAllCheckBoxes ? false : checkedRows.includes(booking._id)} 
-                onClick={() => HandleChecked(booking._id)}>
-              </input></th>
+              <th className="appointments-button-th">
+                <input 
+                  className="appointments-tr-input" 
+                  id={booking._id} type="checkbox" 
+                  checked={resetAllCheckBoxes ? false : checkedRows.includes(booking._id)} 
+                  onClick={() => HandleChecked(booking._id)}>
+                </input>
+              </th>
             </tr>
           ))}
         </tbody>
