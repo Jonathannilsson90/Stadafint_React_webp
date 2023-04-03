@@ -10,7 +10,6 @@ import { NameContext } from '../LoginPage';
 const LogInForm = (props: ILogInForm) => { 
 
     let navigation = useNavigate();
-
     const {text} = useContext(NameContext)
 
     //-------------------------- UseStates ------------------------------

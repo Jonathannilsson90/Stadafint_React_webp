@@ -3,6 +3,7 @@ import { addData, fetchData} from './api';
 import { ILogInPage } from './interfaces';
 
 import LogInForm from './components/LogInForm'
+
 import User      from '../../models/User';
 
 
@@ -64,31 +65,25 @@ const LogInPage = (props: ILogInPage) => {
 
   //-------------------------------------------------------------------
   const onAddNewCustomerHandler = async (name: string) => {
-
     setText(name);
     setDisplay(false);
     setIsCustomer(true);  
     setLogin(true); 
     setNewCustomer(true);  
 
-  props.loginButtonTextHandler(login);
-
-  let res = await addData(name);
-  
-}
+    props.loginButtonTextHandler(login);
+    let res = await addData(name);
+  }
 
   //-------------------------------------------------------------------
-  
- props.loginButtonTextHandler(login);
-
-   
+  props.loginButtonTextHandler(login);
+ 
   //-------------------------------------------------------------------
   return (
       <>
       <NameContext.Provider value={{text, setText}}>
           <LogInForm  onSubmitHandler={onSubmitHandler}
                       onAddNewCustomerHandler={onAddNewCustomerHandler}
-                          // text={text}
                       display={display}
                       newCustomer={newCustomer}
                       isCustomer={isCustomer} ></LogInForm> 

@@ -1,5 +1,6 @@
 import User from "../../models/User";
 
+//---------------------------------------------------------------------------------
 export const fetchData = async () :Promise<any> =>  {
     try
     {
@@ -22,7 +23,7 @@ export const fetchData = async () :Promise<any> =>  {
     }   
 }
 
-
+//---------------------------------------------------------------------------------
 export const addData = async (name: string) => 
 {
              
