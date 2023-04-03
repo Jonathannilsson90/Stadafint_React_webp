@@ -7,19 +7,18 @@ export interface IHowItWorksCard {
 }
 
 export interface IWhyChooseUsCard {
-    text    : string
-    title   : string
-    icon    : string
+    text  : string
+    title : string
+    icon  : string
 
 }
 
 export interface IHomePage {
-    //onLogOutClickHandler:  () => void;
-    loginButtonTextHandler :  (login : boolean) => void;
+    loginButtonTextHandler : (login : boolean) => void;
 }
 
 export interface IContactUsCard {
-    text   : string
-    title   : string
-    icon    : string
+    text  : string
+    title : string
+    icon  : string
 }

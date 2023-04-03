@@ -8,19 +8,14 @@ import Diamond from '../../../assets/logo2.webp'
 const NavigationMenu = (props : INavigationMenu) => {
 
     //-------------------------------------------------------------------
-    const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => {
-        //console.log('scrollToElementClickHandler in navigation menu');   
+    const scrollToElementClickHandler = (event : React.MouseEvent<HTMLElement>) => { 
         let el = event.currentTarget.dataset.element!;
         props.onScrollToElementClickHandler(el)
     }
 
     //-------------------------------------------------------------------
     const onScrollToTopHandler = () => {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-            });
+        window.scroll({top: 0, left: 0, behavior: "smooth"});
     }
 
     //-------------------------------------------------------------------

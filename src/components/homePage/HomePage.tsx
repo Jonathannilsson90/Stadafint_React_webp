@@ -13,16 +13,6 @@ import { useEffect } from 'react'
 
 const HomePage = (props :IHomePage) => {
 
-
-    
-/*      const  onScrollToElementClickHandler =(el : string) =>{
-        let element = document.querySelector('.' + el);
-        console.log(element);
-        if (element) {
-            element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
-          }
-    }  */
-
     props.loginButtonTextHandler(false)
 
     //-------------------------------------------------------------------

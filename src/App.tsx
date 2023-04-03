@@ -30,14 +30,6 @@ function App() {
     };
   }
 
-  /*   const  onScrollToElementClickHandler = (el : string) =>{      
-      let element = document.querySelector('.' + el)!;
-      console.log('Element');
-      console.log(element);
-      if (element) {
-          element.scrollIntoView({behavior:"smooth", block: "start", inline:"nearest"});
-        }
-    }  */
     
   //-------------------------------------------------------------------
   const onScrollToElementClickHandler = (el: string) => {
@@ -66,16 +58,6 @@ function App() {
   }
 
   //-------------------------------------------------------------------
-  
-/*   const onLogOutClickHandler = () => {
-    //console.log('onLogOutClickHandler in app');
-    
-    setLogin(false);
-    setLoginText('Log in');
-    setLoad('/login');
-  }  */
-
-
   return (
     <div className="App">
 
