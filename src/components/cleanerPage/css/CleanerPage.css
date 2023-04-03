@@ -30,7 +30,17 @@
   box-shadow: 3px 4px 0.4em rgba(0, 0, 0, 0.062);
   border-radius: 12px;
 }
-.greating-cleaner{
-  margin-top: 8%;
-
+.header{
+  width: 100%;
+  height: 15vh;
+  background-image: url("https://desertoasiscleaners.com/wp-content/uploads/2018/10/main-slider-04.jpg");
+  padding: 10rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .greating-cleaner{
+  margin-top: 3%;
+  color: white;
 }
