@@ -15,8 +15,10 @@ function CustomerAppointments() {
   
   useEffect(() => {
     const fetchBookings = async () => {
+      
       const response = await axios.get(`${apiUrl}booking/allbookings`);
       const completedBookings = response.data.filter((booking: Booking) => booking.status === false);
+      
       setBooking(completedBookings);
     };
     fetchBookings();
@@ -24,11 +26,11 @@ function CustomerAppointments() {
 
   function HandleChecked(id: string) {
     if (checkedRows.includes(id)) {
-
       setCheckedRows(checkedRows.filter((rowId) => rowId !== id));
-    } else {
 
+    } else {
       setCheckedRows([...checkedRows, id]);
+
     }
   }
 
