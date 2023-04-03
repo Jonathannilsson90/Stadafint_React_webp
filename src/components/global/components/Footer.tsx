@@ -48,7 +48,7 @@ const Footer = (props: IFooter) => {
                     <li className="list-title">Follow us</li>
                     <li className="list">Facebook</li>
                     <li className="list">Linkedin</li>
-                    <li className="list">Instagramm</li>
+                    <li className="list">Instagram</li>
                     <li className="list">Twitter</li>
                 </ul>
             </div>
