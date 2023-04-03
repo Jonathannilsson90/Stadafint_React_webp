@@ -3,17 +3,17 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { apiUrl } from 'src/components/global/api';
 import '../styles/CustomerCompleted.css';
-import { BookedAppointments } from './interface';
+import Booking from 'src/models/Booking';
 
 function CustomerCompleted() {
     let { name } = useParams();
-    const [completed, setCompleted] = useState<BookedAppointments[]>([]);
+    const [completed, setCompleted] = useState<Booking[]>([]);
     useEffect(() => {
         const fetchBookings = async () => {
           const response = await axios.get(`${apiUrl}booking/allbookings`);
     
-          const customer: BookedAppointments[] = response.data.filter(
-            (item: BookedAppointments) =>
+          const customer: Booking[] = response.data.filter(
+            (item: Booking) =>
               item.customername === name && item.status === true
           );
           setCompleted(customer);

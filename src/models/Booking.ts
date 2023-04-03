@@ -1,8 +1,8 @@
 class Booking
 {
     _id: string;
-    customerName: string;
-    cleanerName: string;
+    customername: string;
+    cleanername: string;
     level: string;
     time: string;
     date: string;
@@ -13,17 +13,17 @@ class Booking
                 _id: string,
                 date : string, 
                 time: string, 
-                customerName: string, 
+                customername: string, 
                 level: string, 
-                cleanerName: string, 
+                cleanername: string, 
                 status: boolean)
     {
         this._id = _id;
         this.date = date;
         this.time = time;
-        this.customerName = customerName;
+        this.customername = customername;
         this.level = level;
-        this.cleanerName = cleanerName;
+        this.cleanername = cleanername;
         this.status = status
     }
 }
