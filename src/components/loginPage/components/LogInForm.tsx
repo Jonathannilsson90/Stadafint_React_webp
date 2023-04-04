@@ -3,9 +3,8 @@ import '../css/LogInForm.css'
 import { useContext, useState }    from "react"
 import { useNavigate } from "react-router-dom";
 
-import { ILogInForm } from "../interfaces";
+import { ILogInForm } from '../interfaces';
 import { NameContext } from '../LoginPage';
-
 
 const LogInForm = (props: ILogInForm) => { 
 
