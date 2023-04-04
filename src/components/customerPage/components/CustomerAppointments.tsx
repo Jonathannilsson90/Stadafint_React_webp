@@ -1,13 +1,12 @@
 import '../styles/CustomerAppointments.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import {BookedAppointments} from './interface';
 import { apiUrl } from 'src/components/global/api';
 import { useParams } from "react-router-dom"
 import Booking from 'src/models/Booking';
 
 function CustomerAppointments() {
-  const [booking, setBooking] = useState<BookedAppointments[]>([]);
+  const [booking, setBooking] = useState<Booking[]>([]);
   const [checkedRows, setCheckedRows] = useState<string[]>([]);
   const [resetAllCheckBoxes, setResetAllCheckBoxes] = useState(false);
 
@@ -50,7 +49,7 @@ function CustomerAppointments() {
       setCheckedRows([]);
     }
 
-    async function handleSingleDelete (props: BookedAppointments) {
+    async function handleSingleDelete (props: Booking) {
       try {
         const response = await axios.delete(`${apiUrl}booking/deletebooking/${props._id}`);
         
