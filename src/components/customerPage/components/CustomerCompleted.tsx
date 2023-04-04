@@ -20,7 +20,7 @@ function CustomerCompleted() {
         };
     
         fetchBookings();
-      }, [name]);
+      }, [completed]);
   
     return (
       <div className="customer-containers">
