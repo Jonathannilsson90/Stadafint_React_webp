@@ -24,7 +24,7 @@ const CleanerPage = ({loginButtonTextHandler}: ICleanerPage) => {
           setStadningData(cleaner);
       } 
       fetchBookings();
-    }, [stadningData]);
+    }, [stadningData, name]);
 
     //change status of booking to true when cleaner is done
     const handleToggle = async (id: string ) => {
